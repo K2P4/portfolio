@@ -1,0 +1,52 @@
+/** @format */
+
+import React from "react";
+import { WebLottie } from "../../Components";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
+
+const HomePage = () => {
+	return (
+		<div className="w flex  justify-between align-middle items-center ContainerResponsive ">
+			<div className=" w-[50%] ">
+				<h1 className="text-yellow-400 text-2xl header font-bold tracking-widest">
+					Hello ! I'm <span className="text-gray-300 font-bold">KP</span>
+				</h1>
+
+				<h1 className="text-yellow-400 my-2 text-2xl header font-bold tracking-widest">
+					Junior Web Frontend-Developer
+				</h1>
+
+				<p className=" mt-3 text-md w-[80%] text-gray-300 font-medium tracking-wide leading-8">
+					To Be a Web Developer is so amazing career . I can help everyone build
+					their business. it such happiness for me.So let me to help you !
+				</p>
+
+				<div className="flex mt-9 items-center gap-4 ">
+					<button className="  font-bold  bg-[#ffcc23]   rounded-lg px-7 active:scale-95 hover:bg-yellow-300 duration-500 py-2">
+						Hire Me
+					</button>
+
+					<button className="  font-medium  border border-[#ffcc23]  text-yellow-400   rounded-lg px-5 active:scale-95 hover:bg-[#ffcc23] hover:text-black  transition-transform  duration-500 py-2">
+						Download CV
+					</button>
+				</div>
+
+				<div className="flex gap-5  mt-5">
+					<FaFacebookF className="bg-yellow-400  rounded-full h-7 p-1 w-7   active:scale-95  " />
+					<AiFillInstagram className="bg-yellow-400  rounded-full h-7 p-1 w-7   active:scale-95  " />
+					<FaLinkedinIn className="bg-yellow-400  rounded-full h-7 p-1 w-7   active:scale-95  " />
+					<FaGithub className="bg-yellow-400  rounded-full h-7 p-1 w-7   active:scale-95  " />
+				</div>
+			</div>
+
+			<div className="w-[50%]">
+				<WebLottie />
+			</div>
+		</div>
+	);
+};
+
+export default HomePage;
