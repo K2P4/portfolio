@@ -8,6 +8,16 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 
 const HomePage = () => {
+	const downloadCV = () => {
+		// Replace 'your_cv.pdf' with the path to your CV file
+		const url = "../../../public/Phyo Thura.png";
+		const link = document.createElement("a");
+		link.href = url;
+		link.setAttribute("download", "Phyo Thura.png"); // Change the filename as necessary
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
 	return (
 		<div
 			id="home"
@@ -31,7 +41,9 @@ const HomePage = () => {
 						Hire Me
 					</button>
 
-					<button className=" cardFont font-medium  border border-[#ffcc23]  text-yellow-400   rounded-lg px-5 active:scale-95 hover:bg-[#ffcc23] hover:text-black  transition-transform  duration-500 py-2">
+					<button
+						onClick={downloadCV}
+						className=" cardFont font-medium  border border-[#ffcc23]  text-yellow-400   rounded-lg px-5 active:scale-95 hover:bg-[#ffcc23] hover:text-black  transition-transform  duration-500 py-2">
 						Download CV
 					</button>
 				</div>

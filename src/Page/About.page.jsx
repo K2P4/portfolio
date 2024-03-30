@@ -722,7 +722,7 @@ const AboutPage = () => {
 				</svg>
 
 				<div className="w-[50%]">
-					<h1 className=" header text-2xl text-yellow-400 font-bold">
+					<h1 className="    header text-2xl text-yellow-400 font-bold">
 						About Me
 					</h1>
 
@@ -736,9 +736,7 @@ const AboutPage = () => {
 						trying to make my dreams come true .
 					</p>
 
-					<h1 className="mt-6 font-medium text-yellow-400  tracking-wider">
-						See More ...
-					</h1>
+					
 				</div>
 			</div>
 			<div className="  w-[80%]  bg-[#200536] shadow-[#311a44]    shadow-lg   overflow-hidden -z-20  start-60           border-s-0  rounded-s-none   h-[54%] transition-transform      top-36   absolute  rounded-lg   "></div>
