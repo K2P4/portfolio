@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import { useSpring, animated } from "react-spring";
+import { motion } from "framer-motion";
 
 const ProjectPage = () => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -31,18 +31,6 @@ const ProjectPage = () => {
 		};
 	}, []);
 
-	const cardAnimation = useSpring({
-		transform: isHovered ? "scale(1.05)" : "scale(1)",
-	});
-
-	const secondAnimation = useSpring({
-		transform: hover ? "scale(1.05)" : "scale(1)",
-	});
-
-	const thirdAnimation = useSpring({
-		transform: toggleHover ? "scale(1.05)" : "scale(1)",
-	});
-
 	return (
 		<div className="flex flex-col gap-8 justify-center ContainerResponsive">
 			<div className="flex justify-between items-center ">
@@ -60,8 +48,14 @@ const ProjectPage = () => {
 					showAnimation &&
 					"  animate__animated  animate__slideInRight  duration-1000 "
 				}  items-center gap-5 `}>
-				<animated.div
-					style={cardAnimation}
+				<motion.div
+					whileInView={{ opacity: 1 }}
+					initial={false}
+					whileHover={{
+						opacity: 0.7,
+						scale: 1.04,
+						boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
+					}}
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
 					className="h-[455px] rounded-lg  w-[35%] shadow-md shadow-gray-950 bg-[#23053a]  ">
@@ -82,12 +76,18 @@ const ProjectPage = () => {
 					<button className="     textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
 						View Project
 					</button>
-				</animated.div>
+				</motion.div>
 
-				<animated.div
+				<motion.div
+					whileInView={{ opacity: 1 }}
+					initial={false}
+					whileHover={{
+						opacity: 0.7,
+						scale: 1.04,
+						boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
+					}}
 					onMouseEnter={() => setHovered(true)}
 					onMouseLeave={() => setHovered(false)}
-					style={secondAnimation}
 					className="h-[455px] rounded-lg shadow-gray-950  w-[35%] shadow-md bg-[#23053a]  ">
 					<img
 						className="    object-cover  w-full  h-[55%]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
@@ -107,10 +107,16 @@ const ProjectPage = () => {
 					<button className="  textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
 						View Project
 					</button>
-				</animated.div>
+				</motion.div>
 
-				<animated.div
-					style={thirdAnimation}
+				<motion.div
+					whileInView={{ opacity: 1 }}
+					initial={false}
+					whileHover={{
+						opacity: 0.7,
+						scale: 1.04,
+						boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
+					}}
 					onMouseEnter={() => setToggleHover(true)}
 					onMouseLeave={() => setToggleHover(false)}
 					className="h-[455px] shadow-gray-950 rounded-lg  w-[35%] shadow-md bg-[#23053a]  ">
@@ -132,7 +138,7 @@ const ProjectPage = () => {
 					<button className="  textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
 						View Project
 					</button>
-				</animated.div>
+				</motion.div>
 			</div>
 		</div>
 	);

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { LuDot } from "react-icons/lu";
 import "../../node_modules/animate.css/animate.min.css";
-import { useSpring, animated } from "react-spring";
+import { motion } from "framer-motion";
 
 const ServicePage = () => {
 	const [showAnimation, setShowAnimation] = useState(false);
@@ -32,18 +32,6 @@ const ServicePage = () => {
 		};
 	}, []);
 
-	const cardAnimation = useSpring({
-		transform: isHovered ? "scale(1.05)" : "scale(1)",
-	});
-
-	const secondAnimation = useSpring({
-		transform: hover ? "scale(1.05)" : "scale(1)",
-	});
-
-	const thirdAnimation = useSpring({
-		transform: toggleHover ? "scale(1.05)" : "scale(1)",
-	});
-
 	return (
 		<div>
 			<div className={`ContainerResponsive  flex  flex-col justify-center`}>
@@ -61,9 +49,15 @@ const ServicePage = () => {
 						showAnimation &&
 						"  animate__animated transition-transform  animate__slideInLeft   duration-1000 "
 					}`}>
-					<animated.div
-						style={thirdAnimation}
-						className="w-[30%]    shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4  h-[385px] rounded-lg border-gray-500 "
+					<motion.div
+						whileInView={{ opacity: 1 }}
+						initial={false}
+						whileHover={{
+							opacity: 0.7,
+							scale: 1.04,
+							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
+						}}
+						className="w-[30%]   duration-300  shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4  h-[385px] rounded-lg border-gray-500 "
 						onMouseEnter={() => setToggleHover(true)}
 						onMouseLeave={() => setToggleHover(false)}>
 						<img
@@ -105,10 +99,16 @@ const ServicePage = () => {
 								</p>
 							</div>
 						</div>
-					</animated.div>
-					<animated.div
-						style={secondAnimation}
-						className="w-[30%]    shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4  h-[385px] rounded-lg border-gray-500 "
+					</motion.div>
+					<motion.div
+						whileInView={{ opacity: 1 }}
+						initial={false}
+						whileHover={{
+							opacity: 0.7,
+							scale: 1.04,
+							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
+						}}
+						className="w-[30%]   duration-300  shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4  h-[385px] rounded-lg border-gray-500 "
 						onMouseEnter={() => setHovered(true)}
 						onMouseLeave={() => setHovered(false)}>
 						<img
@@ -150,11 +150,17 @@ const ServicePage = () => {
 								</p>
 							</div>
 						</div>
-					</animated.div>
+					</motion.div>
 
-					<animated.div
-						style={cardAnimation}
-						className="w-[30%]    shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4  h-[385px] rounded-lg border-gray-500 "
+					<motion.div
+						whileInView={{ opacity: 1 }}
+						initial={false}
+						whileHover={{
+							opacity: 0.7,
+							scale: 1.04,
+							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
+						}}
+						className="w-[30%]   duration-300  shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4  h-[385px] rounded-lg border-gray-500 "
 						onMouseEnter={() => setIsHovered(true)}
 						onMouseLeave={() => setIsHovered(false)}>
 						<img
@@ -196,7 +202,7 @@ const ServicePage = () => {
 								</p>
 							</div>
 						</div>
-					</animated.div>
+					</motion.div>
 				</div>
 			</div>
 		</div>
