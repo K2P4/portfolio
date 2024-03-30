@@ -1,10 +1,39 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+import "../../node_modules/animate.css/animate.min.css";
 
 const AboutPage = () => {
+	const [showAnimation, setShowAnimation] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const serviceComponent = document.getElementById("about");
+			if (serviceComponent) {
+				const serviceComponentOffset = serviceComponent.offsetTop;
+				const scrollPosition = window.scrollY + window.innerHeight;
+
+				if (scrollPosition >= serviceComponentOffset) {
+					setShowAnimation(true);
+				} else {
+					setShowAnimation(false);
+				}
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
-		<div className="ContainerResponsive  relative mt-10">
+		<div
+			id="about"
+			className={`ContainerResponsive  ${
+				showAnimation &&
+				"  animate__animated  animate__slideInRight  duration-1000  "
+			} relative mt-10`}>
 			<div className="flex  gap-3 items-center  ">
 				<svg
 					className=" w-[55%]  h-screen   "
@@ -697,7 +726,7 @@ const AboutPage = () => {
 						About Me
 					</h1>
 
-					<p className=" mt-5  leading-8 text-md font-medium text-gray-400 tracking-wide text-justify ">
+					<p className=" mt-5  leading-8 text-md font-medium text-gray-300 tracking-wide text-justify ">
 						{" "}
 						I am <span className=" tracking-widest text-yellow-400">KP</span>,
 						web developer from Myanmar. Currently I have been working in Yoma
@@ -712,7 +741,7 @@ const AboutPage = () => {
 					</h1>
 				</div>
 			</div>
-			<div className="  w-[80%]  bg-[#25053f] shadow-[#34184b]    shadow-lg   overflow-hidden -z-20  start-60           border-s-0  rounded-s-none   h-[54%] transition-transform      top-36   absolute  rounded-lg   "></div>
+			<div className="  w-[80%]  bg-[#200536] shadow-[#311a44]    shadow-lg   overflow-hidden -z-20  start-60           border-s-0  rounded-s-none   h-[54%] transition-transform      top-36   absolute  rounded-lg   "></div>
 		</div>
 	);
 };

@@ -3,8 +3,15 @@
  * @type {import('tailwindcss').Config}
  */
 
-export default {
-	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+module.exports = {
+	darkMode: ["class"],
+	content: [
+		"./pages/**/*.{js,jsx}",
+		"./components/**/*.{js,jsx}",
+		"./app/**/*.{js,jsx}",
+		"./src/**/*.{js,jsx}",
+	],
+	prefix: "",
 	theme: {
 		extend: {
 			fontFamily: {
@@ -14,7 +21,8 @@ export default {
 			colors: {
 				basic: "#008DDA",
 			},
+			position: ["fixed"],
 		},
 	},
-	plugins: [],
+	plugins: [require("tailwindcss-animate")],
 };
