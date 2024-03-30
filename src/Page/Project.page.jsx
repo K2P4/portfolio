@@ -61,7 +61,7 @@ const ProjectPage = () => {
 					className="h-[455px] rounded-lg  w-[35%] shadow-md shadow-gray-950 bg-[#23053a]  ">
 					<img
 						className="   object-center  w-full  h-[55%]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
-						src="../../public/sneaker_project.png"
+						src="https://i.ibb.co/Dzs65wn/sneaker-project.png"
 						alt=""
 					/>
 
@@ -74,7 +74,7 @@ const ProjectPage = () => {
 					</p>
 
 					<button className="     textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-						View Project
+						<a href="https://kp-nikeyy.netlify.app/">View Project</a>
 					</button>
 				</motion.div>
 
@@ -91,7 +91,7 @@ const ProjectPage = () => {
 					className="h-[455px] rounded-lg shadow-gray-950  w-[35%] shadow-md bg-[#23053a]  ">
 					<img
 						className="    object-cover  w-full  h-[55%]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
-						src="../../public/Shopping Cart.png"
+						src="https://i.ibb.co/Kw0fHfX/Shopping-Cart.png"
 						alt=""
 					/>
 
@@ -105,7 +105,9 @@ const ProjectPage = () => {
 					</p>
 
 					<button className="  textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-						View Project
+						<a href="https://main--kop-shoppingcart.netlify.app/">
+							View Project
+						</a>
 					</button>
 				</motion.div>
 
@@ -122,7 +124,7 @@ const ProjectPage = () => {
 					className="h-[455px] shadow-gray-950 rounded-lg  w-[35%] shadow-md bg-[#23053a]  ">
 					<img
 						className="   object-cover  w-full  h-[55%]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
-						src="../../public/Invoice app.png"
+						src="https://i.ibb.co/vxHwcxb/Invoice-app.png"
 						alt=""
 					/>
 
@@ -136,7 +138,7 @@ const ProjectPage = () => {
 					</p>
 
 					<button className="  textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-						View Project
+						<a href="https://kop-inoviceapp.netlify.app/">View Project</a>
 					</button>
 				</motion.div>
 			</div>

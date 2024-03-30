@@ -53,10 +53,9 @@ const ClientComponent = () => {
 					className="h-[400px] py-3 px-3 shadow-gray-950 rounded-lg  w-[30%] shadow-md bg-[#23053a]  ">
 					<img
 						className="   object-cover ring-2 ring-purple-950    text-center mx-auto  h-24 w-24 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
-						src="../../public/Phyo.jpg"
+						src="https://i.ibb.co/7KqJZ62/Phyo.jpg"
 						alt=""
 					/>
-
 					<h1 className=" text-gray-300  my-2 header tracking-wider  font-semibold mx-auto text-center text-xl mt-3">
 						Phyo Thura
 					</h1>
@@ -87,7 +86,7 @@ const ClientComponent = () => {
 					className="h-[440px] py-3 px-3 shadow-gray-950 rounded-lg  w-[32%] shadow-md bg-[#23053a]  ">
 					<img
 						className="   object-cover  ring-2 ring-purple-950    text-center mx-auto  h-24 w-24 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
-						src="../../public/Aye.jpg"
+						src="https://i.ibb.co/WWFHfFn/Aye.jpg"
 						alt=""
 					/>
 
@@ -124,7 +123,7 @@ const ClientComponent = () => {
 					className="h-[400px] py-3 px-3 shadow-gray-950 rounded-lg  w-[30%] shadow-md bg-[#23053a]  ">
 					<img
 						className="   object-cover ring-2 ring-purple-950    text-center mx-auto  h-24 w-24 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
-						src="../../public/Khin.jpg"
+						src="https://i.ibb.co/HrTb6MD/Khin.jpg"
 						alt=""
 					/>
 

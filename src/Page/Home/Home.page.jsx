@@ -10,7 +10,8 @@ import { FaGithub } from "react-icons/fa";
 const HomePage = () => {
 	const downloadCV = () => {
 		// Replace 'your_cv.pdf' with the path to your CV file
-		const url = "../../../public/Phyo Thura.png";
+		const url =
+			"https://drive.google.com/file/d/1AnzYujI1lOqrZVg1PLqtZw1TmYYErG9L/view";
 		const link = document.createElement("a");
 		link.href = url;
 		link.setAttribute("download", "Phyo Thura.png"); // Change the filename as necessary

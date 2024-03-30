@@ -17,7 +17,7 @@ const NavComponent = () => {
 		const handleScroll = () => {
 			if (window.scrollY > 500) {
 				setIsFixed(true);
-			} else if (window.scrollY >=  4900) {
+			} else{
 				setIsFixed(false);
 			} 
 		};
