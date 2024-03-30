@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
@@ -15,7 +15,7 @@ const BottomComponent = () => {
 		}
 	};
 	return (
-		<div className="w-full h-[50%] py-4  flex flex-col gap-5 justify-center projectBox shadow-xl   shadow-[purple]   opacity-95 ">
+		<div className="w-full relative h-[50%] py-4  flex flex-col gap-5 justify-center projectBox shadow-xl   shadow-[purple]   opacity-95 ">
 			<h1 className="flex items-center  mx-auto gap-1 text-xl text-yellow-400  header font-bold tracking-widest  ">
 				KP{" "}
 				<span>
@@ -68,6 +68,19 @@ const BottomComponent = () => {
 					<FaGithub className="bg-gray-300 rounded-full h-8 p-1 w-8   active:scale-95  " />
 				</a>
 			</div>
+
+			<svg
+				onClick={() => scrollToSection("home")}
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				fill="currentColor"
+				className="w-8  absolute  -top-4 text-yellow-500  left-[49%] h-8">
+				<path
+					fillRule="evenodd"
+					d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm.53 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v5.69a.75.75 0 0 0 1.5 0v-5.69l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z"
+					clipRule="evenodd"
+				/>
+			</svg>
 		</div>
 	);
 };

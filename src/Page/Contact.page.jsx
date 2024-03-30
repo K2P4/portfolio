@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import { Input } from "../Components/ui/input";
+
 import { Label } from "../Components/ui/label";
 import { Button } from "../Components/ui/button";
 
@@ -122,7 +122,7 @@ const ContactPage = () => {
 				</div>
 
 				<div
-					className={`${
+					className={` cardFont ${
 						showAnimation &&
 						"animate__animated animate__slideInRight duration-1000"
 					} w-[50%]`}>
@@ -136,11 +136,11 @@ const ContactPage = () => {
 							<>
 								<Form className="flex flex-col gap-3">
 									<div className="">
-										<Input
+										<input
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.name}
-											className="mt-1 text-purple-950 px-3 p-6 rounded-md focus:ring-0 focus:border-0  bg-[#23053a] focus:border-purple-950  accent-purple-950  border-0 text-sm "
+											className="mt-1  px-3 p-5 rounded-md  w-full  focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm "
 											name="name"
 											type="name"
 											id="name"
@@ -155,11 +155,11 @@ const ContactPage = () => {
 									</div>
 
 									<div className="">
-										<Input
+										<input
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.email}
-											className="mt-1 text-purple-950 px-3 p-6 rounded-md focus:ring-0 focus:border-0  bg-[#23053a] focus:border-purple-950  accent-purple-950  border-0 text-sm "
+											className="mt-1 focus:border-2  focus:border-[#280642]    text-purple-950 px-3 p-5 rounded-md  w-full  focus:outline-none  bg-[#23053a]  ring-transparent focus:ring-transparent text-sm "
 											name="email"
 											type="email"
 											id="email"
@@ -174,11 +174,11 @@ const ContactPage = () => {
 									</div>
 
 									<div className="">
-										<Input
+										<input
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.typing}
-											className="mt-1 text-sm text-purple-95  pb-32 rounded-md focus:ring-0 focus:border-0 tracking-wide  bg-[#23053a] focus:border-purple-950  accent-purple-950  h-[150px] pt-2 border-0 "
+											className="mt-1 text-gray-300   px-3  pb-12 rounded-md  w-full  focus:outline-none h-[120px] focus:border-2  focus:border-[#280642]   bg-[#23053a]  ring-transparent focus:ring-transparent text-sm "
 											name="typing"
 											type="text"
 											id="typing"
