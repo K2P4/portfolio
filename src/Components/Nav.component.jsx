@@ -49,7 +49,7 @@ const NavComponent = () => {
 	};
 	return (
 		<div className="">
-			<div className="w-[80%]  h-full mx-auto ">
+			<div className="sm:w-[80%] w-[90%]  h-full mx-auto ">
 				<div
 					className={`flex ${
 						isFixed &&

@@ -24,7 +24,7 @@ const HomePage = () => {
 		<div
 			id="home"
 			className=" flex flex-col  justify-center sm:flex-row  sm:justify-between align-middle items-center sm:ContainerResponsive ">
-			<div className="      h-full    sm:h-auto  mt-9 sm:mt-0 animate__animated animate__slideInLeft duration-1000 w-full sm:w-[50%] ">
+			<div className="      h-full    sm:h-auto   mt-16 sm:mt-0 animate__animated animate__slideInLeft duration-1000 w-full sm:w-[50%] ">
 				<h1 className="text-yellow-400 text-2xl  sm:text-3xl header font-bold tracking-widest">
 					Hello ! I'm <span className="text-gray-300 font-bold">KP</span>
 				</h1>
@@ -38,7 +38,7 @@ const HomePage = () => {
 					their business. it such happiness for me.So let me to help you !
 				</p>
 
-				<div className="flex mt-7 justify-center sm:justify-normal sm:mt-7 items-center gap-4 ">
+				<div className="flex mt-7   sm:justify-normal sm:mt-7 items-center gap-4 ">
 					<button className=" text-sm sm:text-base   cardFont font-bold  bg-[#ffcc23]   rounded-lg sm:last:px-7 active:scale-95 px-6  hover:bg-yellow-300 duration-500 py-2">
 						Hire Me
 					</button>
@@ -50,7 +50,7 @@ const HomePage = () => {
 					</button>
 				</div>
 
-				<div className="flex gap-5 sm:gap-6 mt-5  justify-center sm:justify-normal  sm:mt-7">
+				<div className="flex gap-6 sm:gap-6 mt-5  justify-center  sm:justify-normal  sm:mt-7">
 					<FaFacebookF className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
 					<AiFillInstagram className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
 					<FaDiscord className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
