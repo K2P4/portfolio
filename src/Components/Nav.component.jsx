@@ -49,7 +49,7 @@ const NavComponent = () => {
 	};
 	return (
 		<div className="">
-			<div className="sm:w-[80%] w-[90%]  h-full mx-auto ">
+			<div className="sm:w-[80%] w-[85%]  h-full mx-auto ">
 				<div
 					className={`flex ${
 						isFixed &&
@@ -57,7 +57,7 @@ const NavComponent = () => {
 					} py-5 justify-between items-center`}>
 					<h1
 						onClick={() => nav("/")}
-						className="flex select-none items-center gap-0 sm:gap-1 text-xl text-yellow-400  header font-bold tracking-widest  ">
+						className="flex  select-none items-center gap-0 sm:gap-1 text-xl text-yellow-400  header font-bold tracking-widest  ">
 						KP{" "}
 						<span>
 							<DiCodeigniter className=" w-4 " />

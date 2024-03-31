@@ -50,7 +50,7 @@ const HomePage = () => {
 					</button>
 				</div>
 
-				<div className="flex gap-6 sm:gap-6 mt-5  justify-center  sm:justify-normal  sm:mt-7">
+				<div className="flex gap-6 sm:gap-6 mt-6   sm:mt-7">
 					<FaFacebookF className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
 					<AiFillInstagram className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
 					<FaDiscord className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />

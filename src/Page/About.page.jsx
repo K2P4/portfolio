@@ -741,21 +741,21 @@ const AboutPage = () => {
 				<div className="  w-[80%]  bg-[#200536] shadow-[#311a44]    shadow-lg   overflow-hidden -z-20  start-60           border-s-0  rounded-s-none   h-[54%] transition-transform      top-36   absolute  rounded-lg   "></div>
 			</div>
 
-			<div className="w-full  m-auto h-screen flex flex-col  justify-center  align-middle items-center">
+			<div className="w-full sm:hidden  m-auto h-screen flex flex-col  justify-center  align-middle items-center">
 				<div className="w-full border-b pb-2 border-[#23053a] ">
 					<img
-						className="mx-auto   border-b border  shadow-lg shadow-[#2f1941]   object-cover    w-[170px] h-[170px] rounded-full   opacity-80  text-center  "
+						className="mx-auto   border-b border  shadow-lg shadow-[#2f1941]   object-cover    w-[120px] h-[120px] rounded-full   opacity-80  text-center  "
 						src="https://i.ibb.co/7KqJZ62/Phyo.jpg"
 						alt=""
 					/>
 				</div>
 
 				<div className="">
-					<h1 className="  text-center my-2   header text-2xl text-yellow-400 font-bold">
+					<h1 className="  text-center my-2   header text-xl text-yellow-400 font-bold">
 						About Me
 					</h1>
 
-					<p className=" mt-2 leading-6 text-sm font-medium text-gray-400 tracking-wide text-justify ">
+					<p className=" my-2 leading-6 cardFont text-xs font-medium text-gray-400 tracking-wide text-justify ">
 						{" "}
 						I am <span className=" tracking-widest text-yellow-400">KP</span>,
 						web developer from Myanmar. Currently I have been working in Yoma
@@ -764,6 +764,139 @@ const AboutPage = () => {
 						young, my hobby has been to become a web developer, and I am still
 						trying to make my dreams come true .
 					</p>
+
+					<div className="flex flex-col space-y-5 cardFont mt-4">
+						<div className="flex py-2 border-[#25093b] border-b  items-center  justify-between ">
+							<div className="flex w-[60%] items-center gap-2">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									className="w-4 text-yellow-400 h-4">
+									<path
+										fillRule="evenodd"
+										d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+										clipRule="evenodd"
+									/>
+								</svg>
+
+								<p className=" text-gray-400 tracking-wide text-sm font-medium">
+									Name
+								</p>
+							</div>
+
+							<p className="text-gray-400 w-[60%]  gap-2 flex items-center tracking-wide text-sm  font-medium">
+								<span className="text-yellow-400 text-left  ">: </span> Phyo
+								Thura
+							</p>
+						</div>
+
+						<div className="flex py-2 border-[#25093b]  border-b  items-center  justify-between ">
+							<div className="flex w-[60%] items-center gap-2">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									className="w-4 text-yellow-400 h-4">
+									<path
+										fillRule="evenodd"
+										d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+										clipRule="evenodd"
+									/>
+								</svg>
+
+								<p className=" text-gray-400 tracking-wide text-sm font-medium">
+									Phone
+								</p>
+							</div>
+							<p className="text-gray-400 w-[60%]  gap-2 flex items-center tracking-wide text-sm  font-medium">
+								<span className="text-yellow-400  text-left  ">: </span>{" "}
+								09968213232
+							</p>
+						</div>
+
+						<div className="flex py-2 border-[#25093b]  border-b  items-center  justify-between ">
+							<div className="flex w-[60%] items-center gap-2">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									className="w-4 text-yellow-400 h-4">
+									<path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+									<path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+								</svg>
+
+								<p className=" text-gray-400 tracking-wide text-sm font-medium">
+									Email
+								</p>
+							</div>
+							<p className="text-gray-400 w-[50%]  gap-2 flex items-center tracking-wide text-sm  font-medium">
+								<span className="text-yellow-400  text-left  ">: </span>{" "}
+								pthya381@gmail.com
+							</p>
+						</div>
+					</div>
+
+					<h1 className="text-yellow-400 my-5  header text-sm   tracking-wide">
+						My Interests
+					</h1>
+
+					<div className="flex gap-5 align-middle items-center ">
+						<div className="flex items-center gap-1">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								className="w-5  text-yellow-400  h-5">
+								<path
+									fillRule="evenodd"
+									d="M19.952 1.651a.75.75 0 0 1 .298.599V16.303a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.403-4.909l2.311-.66a1.5 1.5 0 0 0 1.088-1.442V6.994l-9 2.572v9.737a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.402-4.909l2.31-.66a1.5 1.5 0 0 0 1.088-1.442V5.25a.75.75 0 0 1 .544-.721l10.5-3a.75.75 0 0 1 .658.122Z"
+									clipRule="evenodd"
+								/>
+							</svg>
+
+							<p className="text-gray-400  cardFont  tracking-wide text-sm  font-medium">
+								Music
+							</p>
+						</div>
+
+						<div className="flex items-center gap-2">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								className="w-5 text-yellow-400  h-5">
+								<path
+									fillRule="evenodd"
+									d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+									clipRule="evenodd"
+								/>
+								<path d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" />
+							</svg>
+
+							<p className="text-gray-400  cardFont  tracking-wide text-sm  font-medium">
+								Travel
+							</p>
+						</div>
+
+						<div className="flex items-center gap-2">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								className="w-5 text-yellow-400  h-5">
+								<path
+									fillRule="evenodd"
+									d="M1.5 5.625c0-1.036.84-1.875 1.875-1.875h17.25c1.035 0 1.875.84 1.875 1.875v12.75c0 1.035-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 0 1 1.5 18.375V5.625Zm1.5 0v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-1.5A.375.375 0 0 0 3 5.625Zm16.125-.375a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5A.375.375 0 0 0 21 7.125v-1.5a.375.375 0 0 0-.375-.375h-1.5ZM21 9.375A.375.375 0 0 0 20.625 9h-1.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5Zm0 3.75a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5Zm0 3.75a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5ZM4.875 18.75a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5ZM3.375 15h1.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375Zm0-3.75h1.5a.375.375 0 0 0 .375-.375v-1.5A.375.375 0 0 0 4.875 9h-1.5A.375.375 0 0 0 3 9.375v1.5c0 .207.168.375.375.375Zm4.125 0a.75.75 0 0 0 0 1.5h9a.75.75 0 0 0 0-1.5h-9Z"
+									clipRule="evenodd"
+								/>
+							</svg>
+
+							<p className="text-gray-400  cardFont  tracking-wide text-sm  font-medium">
+								Movie
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
