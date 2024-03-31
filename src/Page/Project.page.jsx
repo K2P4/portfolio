@@ -53,7 +53,7 @@ const ProjectPage = () => {
 				className={`w-full flex ${
 					showAnimation &&
 					"  animate__animated  animate__slideInRight  duration-1000 "
-				}  h-[360px]  sm:h-[450px] flex-row mySwiper items-center  `}
+				}  h-[360px]  sm:h-[430px] flex-row mySwiper items-center  `}
 				spaceBetween={30}
 				slidesPerView={1} // Default slidesPerView
 				breakpoints={{
@@ -211,7 +211,7 @@ const ProjectPage = () => {
 						onMouseEnter={() => setIsHovered(true)}
 						onMouseLeave={() => setIsHovered(false)}>
 						<img
-							className="   object-cover  w-full  h-[120px]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
+							className="   object-cover  w-full  h-[120px] sm:h-[151px] rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
 							src="https://i.ibb.co/PZMHdSz/desktop-design.jpg"
 							alt=""
 						/>
