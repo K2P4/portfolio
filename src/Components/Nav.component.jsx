@@ -49,11 +49,11 @@ const NavComponent = () => {
 	};
 	return (
 		<div className="">
-			<div className="sm:w-[80%] w-[85%]  h-full mx-auto ">
+			<div className="sm:w-[80%] w-[85%]  h-full m-auto ">
 				<div
 					className={`flex ${
 						isFixed &&
-						"fixed top-0 left-0 w-full   px-32  mx-auto bg-[#200435]  duration-500     z-10 "
+						"fixed top-0 left-0 w-[90%] px-8  sm:full    sm:px-32  mx-auto bg-[#200435]  duration-500     z-10 "
 					} py-5 justify-between items-center`}>
 					<h1
 						onClick={() => nav("/")}

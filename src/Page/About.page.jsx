@@ -5,6 +5,7 @@ import "../../node_modules/animate.css/animate.min.css";
 
 const AboutPage = () => {
 	const [showAnimation, setShowAnimation] = useState(false);
+	const [showAnimationCopy, setShowAnimationCopy] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -17,6 +18,27 @@ const AboutPage = () => {
 					setShowAnimation(true);
 				} else {
 					setShowAnimation(false);
+				}
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const serviceComponent = document.getElementById("about2");
+			if (serviceComponent) {
+				const serviceComponentOffset = serviceComponent.offsetTop;
+				const scrollPosition = window.scrollY + window.innerHeight;
+
+				if (scrollPosition >= serviceComponentOffset) {
+					setShowAnimationCopy(true);
+				} else {
+					setShowAnimationCopy(false);
 				}
 			}
 		};
@@ -741,7 +763,12 @@ const AboutPage = () => {
 				<div className="  w-[80%]  bg-[#200536] shadow-[#311a44]    shadow-lg   overflow-hidden -z-20  start-60           border-s-0  rounded-s-none   h-[54%] transition-transform      top-36   absolute  rounded-lg   "></div>
 			</div>
 
-			<div className="w-full sm:hidden  m-auto h-screen flex flex-col  justify-center  align-middle items-center">
+			<div
+				id="about2"
+				className={`w-full  ${
+					showAnimationCopy &&
+					"  animate__animated  animate__slideInRight  duration-1000  "
+				}  sm:hidden  m-auto h-screen flex flex-col  justify-center  align-middle items-center`}>
 				<div className="w-full border-b pb-2 border-[#23053a] ">
 					<img
 						className="mx-auto   border-b border  shadow-lg shadow-[#2f1941]   object-cover    w-[120px] h-[120px] rounded-full   opacity-80  text-center  "
