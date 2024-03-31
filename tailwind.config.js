@@ -10,6 +10,7 @@ module.exports = {
 		"./components/**/*.{js,jsx}",
 		"./app/**/*.{js,jsx}",
 		"./src/**/*.{js,jsx}",
+		"./node_modules/flowbite/**/*.js",
 	],
 	prefix: "",
 	theme: {
@@ -24,5 +25,5 @@ module.exports = {
 			position: ["fixed"],
 		},
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate", "flowbite/plugin")],
 };

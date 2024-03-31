@@ -33,7 +33,7 @@ const AboutPage = () => {
 			className={`ContainerResponsive  ${
 				showAnimation &&
 				"  animate__animated  animate__slideInRight  duration-1000  "
-			} relative mt-10`}>
+			} hidden sm:flex  relative mt-10`}>
 			<div className="flex  gap-3 items-center  ">
 				<svg
 					className=" w-[55%]  h-screen   "

@@ -3,8 +3,9 @@
 import React from "react";
 import { WebLottie } from "../../Components";
 import { FaFacebookF } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa6";
+import { FaLinkedinIn, FaDiscord } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
+
 import { FaGithub } from "react-icons/fa";
 
 const HomePage = () => {
@@ -22,42 +23,43 @@ const HomePage = () => {
 	return (
 		<div
 			id="home"
-			className="w flex  justify-between align-middle items-center ContainerResponsive ">
-			<div className=" animate__animated animate__slideInLeft duration-1000 w-[50%] ">
-				<h1 className="text-yellow-400 text-2xl header font-bold tracking-widest">
+			className=" flex flex-col  justify-center sm:flex-row  sm:justify-between align-middle items-center sm:ContainerResponsive ">
+			<div className="      h-full    sm:h-auto  mt-9 sm:mt-0 animate__animated animate__slideInLeft duration-1000 w-full sm:w-[50%] ">
+				<h1 className="text-yellow-400 text-2xl  sm:text-3xl header font-bold tracking-widest">
 					Hello ! I'm <span className="text-gray-300 font-bold">KP</span>
 				</h1>
 
-				<h1 className="text-yellow-400 my-2 text-2xl header font-bold tracking-widest">
+				<h1 className="text-yellow-400 my-1 sm:my-2 text-xl sm:text-2xl header font-bold tracking-widest">
 					Junior Web Frontend-Developer
 				</h1>
 
-				<p className=" mt-5 text-md w-[80%] text-gray-300 font-medium tracking-wide leading-8">
+				<p className=" mt-3 sm:mt-5 text-sm  sm:text-base text-justify sm:text-pretty w-full sm:w-[80%] text-gray-300 font-medium tracking-wide  leading-6 sm:leading-8">
 					To Be a Web Developer is so amazing career . I can help everyone build
 					their business. it such happiness for me.So let me to help you !
 				</p>
 
-				<div className="flex mt-9 items-center gap-4 ">
-					<button className="  cardFont font-bold  bg-[#ffcc23]   rounded-lg px-7 active:scale-95 hover:bg-yellow-300 duration-500 py-2">
+				<div className="flex mt-7 justify-center sm:justify-normal sm:mt-7 items-center gap-4 ">
+					<button className=" text-sm sm:text-base   cardFont font-bold  bg-[#ffcc23]   rounded-lg sm:last:px-7 active:scale-95 px-6  hover:bg-yellow-300 duration-500 py-2">
 						Hire Me
 					</button>
 
 					<button
 						onClick={downloadCV}
-						className=" cardFont font-medium  border border-[#ffcc23]  text-yellow-400   rounded-lg px-5 active:scale-95 hover:bg-[#ffcc23] hover:text-black  transition-transform  duration-500 py-2">
+						className=" text-sm  sm:text-base cardFont font-medium  border border-[#ffcc23]  text-yellow-400   rounded-lg px-5 active:scale-95 hover:bg-[#ffcc23] hover:text-black  transition-transform  duration-500 py-2">
 						Download CV
 					</button>
 				</div>
 
-				<div className="flex gap-5  mt-7">
-					<FaFacebookF className="bg-yellow-400  rounded-full h-8 p-1 w-8   active:scale-95  " />
-					<AiFillInstagram className="bg-yellow-400  rounded-full h-8 p-1 w-8   active:scale-95  " />
-					<FaLinkedinIn className="bg-yellow-400  rounded-full h-8 p-1 w-8   active:scale-95  " />
-					<FaGithub className="bg-yellow-400  rounded-full h-8 p-1 w-8   active:scale-95  " />
+				<div className="flex gap-5 sm:gap-6 mt-5  justify-center sm:justify-normal  sm:mt-7">
+					<FaFacebookF className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
+					<AiFillInstagram className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
+					<FaDiscord className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
+					<FaLinkedinIn className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
+					<FaGithub className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
 				</div>
 			</div>
 
-			<div className="w-[50%] animate__animated animate__slideInRight duration-1000">
+			<div className="w-full hidden sm:flex sm:w-[50%] animate__animated animate__slideInRight duration-1000">
 				<WebLottie />
 			</div>
 		</div>
