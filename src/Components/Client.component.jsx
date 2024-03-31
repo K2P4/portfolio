@@ -31,7 +31,7 @@ const ClientComponent = () => {
 	}, []);
 
 	return (
-		<div className=" ContainerResponsive flex flex-col  justify-center gap-16  ">
+		<div className=" ContainerResponsive flex flex-col  gap-20 justify-center sm:gap-16  ">
 			<h1 className=" text-yellow-400 mt-10  text-2xl header font-bold tracking-wide ">
 				Client & Reviews
 			</h1>
@@ -50,7 +50,7 @@ const ClientComponent = () => {
 						scale: 0.9,
 						boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
 					}}
-					className="h-[400px] py-3 px-3 shadow-gray-950 rounded-lg  w-[30%] shadow-md bg-[#23053a]  ">
+					className="sm:h-[400px] h-[300px] py-3 px-3 shadow-gray-950 rounded-lg w-full sm:w-[30%] shadow-md bg-[#23053a]  ">
 					<img
 						className="   object-cover ring-2 ring-purple-950    text-center mx-auto  h-24 w-24 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
 						src="https://i.ibb.co/7KqJZ62/Phyo.jpg"

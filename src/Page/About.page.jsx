@@ -765,13 +765,13 @@ const AboutPage = () => {
 
 			<div
 				id="about2"
-				className={`w-full  ${
+				className={`w-full m-auto   h-screen      ${
 					showAnimationCopy &&
 					"  animate__animated  animate__slideInRight  duration-1000  "
-				}  sm:hidden  m-auto h-screen flex flex-col  justify-center  align-middle items-center`}>
+				}  sm:hidden  m-auto  flex flex-col  justify-center  align-middle items-center`}>
 				<div className="w-full border-b pb-2 border-[#23053a] ">
 					<img
-						className="mx-auto   border-b border  shadow-lg shadow-[#2f1941]   object-cover    w-[120px] h-[120px] rounded-full   opacity-80  text-center  "
+						className="mx-auto   mb-8  border-b border  shadow-lg shadow-[#2f1941]   object-cover    w-[160px] h-[160px] rounded-full   opacity-80  text-center  "
 						src="https://i.ibb.co/7KqJZ62/Phyo.jpg"
 						alt=""
 					/>
@@ -786,7 +786,7 @@ const AboutPage = () => {
 						{" "}
 						I am <span className=" tracking-widest text-yellow-400">KP</span>,
 						web developer from Myanmar. Currently I have been working in Yoma
-						Bank with business development specialist opreation . I have 2 years
+						Bank with business development specialist opreation position . I have 2 years
 						+ experience in Customer Service Field & Banking Field. Since I was
 						young, my hobby has been to become a web developer, and I am still
 						trying to make my dreams come true .
@@ -868,7 +868,7 @@ const AboutPage = () => {
 						My Interests
 					</h1>
 
-					<div className="flex gap-5 align-middle items-center ">
+					<div className="flex gap-5  mb-44 align-middle items-center ">
 						<div className="flex items-center gap-1">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

@@ -13,8 +13,8 @@ import Autoplay from "embla-carousel-autoplay";
 
 const SkillPage = () => {
 	return (
-		<div className="ContainerResponsive flex flex-col justify-center   ">
-			<h1 className="text-yellow-400     ms-10 mb-10    text-3xl header border-b-2 w-[13%] border-b-yellow-400 pb-1">
+		<div className="ContainerResponsive  gap-14 sm:gap-0 flex flex-col justify-center   ">
+			<h1 className="text-yellow-400     sm:ms-10 sm:mb-10   mt-60 sm:mt-0  text-2xl  sm:text-3xl header border-b-2 sm:w-[13%] border-b-yellow-400 pb-1">
 				Skill-Set
 			</h1>
 
@@ -24,11 +24,11 @@ const SkillPage = () => {
 						delay: 2000,
 					}),
 				]}
-				className=" mt-16 flex  justify-center mx-auto  w-full  items-center ">
-				<CarouselContent className="    flex    items-center   gap-16 w-[20%] ">
-					<CarouselItem className="  ms-10 shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4 h-[200px]  ">
+				className="  mt-10 sm:mt-16 flex  justify-center mx-auto  w-full  items-center ">
+				<CarouselContent className="    flex    items-center    gap-20 mx-auto  sm:gap-16 w-[80%] sm:w-[20%] ">
+					<CarouselItem className="  sm:ms-10 shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-full h-full sm:w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4 sm:h-[200px]  ">
 						<img
-							className="mx-auto text-center h-32  object-cover   w-32 "
+							className="mx-auto text-center sm:h-32   object-cover   sm:w-32 "
 							src="https://cdn-icons-png.flaticon.com/128/174/174854.png"
 							alt=""
 						/>
@@ -37,9 +37,9 @@ const SkillPage = () => {
 							HTML5
 						</h1>
 					</CarouselItem>
-					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
+					<CarouselItem className="  mx-auto sm:ms-10 shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-full h-full sm:w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4 sm:h-[200px]   ">
 						<img
-							className="mx-auto text-center h-32  object-cover   w-32 "
+							className="mx-auto text-center sm:h-32   object-cover   sm:w-32 "
 							src="https://cdn-icons-png.flaticon.com/128/732/732190.png"
 							alt=""
 						/>

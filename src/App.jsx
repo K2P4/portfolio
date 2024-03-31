@@ -7,7 +7,7 @@ import { HomePage } from "./Page";
 
 const App = () => {
 	return (
-		<div className=" w-full h-screen mx-auto  ">
+		<div className=" sm:w-full sm:h-screen mx-auto  ">
 			<Routes>
 				<Route path="/" element={<NavComponent />} />
 			</Routes>

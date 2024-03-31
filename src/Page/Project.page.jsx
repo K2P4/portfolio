@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, Pagination } from "swiper/modules";
+import SwiperCore from "swiper";
+import { Keyboard, Autoplay, Pagination } from "swiper/modules";
 import "../../node_modules/swiper/swiper-bundle.min.css";
 import { motion } from "framer-motion";
 
@@ -36,9 +37,9 @@ const ProjectPage = () => {
 	}, []);
 
 	return (
-		<div className="flex flex-col gap-10 justify-center ContainerResponsive">
+		<div className="flex flex-col gap-14  sm:gap-10 justify-center ContainerResponsive">
 			<div className="flex justify-between items-center ">
-				<h1 className="text-2xl tracking-wide text-yellow-400 header">
+				<h1 className="sm:text-2xl text-xl tracking-wide text-yellow-400 header">
 					My Projects
 				</h1>
 
@@ -46,22 +47,31 @@ const ProjectPage = () => {
 					See All
 				</p>
 			</div>
+
 			<Swiper
 				id="project"
 				className={`w-full flex ${
 					showAnimation &&
 					"  animate__animated  animate__slideInRight  duration-1000 "
-				}   h-[450px] flex-row mySwiper items-center  `}
-				slidesPerView={3}
+				}  h-[360px]  sm:h-[450px] flex-row mySwiper items-center  `}
 				spaceBetween={30}
+				slidesPerView={1} // Default slidesPerView
+				breakpoints={{
+					768: {
+						slidesPerView: 3, // slidesPerView for screens wider than 768px
+					},
+				}}
+				pagination={{ clickable: true }}
+				centeredSlides={true}
+				autoplay={{
+					delay: 2500,
+					disableOnInteraction: false,
+				}}
 				keyboard={{
 					enabled: true,
 				}}
-				pagination={{
-					clickable: true,
-				}}
-				modules={[Keyboard, Pagination]}>
-				<SwiperSlide className="  h-[455px]  w-[35%] ">
+				modules={[Keyboard, Autoplay, Pagination]}>
+				<SwiperSlide className="  w-full sm:h-[455px]  sm:w-[35%] ">
 					<motion.div
 						whileHover={{
 							opacity: 0.7,
@@ -82,7 +92,7 @@ const ProjectPage = () => {
 							Sneaker Nikee
 						</h1>
 
-						<p className="h-20 text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className="h-20 text-sm sm:text-base text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 							Sneaker shopping cart website wtih colorful responsive design .
 						</p>
 
@@ -92,7 +102,7 @@ const ProjectPage = () => {
 					</motion.div>
 				</SwiperSlide>
 
-				<SwiperSlide className=" h-[455px]  w-[35%] ">
+				<SwiperSlide className=" w-full sm:h-[455px]  sm:w-[35%]">
 					<motion.div
 						whileHover={{
 							opacity: 0.7,
@@ -112,7 +122,7 @@ const ProjectPage = () => {
 							KOP Solutions
 						</h1>
 
-						<p className=" h-20 text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className=" h-20 text-sm sm:text-base text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 							That it's my student react shopping cart project with fetching
 							data api from fakestore api .
 						</p>
@@ -125,7 +135,7 @@ const ProjectPage = () => {
 					</motion.div>
 				</SwiperSlide>
 
-				<SwiperSlide className=" h-[455px] w-[35%] ">
+				<SwiperSlide className="  w-full sm:h-[455px]  sm:w-[35%]">
 					<motion.div
 						whileInView={{ opacity: 1 }}
 						initial={false}
@@ -147,7 +157,7 @@ const ProjectPage = () => {
 							Invoice App
 						</h1>
 
-						<p className="h-20 text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className="h-20 text-sm sm:text-base text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 							You can create, update,delete,manage and print products in this
 							app . and also calulate product price.
 						</p>
@@ -158,20 +168,18 @@ const ProjectPage = () => {
 					</motion.div>
 				</SwiperSlide>
 
-				<SwiperSlide className=" h-[455px] w-[35%] ">
+				<SwiperSlide className=" w-full sm:h-[455px]  sm:w-[35%]">
 					<motion.div
-						whileInView={{ opacity: 1 }}
-						initial={false}
 						whileHover={{
 							opacity: 0.7,
 							scale: 1.04,
 							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
 						}}
-						onMouseEnter={() => setToggleHover(true)}
-						onMouseLeave={() => setToggleHover(false)}
-						className=" shadow-gray-950 rounded-lg shadow-md bg-[#23053a]  ">
+						className="  m-auto rounded-lg  shadow-gray-950   shadow-md bg-[#23053a]  "
+						onMouseEnter={() => setHovered(true)}
+						onMouseLeave={() => setHovered(false)}>
 						<img
-							className="    h-[145px]   object-center     w-full rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
+							className="    object-cover  w-full  h-[54%]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
 							src="https://i.ibb.co/DkZLLsS/Japanese-Meal.png"
 							alt=""
 						/>
@@ -180,18 +188,18 @@ const ProjectPage = () => {
 							Japanese Meal
 						</h1>
 
-						<p className="h-20 text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className=" h-20 text-xs leading-6 sm:text-base text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 							You can find and Investigate about japanese meals and also learn
-							cooking recipe japanese style in this website .
+							cooking recipe japanese style in this website.
 						</p>
 
-						<button className="   textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
+						<button className="  textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
 							<a href="https://kop-japanese-meals.netlify.app/">View Project</a>
 						</button>
 					</motion.div>
 				</SwiperSlide>
 
-				<SwiperSlide className="  h-[455px]  w-[35%] ">
+				<SwiperSlide className="   w-full sm:h-[455px]  sm:w-[35%] ">
 					<motion.div
 						whileHover={{
 							opacity: 0.7,
@@ -203,17 +211,18 @@ const ProjectPage = () => {
 						onMouseEnter={() => setIsHovered(true)}
 						onMouseLeave={() => setIsHovered(false)}>
 						<img
-							className="     object-center  w-full  h-[145px]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95   "
+							className="   object-cover  w-full  h-[120px]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
 							src="https://i.ibb.co/PZMHdSz/desktop-design.jpg"
 							alt=""
 						/>
 
 						<h1 className=" text-yellow-400 header tracking-wider  font-semibold mx-auto text-center text-xl mt-3">
-							Sneaker Nikee
+							W .
 						</h1>
 
-						<p className="h-20 text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
-							Sneaker shopping cart website wtih colorful responsive design .
+						<p className="h-20 text-sm sm:text-base text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+							That it's simple project with using html css javascript &
+							bootstrap .
 						</p>
 
 						<button className="     textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">

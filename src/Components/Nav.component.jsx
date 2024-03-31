@@ -49,12 +49,12 @@ const NavComponent = () => {
 	};
 	return (
 		<div className="">
-			<div className="sm:w-[80%] w-[85%]  h-full m-auto ">
+			<div className="sm:w-[80%] w-[85%]  h-full mx-auto ">
 				<div
-					className={`flex ${
+					className={` ${
 						isFixed &&
-						"fixed top-0 left-0 w-[90%] px-8  sm:full    sm:px-32  mx-auto bg-[#200435]  duration-500     z-10 "
-					} py-5 justify-between items-center`}>
+						"fixed top-0 left-0  w-full    px-16   ps-9 sm:ps-32  sm:px-32  mx-auto bg-[#200435]  duration-500     z-10 "
+					} flex   py-5 justify-between items-center`}>
 					<h1
 						onClick={() => nav("/")}
 						className="flex  select-none items-center gap-0 sm:gap-1 text-xl text-yellow-400  header font-bold tracking-widest  ">
@@ -63,31 +63,6 @@ const NavComponent = () => {
 							<DiCodeigniter className=" w-4 " />
 						</span>
 					</h1>
-
-					{/* navigation menu */}
-					<div className="flex sm:hidden  text-center">
-						<button
-							className=" text-xl  flex  text-yellow-500  tracking-wide items-center font-bold "
-							type="button"
-							data-drawer-target="drawer-navigation"
-							data-drawer-show="drawer-navigation"
-							aria-controls="drawer-navigation">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								strokeWidth={1.5}
-								stroke="currentColor"
-								onClick={toggleMenu}
-								className="w-7 h-7">
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-								/>
-							</svg>
-						</button>
-					</div>
 
 					{/* toggle menu */}
 					{toggle && (
@@ -234,6 +209,31 @@ const NavComponent = () => {
 								<NavLink to="/">Contact</NavLink>
 							</li>
 						</ul>
+					</div>
+
+					{/* navigation menu */}
+					<div className="flex sm:hidden   text-center">
+						<button
+							className=" text-xl  flex  text-yellow-500  tracking-wide items-center font-bold "
+							type="button"
+							data-drawer-target="drawer-navigation"
+							data-drawer-show="drawer-navigation"
+							aria-controls="drawer-navigation">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={1.5}
+								stroke="currentColor"
+								onClick={toggleMenu}
+								className="w-7 h-7">
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+								/>
+							</svg>
+						</button>
 					</div>
 				</div>
 

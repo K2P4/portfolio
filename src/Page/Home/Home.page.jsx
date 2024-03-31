@@ -23,8 +23,8 @@ const HomePage = () => {
 	return (
 		<div
 			id="home"
-			className=" flex flex-col  justify-center sm:flex-row  sm:justify-between align-middle items-center sm:ContainerResponsive ">
-			<div className="      h-screen     sm:h-auto   mt-16 sm:mt-0 animate__animated animate__slideInLeft duration-1000 w-full sm:w-[50%] ">
+			className=" flex flex-col  h-screen   sm:h-auto justify-center sm:flex-row  sm:justify-between align-middle items-center sm:ContainerResponsive ">
+			<div className="  mb-auto    mt-24  sm:mb-0    sm:mt-0 animate__animated animate__slideInLeft duration-1000 w-full sm:w-[50%] ">
 				<h1 className="text-yellow-400 text-2xl  sm:text-3xl header font-bold tracking-widest">
 					Hello ! I'm <span className="text-gray-300 font-bold">KP</span>
 				</h1>
