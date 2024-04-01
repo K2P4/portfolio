@@ -129,7 +129,7 @@ const ContactPage = () => {
 					className={` cardFont ${
 						showAnimation &&
 						"animate__animated animate__slideInRight duration-1000"
-					}w-full sm:w-[50%]`}>
+					}w-full mt-4  sm:mt-0 sm:w-[50%]`}>
 					<Formik
 						validateOnChange={false}
 						validateOnBlur={false}

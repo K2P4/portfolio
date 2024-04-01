@@ -83,7 +83,7 @@ const ClientComponent = () => {
 						scale: 0.9,
 						boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
 					}}
-					className="sm:h-[400px]  h-[350px] py-3 px-3 shadow-gray-950 rounded-lg w-full sm:w-[30%] shadow-md bg-[#23053a]   ">
+					className=" sm:h-[440px]  h-[350px] py-3 px-3 shadow-gray-950 rounded-lg w-full sm:w-[30%] shadow-md bg-[#23053a]   ">
 					<img
 						className="   object-cover ring-2 ring-purple-950    text-center mx-auto    h-20 w-20 sm:h-24 sm:w-24 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
 						src="https://i.ibb.co/WWFHfFn/Aye.jpg"
