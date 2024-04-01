@@ -7,6 +7,7 @@ import { Button } from "../Components/ui/button";
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
+import { BottomComponent } from "../Components";
 
 const ContactPage = () => {
 	const [showAnimation, setShowAnimation] = useState(false);
@@ -212,7 +213,11 @@ const ContactPage = () => {
 					</Formik>
 				</div>
 			</div>
+
+			
 		</div>
+
+		
 	);
 };
 

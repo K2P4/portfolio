@@ -25,7 +25,7 @@ const SkillPage = () => {
 					}),
 				]}
 				className="  mt-10 sm:mt-16 flex  justify-center mx-auto  w-full  items-center ">
-				<CarouselContent className="    flex    items-center    gap-20 mx-auto  sm:gap-16 w-[80%] sm:w-[20%] ">
+				<CarouselContent className="    flex    items-center    gap-20 mx-auto  sm:gap-16 w-[90%] sm:w-[20%] ">
 					<CarouselItem className="  sm:ms-10 shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-full h-full sm:w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4 sm:h-[200px]  ">
 						<img
 							className="mx-auto text-center sm:h-32   object-cover   sm:w-32 "
@@ -116,8 +116,8 @@ const SkillPage = () => {
 					</CarouselItem>
 				</CarouselContent>
 
-				<CarouselPrevious className="bg-[#2c173b] duration-300 hover:bg-[#37174e] hover:border-[#37174e] border-[#2c173b]" />
-				<CarouselNext className="bg-[#2c173b] duration-300 hover:bg-[#37174e] hover:border-[#37174e] border-[#2c173b]" />
+				<CarouselPrevious className="sm:flex hidden bg-[#2c173b] duration-300 hover:bg-[#37174e] hover:border-[#37174e] border-[#2c173b]" />
+				<CarouselNext className="sm:flex hidden bg-[#2c173b] duration-300 hover:bg-[#37174e] hover:border-[#37174e] border-[#2c173b]" />
 			</Carousel>
 		</div>
 	);
