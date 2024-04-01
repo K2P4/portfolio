@@ -11,8 +11,7 @@ import { FaGithub } from "react-icons/fa";
 const HomePage = () => {
 	const downloadCV = () => {
 		// Replace 'your_cv.pdf' with the path to your CV file
-		const url =
-			"https://drive.google.com/file/d/1AnzYujI1lOqrZVg1PLqtZw1TmYYErG9L/view";
+		const url = "https://i.ibb.co/cJ2k4Nd/Phyo-Thura-CV-pdf-intern-1.png";
 		const link = document.createElement("a");
 		link.href = url;
 		link.setAttribute("download", "Phyo Thura.png"); // Change the filename as necessary
@@ -20,6 +19,8 @@ const HomePage = () => {
 		link.click();
 		document.body.removeChild(link);
 	};
+
+	
 	return (
 		<div
 			id="home"
