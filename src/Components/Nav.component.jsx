@@ -54,7 +54,7 @@ const NavComponent = () => {
 				<div
 					className={` ${
 						isFixed &&
-						"fixed top-0 left-0  w-full    pe-9   ps-9 sm:ps-32 sm:pe-0 sm:px-32  mx-auto bg-[#200435]  duration-500      z-10 "
+						"fixed top-0 left-0  w-full    pe-9   ps-9 sm:ps-32 sm:pe-0 sm:px-32  mx-auto bg-[#200435]  duration-500      z-20 "
 					} flex   py-5 justify-between items-center`}>
 					<h1
 						onClick={() => nav("/")}
@@ -67,7 +67,9 @@ const NavComponent = () => {
 
 					{/* toggle menu */}
 					{toggle && (
-						<div className="fixed  duration-700  bg-[#26063f]  animate__animated  animate__bounceInLeft  top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform  w-64 dark:bg-gray-800">
+						<div
+							
+							className={`fixed  duration-700  bg-[#26063f]  animate__animated  animate__bounceInLeft  top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform w-64 dark:bg-gray-800`}>
 							<h5 className="text-xl mt-3 tracking-wide font-semibold text-yellow-500 uppercase dark:text-gray-400">
 								Menu
 							</h5>
