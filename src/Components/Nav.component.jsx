@@ -54,7 +54,7 @@ const NavComponent = () => {
 				<div
 					className={` ${
 						isFixed &&
-						"fixed top-0 left-0  w-full    pe-9   ps-9 sm:ps-32 sm:pe-0 sm:px-32  mx-auto bg-[#200435]  duration-500      z-20 "
+						"fixed top-0 left-0  w-full    pe-9   ps-9  sm:pe-32 sm:px-32  mx-auto bg-[#200435]  duration-500      z-20 "
 					} flex   py-5 justify-between items-center`}>
 					<h1
 						onClick={() => nav("/")}
