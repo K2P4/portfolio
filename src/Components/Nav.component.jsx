@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { ContactPage, HomePage, ProjectPage, ServicePage } from "../Page";
 import AboutPage from "../Page/About.page";
@@ -14,6 +14,8 @@ import BottomComponent from "./Bottom.component";
 const NavComponent = () => {
 	const [toggle, settoggle] = useState(false);
 	const [isFixed, setIsFixed] = useState(false);
+	const MenuRef = useRef();
+
 	const nav = useNavigate();
 
 	useEffect(() => {
@@ -25,10 +27,17 @@ const NavComponent = () => {
 			}
 		};
 
-		window.addEventListener("scroll", handleScroll);
+		const handleMouse = (e) => {
+			if (!MenuRef.current.contains(e.target)) {
+				settoggle(false);
+			}
+		};
 
+		window.addEventListener("scroll", handleScroll);
+		window.addEventListener("mousedown", handleMouse);
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
+			window.addEventListener("mousedown", handleMouse);
 		};
 	}, []);
 
@@ -54,7 +63,7 @@ const NavComponent = () => {
 				<div
 					className={` ${
 						isFixed &&
-						"fixed top-0 left-0  w-full    pe-9   ps-9  sm:pe-32 sm:px-32  mx-auto bg-[#200435]  duration-500      z-20 "
+						"fixed top-0 left-0  w-full    pe-9   ps-9  sm:pe-32 sm:px-32  mx-auto bg-[#200435]  duration-500      z-30 "
 					} flex   py-5 justify-between items-center`}>
 					<h1
 						onClick={() => nav("/")}
@@ -68,7 +77,7 @@ const NavComponent = () => {
 					{/* toggle menu */}
 					{toggle && (
 						<div
-							
+							ref={MenuRef}
 							className={`fixed  duration-700  bg-[#26063f]  animate__animated  animate__bounceInLeft  top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform w-64 dark:bg-gray-800`}>
 							<h5 className="text-xl mt-3 tracking-wide font-semibold text-yellow-500 uppercase dark:text-gray-400">
 								Menu
@@ -143,7 +152,7 @@ const NavComponent = () => {
 
 									<li>
 										<a
-											onClick={() => scrollToSection("about")}
+											onClick={() => scrollToSection("about2")}
 											className="flex items-center p-2  hover:bg-purple-950   rounded-lg dark:text-white  dark:hover:bg-gray-700 group">
 											<svg
 												xmlns="http://www.w3.org/2000/svg"

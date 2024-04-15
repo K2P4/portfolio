@@ -26,7 +26,7 @@ const HomePage = () => {
 			id="home"
 			className=" flex flex-col  h-screen   sm:h-auto justify-center sm:flex-row  sm:justify-between align-middle items-center sm:ContainerResponsive ">
 			<div className="  mb-auto    mt-24  sm:mb-0    sm:mt-0 animate__animated animate__slideInLeft duration-1000 w-full sm:w-[50%] ">
-				<h1 className="text-yellow-400 text-3xl  sm:text-3xl header font-bold tracking-widest">
+				<h1 className="text-yellow-400  text-3xl sm:text-3xl header font-bold tracking-widest">
 					Hello ! I'm <span className="text-gray-300 font-bold">KP</span>
 				</h1>
 
@@ -34,29 +34,29 @@ const HomePage = () => {
 					<span className="">Junior Web</span> Frontend-Developer
 				</h1>
 
-				<p className=" mt-3 sm:mt-5 text-sm  sm:text-base text-justify sm:text-pretty w-full sm:w-[80%] text-gray-300 font-medium tracking-wide  leading-6 sm:leading-8">
+				<p className=" mt-6 sm:mt-5 text-md  sm:text-base text-justify sm:text-pretty w-full sm:w-[80%] text-gray-300 font-medium tracking-wide  leading-6 sm:leading-8">
 					To Be a Web Developer is so amazing career . I can help everyone build
 					their business. it such happiness for me.So let me to help you !
 				</p>
 
-				<div className="flex mt-7   sm:justify-normal sm:mt-7 items-center gap-4 ">
-					<button className=" text-sm sm:text-base   cardFont font-bold  bg-[#ffcc23]   rounded-lg sm:last:px-7 active:scale-95 px-6  hover:bg-yellow-300 duration-500 py-2">
+				<div className="flex mt-8   sm:justify-normal sm:mt-7 items-center gap-4 ">
+					<button className=" text-md sm:text-base   cardFont font-bold  bg-[#ffcc23]   rounded-lg px-7 active:scale-95   hover:bg-yellow-300 duration-500 py-2">
 						Hire Me
 					</button>
 
 					<button
 						onClick={downloadCV}
-						className=" text-sm  sm:text-base cardFont font-medium  border border-[#ffcc23]  text-yellow-400   rounded-lg px-5 active:scale-95 hover:bg-[#ffcc23] hover:text-black  transition-transform  duration-500 py-2">
+						className=" text-md  sm:text-base cardFont font-medium  border border-[#ffcc23]  text-yellow-400   px-6 rounded-lg sm:px-5 active:scale-95 hover:bg-[#ffcc23] hover:text-black  transition-transform  duration-500 py-2">
 						Download CV
 					</button>
 				</div>
 
-				<div className="flex gap-6 sm:gap-6 mt-6   sm:mt-7">
-					<FaFacebookF className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
-					<AiFillInstagram className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
-					<FaDiscord className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
-					<FaLinkedinIn className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
-					<FaGithub className="bg-yellow-400  rounded-full  h-8 p-1 w-8   active:scale-95  " />
+				<div className="flex gap-6 sm:gap-6   mt-7">
+					<FaFacebookF className="bg-yellow-400  rounded-full sm:h-9 sm:w-9  h-10 p-1 w-10   active:scale-95  " />
+					<AiFillInstagram className="bg-yellow-400  rounded-full   sm:h-9 sm:w-9 h-10 p-1 w-10   active:scale-95  " />
+					<FaDiscord className="bg-yellow-400  rounded-full  sm:h-9 sm:w-9 h-10 p-1 w-10   active:scale-95  " />
+					<FaLinkedinIn className="bg-yellow-400  rounded-full sm:h-9 sm:w-9  h-10 p-1 w-10   active:scale-95  " />
+					<FaGithub className="bg-yellow-400  rounded-full  sm:h-9 sm:w-9 h-10 p-1 w-10   active:scale-95  " />
 				</div>
 			</div>
 
