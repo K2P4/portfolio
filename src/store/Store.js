@@ -1,12 +1,12 @@
 /** @format */
 
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { configureStore } from "@reduxjs/toolkit";
+import { ApiService } from "./ApiService";
 
-export const ApiService = createApi({
-	reducerPath: "api",
-	baseQuery: fetchBaseQuery({
-		baseUrl: "https://pokeapi.co/api/v2/",
-	}),
-
-    endpoints: () => ({})
+export const store = configureStore({
+	reducer: {
+		[ApiService.reducerPath]: ApiService.reducer,
+	},
+	middleware: (getDefaultMiddleware) =>
+		getDefaultMiddleware().concat(ApiService.middleware),
 });

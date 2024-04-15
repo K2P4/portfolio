@@ -4,13 +4,16 @@ import React, { useEffect, useState } from "react";
 
 import { Label } from "../Components/ui/label";
 import { Button } from "../Components/ui/button";
-
+import { Loader2 } from "lucide-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import { BottomComponent } from "../Components";
+import { useCreateMutation } from "../store/endpoints/contact";
 
 const ContactPage = () => {
 	const [showAnimation, setShowAnimation] = useState(false);
+	const [CreateFun, { data,isLoading }] = useCreateMutation();
+
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -39,10 +42,11 @@ const ContactPage = () => {
 		typing: "",
 	};
 
-	const handleSubmit = async (value, action) => {
+	const handleSubmit = async (value) => {
 		console.log(value);
-
-	action.reset();
+		CreateFun(value);
+		
+		
 	};
 
 	const validationSchema = yup.object({
@@ -50,10 +54,9 @@ const ContactPage = () => {
 			.string()
 			.required("email is required")
 			.email("invalid email format"),
-		name: yup
-			.string()
-			.required("name is required")
-			.min("name is must be 2 letter at least "),
+		name: yup.string().required("name is required"),
+
+		typing: yup.string(),
 	});
 
 	return (
@@ -155,7 +158,7 @@ const ContactPage = () => {
 										<ErrorMessage
 											component={"p"}
 											name="name"
-											className="text-red-500 text-sm font-medium"
+											className="text-orange-500 text-sm font-medium"
 										/>
 									</div>
 
@@ -174,7 +177,7 @@ const ContactPage = () => {
 										<ErrorMessage
 											component={"p"}
 											name="password"
-											className="text-red-500 text-sm font-medium"
+											className="text-orange-500 text-sm font-medium"
 										/>
 									</div>
 
@@ -193,7 +196,7 @@ const ContactPage = () => {
 										<ErrorMessage
 											component={"p"}
 											name="typing"
-											className="text-red-500 text-sm font-medium"
+											className="text-orange-500 text-sm font-medium"
 										/>
 									</div>
 
@@ -201,8 +204,8 @@ const ContactPage = () => {
 										disabled={isSubmitting}
 										type="submit"
 										className="text-black ms-auto cardFont  active:scale-95 sm:mt-5  mt-3 bg-yellow-500 sm:w-[30%]  hover:bg-yellow-500 rounded-lg   text-center  font-semibold">
-										{isSubmitting ? (
-											<Loader2 className=" mr-2 h-4 w-4 animate-spin" />
+										{isLoading ? (
+											<Loader2 className=" mr-2 text-white h-5 w-5 animate-spin" />
 										) : (
 											<> Send Message</>
 										)}
@@ -213,11 +216,7 @@ const ContactPage = () => {
 					</Formik>
 				</div>
 			</div>
-
-			
 		</div>
-
-		
 	);
 };
 

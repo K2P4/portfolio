@@ -53,11 +53,11 @@ const ClientComponent = () => {
 					className="sm:h-[400px] h-[300px] py-3 px-3 shadow-gray-950 rounded-lg w-full sm:w-[30%] shadow-md bg-[#23053a]  ">
 					<img
 						className="   object-cover ring-2 ring-purple-950    text-center mx-auto    h-20 w-20 sm:h-24 sm:w-24 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
-						src="https://i.ibb.co/7KqJZ62/Phyo.jpg"
+						src="https://i.ibb.co/7pnY8Cb/min-thu-khant.jpg"
 						alt=""
 					/>
 					<h1 className=" text-gray-300 text-md  my-2 header tracking-wider  font-semibold mx-auto text-center sm:text-xl mt-3">
-						Phyo Thura
+						Min Thu Khant
 					</h1>
 
 					<div className="flex sm:gap-3  gap-2 items-center  justify-center">
@@ -83,7 +83,7 @@ const ClientComponent = () => {
 						scale: 0.9,
 						boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
 					}}
-					className=" sm:h-[440px]  h-[350px] py-3 px-3 shadow-gray-950 rounded-lg w-full sm:w-[30%] shadow-md bg-[#23053a]   ">
+					className=" sm:h-[470px]  h-[350px] py-3 px-3 shadow-gray-950 rounded-lg w-full sm:w-[30%] shadow-md bg-[#23053a]   ">
 					<img
 						className="   object-cover ring-2 ring-purple-950    text-center mx-auto    h-20 w-20 sm:h-24 sm:w-24 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
 						src="https://i.ibb.co/WWFHfFn/Aye.jpg"
@@ -103,7 +103,7 @@ const ClientComponent = () => {
 						))}
 					</div>
 
-					<p className="h-20 text-justify text-xs sm:text-base  text-gray-400 leading-6  sm:my-4 sm:px-2  mx-auto tracking-wide cardFont ">
+					<p className="h-20  sm:text-justify text-xs sm:text-base  text-gray-400 leading-6  sm:my-4 sm:px-2  mx-auto tracking-wide cardFont ">
 						Working with KP was an absolute delight! He is not only brought our
 						vision to life but also added their own creative flair, resulting in
 						a website that exceeded our expectations. Their professionalism,
