@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { WebLottie } from "../../Components";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn, FaDiscord } from "react-icons/fa6";
@@ -9,6 +9,51 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 
 const HomePage = () => {
+	const [loopNum, setLoopNum] = useState(0);
+	const [isDeleting, setIsDeleting] = useState(false);
+	const [text, setText] = useState("");
+	const [delta, setDelta] = useState(300 - Math.random() * 100);
+	const [index, setIndex] = useState(1);
+	const toRotate = ["Web Frontend-Developer", "Web Designer", "UI/UX Designer"];
+	const period = 2000;
+
+	useEffect(() => {
+		let ticker = setInterval(() => {
+			tick();
+		}, delta);
+
+		return () => {
+			clearInterval(ticker);
+		};
+	}, [text]);
+
+	const tick = () => {
+		let i = loopNum % toRotate.length;
+		let fullText = toRotate[i];
+		let updatedText = isDeleting
+			? fullText.substring(0, text.length - 1)
+			: fullText.substring(0, text.length + 1);
+
+		setText(updatedText);
+
+		if (isDeleting) {
+			setDelta((prevDelta) => prevDelta / 2);
+		}
+
+		if (!isDeleting && updatedText === fullText) {
+			setIsDeleting(true);
+			setIndex((prevIndex) => prevIndex - 1);
+			setDelta(period);
+		} else if (isDeleting && updatedText === "") {
+			setIsDeleting(false);
+			setLoopNum(loopNum + 1);
+			setIndex(1);
+			setDelta(500);
+		} else {
+			setIndex((prevIndex) => prevIndex + 1);
+		}
+	};
+
 	const downloadCV = () => {
 		// Replace 'your_cv.pdf' with the path to your CV file
 		const url = "https://i.ibb.co/cJ2k4Nd/Phyo-Thura-CV-pdf-intern-1.png";
@@ -20,18 +65,22 @@ const HomePage = () => {
 		document.body.removeChild(link);
 	};
 
-	
 	return (
 		<div
 			id="home"
 			className=" flex flex-col  h-screen   sm:h-auto justify-center sm:flex-row  sm:justify-between align-middle items-center sm:ContainerResponsive ">
 			<div className="  mb-auto    mt-24  sm:mb-0    sm:mt-0 animate__animated animate__slideInLeft duration-1000 w-full sm:w-[50%] ">
-				<h1 className="text-yellow-400  text-3xl sm:text-3xl header font-bold tracking-widest">
+				<h1 className="text-yellow-400  text-3xl sm:text-4xl header font-bold tracking-widest">
 					Hello ! I'm <span className="text-gray-300 font-bold">KP</span>
 				</h1>
 
-				<h1 className="text-yellow-400 my-1 sm:my-2 text-3xl sm:text-2xl header font-bold tracking-widest">
-					<span className="">Junior Web</span> Frontend-Developer
+				<h1 className="text-yellow-400 my-1 sm:my-2 text-3xl sm:text-3xl header font-bold tracking-widest">
+					<span
+						className="txt-rotate"
+						dataPeriod="800"
+						data-rotate='[ "Web Frontend-Developer", "Web Designer", "UI/UX Designer" ]'>
+						<span className="wrap text">Junior {text}</span>
+					</span>
 				</h1>
 
 				<p className=" mt-6 sm:mt-5 text-md  sm:text-base text-justify sm:text-pretty w-full sm:w-[80%] text-gray-300 font-medium tracking-wide  leading-6 sm:leading-8">
