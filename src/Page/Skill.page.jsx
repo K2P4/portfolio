@@ -13,7 +13,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 const SkillPage = () => {
 	return (
-		<div className="ContainerResponsive  gap-14 sm:gap-0 flex flex-col justify-center   ">
+		<div className="ContainerResponsive select-none gap-14 sm:gap-0 flex flex-col justify-center   ">
 			<h1 className="text-yellow-400     sm:ms-10 sm:mb-10   mt-60 sm:mt-0  text-2xl  sm:text-3xl header border-b-2 sm:w-[13%] border-b-yellow-400 pb-1">
 				Skill-Set
 			</h1>
@@ -95,12 +95,12 @@ const SkillPage = () => {
 					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
 						<img
 							className="mx-auto text-center h-32  object-cover   w-32 "
-							src="https://cdn-icons-png.flaticon.com/128/15466/15466163.png"
+							src="https://cdn-icons-png.flaticon.com/128/2111/2111432.png"
 							alt=""
 						/>
 
 						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
-							GIT
+							GIT HUB
 						</h1>
 					</CarouselItem>
 					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
@@ -112,6 +112,28 @@ const SkillPage = () => {
 
 						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
 							API
+						</h1>
+					</CarouselItem>
+					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
+						<img
+							className="mx-auto text-center h-32  object-cover   w-32 "
+							src="https://cdn-icons-png.flaticon.com/128/5968/5968705.png"
+							alt=""
+						/>
+
+						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
+							FIGMA
+						</h1>
+					</CarouselItem>
+					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
+						<img
+							className="mx-auto text-center h-32  object-cover   w-32 "
+							src="https://cdn-icons-png.flaticon.com/128/5968/5968332.png"
+							alt=""
+						/>
+
+						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
+							PHP
 						</h1>
 					</CarouselItem>
 				</CarouselContent>
