@@ -14,12 +14,15 @@ import BottomComponent from "./Bottom.component";
 const NavComponent = () => {
 	const [toggle, settoggle] = useState(false);
 	const [isFixed, setIsFixed] = useState(false);
+	const [activeSection, setActiveSection] = useState("home");
+
 	const MenuRef = useRef();
 
 	const nav = useNavigate();
 
 	useEffect(() => {
 		const handleScroll = () => {
+			 const sections = ["home", "service", "about", "contact"];
 			if (window.scrollY > 500) {
 				setIsFixed(true);
 			} else {
@@ -57,6 +60,7 @@ const NavComponent = () => {
 			element.scrollIntoView({ behavior: "smooth" });
 		}
 	};
+
 	return (
 		<div className="">
 			<div className=" sm:w-[80%]  w-[90%]  h-full  mx-auto ">
@@ -243,27 +247,27 @@ const NavComponent = () => {
 						<ul className="flex   space-x-7">
 							<li
 								onClick={() => scrollToSection("home")}
-								className=" text-gray-400  tracking-wide select-none hover:text-yellow-400  font-medium   hover:border-b transition-transform  duration-500  hover:border-b-yellow-400  active:text-yellow-500   ">
+								className="  text-gray-400 select-pointer  tracking-wide select-none hover:text-yellow-400  font-medium   hover:border-b transition-transform  duration-500  hover:border-b-yellow-400  active:text-yellow-500   ">
 								Home
 							</li>
 							<li
 								onClick={() => scrollToSection("about")}
-								className=" text-gray-400  tracking-wide select-none hover:text-yellow-400  font-medium   hover:border-b  transition-transform  duration-500  hover:border-b-yellow-400  active:text-yellow-500   ">
+								className=" text-gray-400 select-pointer  tracking-wide select-none hover:text-yellow-400  font-medium   hover:border-b  transition-transform  duration-500  hover:border-b-yellow-400  active:text-yellow-500   ">
 								About
 							</li>
 							<li
 								onClick={() => scrollToSection("service")}
-								className=" text-gray-400  tracking-wide select-none hover:text-yellow-400  font-medium   hover:border-b  transition-transform  duration-500  hover:border-b-yellow-400  active:text-yellow-500   ">
+								className=" text-gray-400 select-pointer  tracking-wide select-none hover:text-yellow-400  font-medium   hover:border-b  transition-transform  duration-500  hover:border-b-yellow-400  active:text-yellow-500   ">
 								Service
 							</li>
 							<li
 								onClick={() => scrollToSection("project")}
-								className=" text-gray-400  tracking-wide select-none hover:text-yellow-400  font-medium   hover:border-b transition-transform  duration-500  hover:border-b-yellow-400  active:text-yellow-500   ">
+								className=" text-gray-400 select-pointer  tracking-wide select-none hover:text-yellow-400  font-medium   hover:border-b transition-transform  duration-500  hover:border-b-yellow-400  active:text-yellow-500   ">
 								Project
 							</li>
 							<li
 								onClick={() => scrollToSection("contact")}
-								className=" text-gray-400  tracking-wide select-none hover:text-yellow-400  font-medium   hover:hover:border-b  transition-transform  duration-500  hover:border-b-yellow-400  active:text-yellow-500   ">
+								className=" text-gray-400 select-pointer  tracking-wide select-none hover:text-yellow-400  font-medium   hover:hover:border-b  transition-transform  duration-500  hover:border-b-yellow-400  active:text-yellow-500   ">
 								<NavLink to="/">Contact</NavLink>
 							</li>
 						</ul>

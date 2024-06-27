@@ -7,13 +7,19 @@ import SwiperCore from "swiper";
 import { Keyboard, Autoplay, Pagination } from "swiper/modules";
 import "../../node_modules/swiper/swiper-bundle.min.css";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const ProjectPage = () => {
 	const [isHovered, setIsHovered] = useState(false);
+	const nav = useNavigate();
 	const [hover, setHovered] = useState(false);
 	const [showAnimation, setShowAnimation] = useState(false);
 
 	const [toggleHover, setToggleHover] = useState(false);
+
+	const hanldeProject = (path) => {
+		nav(path);
+	};
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -64,18 +70,18 @@ const ProjectPage = () => {
 				pagination={{ clickable: true }}
 				centeredSlides={true}
 				autoplay={{
-					delay: 2500,
+					delay: 3500,
 					disableOnInteraction: false,
 				}}
 				keyboard={{
 					enabled: true,
 				}}
 				modules={[Keyboard, Autoplay, Pagination]}>
-				<SwiperSlide className="  w-full sm:h-[455px]  sm:w-[35%] ">
+				<SwiperSlide className="  w-full sm:h-[455px]     sm:w-[35%] ">
 					<motion.div
 						whileHover={{
 							opacity: 0.7,
-							scale: 1.04,
+							scale: 1.02,
 
 							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
 						}}
@@ -96,13 +102,13 @@ const ProjectPage = () => {
 							Sneaker shopping cart website wtih colorful responsive design .
 						</p>
 
-						<button className="     textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-							<a href="https://kp-nikeyy.netlify.app/">View Project</a>
+						<button className="  select-pointer    textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
+							<a href="https://nikke-chi.vercel.app/">View Project</a>
 						</button>
 					</motion.div>
 				</SwiperSlide>
 
-				<SwiperSlide className=" w-full sm:h-[455px]  sm:w-[35%]">
+				<SwiperSlide className=" w-full sm:h-[455px]     sm:w-[35%]">
 					<motion.div
 						whileHover={{
 							opacity: 0.7,
@@ -127,7 +133,7 @@ const ProjectPage = () => {
 							data api from fakestore api .
 						</p>
 
-						<button className="  textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
+						<button className="  select-pointer   textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
 							<a href="https://main--kop-shoppingcart.netlify.app/">
 								View Project
 							</a>
@@ -135,7 +141,7 @@ const ProjectPage = () => {
 					</motion.div>
 				</SwiperSlide>
 
-				<SwiperSlide className="  w-full sm:h-[455px]  sm:w-[35%]">
+				<SwiperSlide className="  w-full sm:h-[455px]     sm:w-[35%]">
 					<motion.div
 						whileInView={{ opacity: 1 }}
 						initial={false}
@@ -162,13 +168,15 @@ const ProjectPage = () => {
 							app . and also calulate product price.
 						</p>
 
-						<button className="   textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-							<a href="https://kop-inoviceapp.netlify.app/">View Project</a>
+						<button className=" select-pointer   textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
+							<a href="https://invoice-app-nu-pearl.vercel.app/">
+								View Project
+							</a>
 						</button>
 					</motion.div>
 				</SwiperSlide>
 
-				<SwiperSlide className=" w-full sm:h-[455px]  sm:w-[35%]">
+				<SwiperSlide className=" w-full sm:h-[455px]     sm:w-[35%]">
 					<motion.div
 						whileHover={{
 							opacity: 0.7,
@@ -193,13 +201,47 @@ const ProjectPage = () => {
 							cooking recipe japanese style in this website.
 						</p>
 
-						<button className="  textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
+						<button className=" select-pointer  textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
 							<a href="https://kop-japanese-meals.netlify.app/">View Project</a>
 						</button>
 					</motion.div>
 				</SwiperSlide>
 
-				<SwiperSlide className="   w-full sm:h-[455px]  sm:w-[35%] ">
+				<SwiperSlide className=" w-full sm:h-[455px]     sm:w-[35%]">
+					<motion.div
+						whileHover={{
+							opacity: 0.7,
+							scale: 1.04,
+							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
+						}}
+						className="  m-auto rounded-lg  shadow-gray-950   shadow-md bg-[#23053a]  "
+						onMouseEnter={() => setHovered(true)}
+						onMouseLeave={() => setHovered(false)}>
+						<img
+							className="    object-cover  w-full  h-[54%]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
+							src="https://i.ibb.co/02Rt1BG/Screenshot-2024-06-27-195000.png"
+							alt=""
+						/>
+
+						<h1 className=" text-yellow-400 header tracking-wider  font-semibold mx-auto text-center text-xl mt-3">
+							CONTACT APP
+						</h1>
+
+						<p className=" h-20 text-xs leading-6 sm:text-base text-gray-400 my-4 px-2  mx-auto tracking-tight cardFont text-center">
+							You can save data contact information and also update delete
+							contact data . Before do it, you need to register and sign in
+							acount .
+						</p>
+
+						<button className="select-pointer   textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
+							<a href="https://student-project-with-contact-app.vercel.app/">
+								View Project
+							</a>
+						</button>
+					</motion.div>
+				</SwiperSlide>
+
+				<SwiperSlide className="   w-full sm:h-[455px]     sm:w-[35%] ">
 					<motion.div
 						whileHover={{
 							opacity: 0.7,
@@ -225,7 +267,7 @@ const ProjectPage = () => {
 							bootstrap .
 						</p>
 
-						<button className="     textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
+						<button className="select-pointer      textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
 							<a href="https://markyk2.netlify.app/">View Project</a>
 						</button>
 					</motion.div>

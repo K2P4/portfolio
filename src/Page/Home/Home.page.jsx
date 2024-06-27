@@ -14,7 +14,7 @@ const HomePage = () => {
 	const [text, setText] = useState("");
 	const [delta, setDelta] = useState(300 - Math.random() * 100);
 	const [index, setIndex] = useState(1);
-	const toRotate = ["Web Frontend-Developer", "Web Designer", "UI/UX Designer"];
+	const toRotate = ["Web Frontend-Developer", "Web Backend-Developer", "UI/UX Designer"];
 	const period = 2000;
 
 	useEffect(() => {
@@ -56,7 +56,7 @@ const HomePage = () => {
 
 	const downloadCV = () => {
 		// Replace 'your_cv.pdf' with the path to your CV file
-		const url = "https://i.ibb.co/cJ2k4Nd/Phyo-Thura-CV-pdf-intern-1.png";
+		const url = "https://i.ibb.co/19HJxCt/Professional-Modern-CV-Resume.png";
 		const link = document.createElement("a");
 		link.href = url;
 		link.setAttribute("download", "Phyo Thura.png"); // Change the filename as necessary
