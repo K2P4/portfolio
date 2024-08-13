@@ -202,7 +202,7 @@ const ProjectPage = () => {
 						</p>
 
 						<button className=" select-pointer  textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-							<a href="https://kop-japanese-meals.netlify.app/">View Project</a>
+							<a target="_blank" href="https://kop-japanese-meals.netlify.app/">View Project</a>
 						</button>
 					</motion.div>
 				</SwiperSlide>
