@@ -103,7 +103,7 @@ const ProjectPage = () => {
 						</p>
 
 						<button className="  select-pointer    textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-							<a href="https://nikke-chi.vercel.app/">View Project</a>
+							<a  target="_blank" href="https://nikke-chi.vercel.app/">View Project</a>
 						</button>
 					</motion.div>
 				</SwiperSlide>
@@ -134,7 +134,7 @@ const ProjectPage = () => {
 						</p>
 
 						<button className="  select-pointer   textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-							<a href="https://main--kop-shoppingcart.netlify.app/">
+							<a target="_blank" href="https://main--kop-shoppingcart.netlify.app/">
 								View Project
 							</a>
 						</button>
@@ -169,7 +169,7 @@ const ProjectPage = () => {
 						</p>
 
 						<button className=" select-pointer   textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-							<a href="https://invoice-app-nu-pearl.vercel.app/">
+							<a target="_blank" href="https://invoice-app-nu-pearl.vercel.app/">
 								View Project
 							</a>
 						</button>
@@ -234,7 +234,7 @@ const ProjectPage = () => {
 						</p>
 
 						<button className="select-pointer   textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-							<a href="https://student-project-with-contact-app.vercel.app/">
+							<a target="_blank" href="https://student-project-with-contact-app.vercel.app/">
 								View Project
 							</a>
 						</button>
@@ -268,7 +268,7 @@ const ProjectPage = () => {
 						</p>
 
 						<button className="select-pointer      textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
-							<a href="https://markyk2.netlify.app/">View Project</a>
+							<a target="_blank" href="https://markyk2.netlify.app/">View Project</a>
 						</button>
 					</motion.div>
 				</SwiperSlide>
