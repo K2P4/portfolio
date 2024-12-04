@@ -45,6 +45,11 @@ const ContactPage = () => {
 	const handleSubmit = async (value) => {
 		console.log(value);
 		CreateFun(value);
+
+		value.email = "";
+		value.name = "";
+		value.typing = "";
+		
 		
 		
 	};
