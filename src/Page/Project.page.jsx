@@ -1,4 +1,4 @@
-/** @format */
+LP/** @format */
 
 import React, { useEffect, useState } from "react";
 
@@ -100,7 +100,7 @@ const ProjectPage = () => {
 						</h1>
 
 						<p className="h-20 text-sm sm:text-base text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
-							Zoya blog website is blog content website inspire from react project library . It has more content and video blogs on this website . 
+							Zoya blog website is blog content website inspire from react project library.It has more content blogs on this website. 
 						</p>
 
 						<button className="  select-pointer    textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
@@ -251,7 +251,7 @@ const ProjectPage = () => {
 						onMouseEnter={() => setHovered(true)}
 						onMouseLeave={() => setHovered(false)}>
 						<img
-							className="    object-cover  w-full  h-[54%]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
+							className="   object-cover  w-full  h-[54%]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
 							src="https://i.ibb.co/02Rt1BG/Screenshot-2024-06-27-195000.png"
 							alt=""
 						/>
