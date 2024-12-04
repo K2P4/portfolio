@@ -77,6 +77,39 @@ const ProjectPage = () => {
 					enabled: true,
 				}}
 				modules={[Keyboard, Autoplay, Pagination]}>
+
+				<SwiperSlide className="  w-full sm:h-[455px]     sm:w-[35%] ">
+					<motion.div
+						whileHover={{
+							opacity: 0.7,
+							scale: 1.02,
+
+							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
+						}}
+						className=" rounded-lg shadow-md shadow-gray-950 bg-[#23053a]  "
+						onMouseEnter={() => setIsHovered(true)}
+						onMouseLeave={() => setIsHovered(false)}>
+						<img
+							className="   object-center  w-full  h-[55%]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
+							src="https://i.ibb.co/fN0ydCg/Screenshot-2024-12-04-190659.png"
+							alt=""
+						/>
+
+						<h1 className=" text-yellow-400 header tracking-wider  font-semibold mx-auto text-center text-xl mt-3">
+							Zoya Blog
+						</h1>
+
+						<p className="h-20 text-sm sm:text-base text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+							Zoya blog website is blog content website inspire from react project library . It has more content and video blogs on this website . 
+						</p>
+
+						<button className="  select-pointer    textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
+							<a target="_blank" href="https://zoya-blog.vercel.app/">
+								View Project
+							</a>
+						</button>
+					</motion.div>
+				</SwiperSlide>
 				<SwiperSlide className="  w-full sm:h-[455px]     sm:w-[35%] ">
 					<motion.div
 						whileHover={{
