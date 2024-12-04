@@ -286,7 +286,7 @@ const ProjectPage = () => {
 						onMouseEnter={() => setIsHovered(true)}
 						onMouseLeave={() => setIsHovered(false)}>
 						<img
-							className="   object-cover  w-full  h-[120px] sm:h-[151px] rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
+							className="   object-cover  w-full  h-[54%]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95      "
 							src="https://i.ibb.co/PZMHdSz/desktop-design.jpg"
 							alt=""
 						/>
