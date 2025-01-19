@@ -751,9 +751,8 @@ const AboutPage = () => {
 
 						<p className=" mt-5  leading-8 text-md font-medium text-gray-300 tracking-wide text-justify ">
 							{" "}
-							I am <span className=" tracking-widest text-yellow-400">KP</span>,
-							web developer from Myanmar. Currently I have been working in Yoma
-							Bank with business development specialist opreation . I have 2
+							Hello I am <span className=" tracking-widest text-yellow-400 font-bold">KP</span>. Currently I have been working as a  
+							Warehouse office executive position  in logistic company. I have 2
 							years + experience in Customer Service Field & Banking Field.
 							Since I was young, my hobby has been to become a web developer,
 							and I am still trying to make my dreams come true .

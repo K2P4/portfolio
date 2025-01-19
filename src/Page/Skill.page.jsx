@@ -136,6 +136,18 @@ const SkillPage = () => {
 							PHP
 						</h1>
 					</CarouselItem>
+
+					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
+						<img
+							className="mx-auto text-center h-32  object-cover   w-32 "
+							src="https://icon.icepanel.io/Technology/svg/Laravel.svg"
+							alt=""
+						/>
+
+						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
+							Laravel
+						</h1>
+					</CarouselItem>
 				</CarouselContent>
 
 				<CarouselPrevious className="sm:flex hidden bg-[#2c173b] duration-300 hover:bg-[#37174e] hover:border-[#37174e] border-[#2c173b]" />

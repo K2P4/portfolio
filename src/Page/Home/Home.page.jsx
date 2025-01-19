@@ -56,7 +56,7 @@ const HomePage = () => {
 
 	const downloadCV = () => {
 		// Replace 'your_cv.pdf' with the path to your CV file
-		const url = "https://i.ibb.co/19HJxCt/Professional-Modern-CV-Resume.png";
+		const url = "https://i.ibb.co/DkCTzph/CV-Web-Developer.png";
 		const link = document.createElement("a");
 		link.href = url;
 		link.setAttribute("download", "Phyo Thura.png"); // Change the filename as necessary
@@ -101,11 +101,28 @@ const HomePage = () => {
 				</div>
 
 				<div className="flex gap-6 sm:gap-6   mt-7">
+					<a href="https://www.facebook.com/profile.php?id=100077023871140&mibextid=LQQJ4d" target="_blank">
 					<FaFacebookF className="bg-yellow-400  rounded-full sm:h-9 sm:w-9  h-10 p-1 w-10   active:scale-95  " />
+					</a>
+
+
+					<a href="https://www.instagram.com/vik83124?igsh=MWdtMmphc3hodjBucg%3D%3D&utm_source=qr" target="_blank">
 					<AiFillInstagram className="bg-yellow-400  rounded-full   sm:h-9 sm:w-9 h-10 p-1 w-10   active:scale-95  " />
+					</a>
+
+					<a href="https://discord.com/channels/1147540820203941888/1155112504146530334/1155112504146530334r" target="_blank">
 					<FaDiscord className="bg-yellow-400  rounded-full  sm:h-9 sm:w-9 h-10 p-1 w-10   active:scale-95  " />
+					</a>
+
+					<a href="http://linkedin.com/in/phyothura21" target="_blank">
 					<FaLinkedinIn className="bg-yellow-400  rounded-full sm:h-9 sm:w-9  h-10 p-1 w-10   active:scale-95  " />
+					</a>
+
+					<a href="https://github.com/K2P4" target="_blank">
 					<FaGithub className="bg-yellow-400  rounded-full  sm:h-9 sm:w-9 h-10 p-1 w-10   active:scale-95  " />
+					</a>
+
+
 				</div>
 			</div>
 
