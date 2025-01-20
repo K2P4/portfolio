@@ -101,7 +101,7 @@ const ProjectPage = () => {
 							The Dev Diary
 						</h1>
 
-						<p className="h-20 text-sm sm:text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className="h-20 text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 						 Tech update blog platform with auth,comment sections,and admin management. Built with Laravel,offers CRUD functions for blog management and user roles. 
 						</p>
 
@@ -134,7 +134,7 @@ const ProjectPage = () => {
 							Zoya Blog
 						</h1>
 
-						<p className="h-20 text-sm sm:text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className="h-20 text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 						 Travel blog website inspired by the React project,features modern UI design and  blog content shop, allowing users to explore engaging travel stories and purchase related items.
 						</p>
 
@@ -166,7 +166,7 @@ const ProjectPage = () => {
 							Sneaker Nikee
 						</h1>
 
-						<p className="h-20 text-sm sm:text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className="h-20 text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 						Online shopping cart platform for sneaker enthusiasts. Built with React and Redux,provides a seamless shopping experience with product listings, cart management, and secure checkout.
 						</p>
 
@@ -196,7 +196,7 @@ const ProjectPage = () => {
 							KOP Solutions
 						</h1>
 
-						<p className=" h-20 text-sm sm:text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className=" h-20 text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 							That it's my student react shopping cart project with fetching
 							data api from fakestore api .
 						</p>
@@ -231,7 +231,7 @@ const ProjectPage = () => {
 							Invoice App
 						</h1>
 
-						<p className="h-20 text-sm sm:text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className="h-20 text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 						Invoice App is a simple and lightweight invoicing tool for small businesses and freelancers. It allows users to create, edit, and manage invoices efficiently with a clean and minimal UI						</p>
 
 						<button className=" select-pointer   textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
@@ -262,7 +262,7 @@ const ProjectPage = () => {
 							Japanese Meal
 						</h1>
 
-						<p className=" h-20 text-xs leading-6 sm:text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className=" h-20 text-xs leading-6 text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 						Recipe search website that helps users explore Japanese dishes,with UI design and categorized recipes, users can easily find and cook their favorite meals
 						</p>
 
@@ -292,11 +292,11 @@ const ProjectPage = () => {
 							CONTACT APP
 						</h1>
 
-						<p className=" h-20 text-xs leading-6 sm:text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-tight cardFont text-center">
+						<p className=" h-20  leading-6 text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-tight cardFont text-center">
 						User contact management system with full CRUD and authentication,with React-Redux, features a sleek design for adding, editing, and organizing contacts efficiently
 						</p>
 
-						<button className="select-pointer   textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
+						<button className="select-pointer   text-gray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
 							<a target="_blank" href="https://student-project-with-contact-app.vercel.app/">
 								View Project
 							</a>
@@ -325,12 +325,12 @@ const ProjectPage = () => {
 							W .
 						</h1>
 
-						<p className="h-20 text-sm sm:text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
+						<p className="h-20 text-[12px] text-gray-400 my-4 px-2  mx-auto tracking-wider cardFont text-center">
 							That it's simple project with using html css javascript &
 							bootstrap .
 						</p>
 
-						<button className="select-pointer      textgray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
+						<button className="select-pointer      text-gray-800 tracking-wide font-semibold text-center mx-auto flex justify-center   bg-[#ffcc23]   rounded-xl px-8 active:scale-95 hover:bg-yellow-500 duration-500 py-3">
 							<a target="_blank" href="https://markyk2.netlify.app/">View Project</a>
 						</button>
 					</motion.div>
