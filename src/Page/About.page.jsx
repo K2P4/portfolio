@@ -752,7 +752,7 @@ const AboutPage = () => {
 						<p className=" mt-5  leading-8 text-md font-medium text-gray-300 tracking-wide text-justify ">
 							{" "}
 							Hello I am <span className=" tracking-widest text-yellow-400 font-bold">KP</span>. Currently I have been working as a  
-							Warehouse office executive position  in logistic company. I have 2
+							Warehouse office executive position  in the logistic company. I have 2
 							years + experience in Customer Service Field & Banking Field.
 							Since I was young, my hobby has been to become a web developer,
 							and I am still trying to make my dreams come true .
@@ -783,15 +783,38 @@ const AboutPage = () => {
 
 					<p className=" my-2 leading-7 cardFont text-sm font-medium text-gray-400 tracking-wide text-justify ">
 						{" "}
-						I am <span className=" tracking-widest text-yellow-400">KP</span>,
-						web developer from Myanmar. Currently I have been working in Yoma
-						Bank with business development specialist opreation position . I
-						have 2 years + experience in Customer Service Field & Banking Field.
-						Since I was young, my hobby has been to become a web developer, and
-						I am still trying to make my dreams come true .
+						Hello I am <span className=" tracking-widest text-yellow-400 font-bold">KP</span>. Currently I have been working as a  
+							Warehouse office executive position  in the logistic company. I have 2
+							years + experience in Customer Service Field & Banking Field.
+							Since I was young, my hobby has been to become a web developer,
+							and I am still trying to make my dreams come true .
 					</p>
 
-					<div className="flex flex-col space-y-5 cardFont mt-7">
+					<div class=" text-gray-400 py-5 rounded-lg w-full ">
+        <div class="grid grid-cols-[30px_70px_10px_auto] items-center gap-x-2 py-2 text-left">
+            <span class="text-yellow-400 text-lg">📂</span>
+            <span>Name</span>
+            <span>:</span>
+            <span>Phyo Thura</span>
+        </div>
+
+        <div class="grid grid-cols-[30px_70px_10px_auto] items-center gap-x-2 py-2 text-left">
+            <span class="text-yellow-400 text-lg">📞</span>
+            <span>Phone</span>
+            <span>:</span>
+            <span>09968213232</span>
+        </div>
+
+        <div class="grid grid-cols-[30px_70px_10px_auto] items-center gap-x-2 py-2 text-left">
+            <span class="text-yellow-400 text-lg">📧</span>
+            <span>Email</span>
+            <span>:</span>
+            <span>pthya381@gmail.com</span>
+        </div>
+    </div>
+
+
+					{/* <div className="flex flex-col space-y-5 cardFont mt-7">
 						<div className="flex py-2 border-[#25093b] border-b  items-center  justify-between ">
 							<div className="flex w-[54%] items-center gap-2">
 								<svg
@@ -861,7 +884,7 @@ const AboutPage = () => {
 								pthya381@gmail.com
 							</p>
 						</div>
-					</div>
+					</div> */}
 
 					<h1 className="text-yellow-400 my-8  header text-lg    tracking-wide">
 						My Interests
