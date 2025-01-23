@@ -153,7 +153,7 @@ const ContactPage = () => {
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.name}
-											className="mt-1 px-10 py-3 sm:px-3 sm:p-5 rounded-md  w-full  focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm "
+											className="mt-1 px-10 py-3 sm:px-3 sm:p-5 rounded-md  w-full  focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm text-gray-400 "
 											name="name"
 											type="name"
 											id="name"
@@ -172,7 +172,7 @@ const ContactPage = () => {
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.email}
-											className="mt-1 px-10 py-3 sm:px-3 sm:p-5 rounded-md  w-full  focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm "
+											className="mt-1 px-10 py-3 sm:px-3 sm:p-5 rounded-md  w-full  text-gray-400 focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm "
 											name="email"
 											type="email"
 											id="email"
@@ -191,7 +191,7 @@ const ContactPage = () => {
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.typing}
-											className="mt-1 text-gray-300   px-3  pb-12 rounded-md  w-full  focus:outline-none h-[120px] focus:border-2  focus:border-[#280642]   bg-[#23053a]  ring-transparent focus:ring-transparent text-sm "
+											className="mt-1 text-gray-300   px-3  pb-12 rounded-md  text-gray-400  w-full  focus:outline-none h-[120px] focus:border-2  focus:border-[#280642]   bg-[#23053a]  ring-transparent focus:ring-transparent text-sm "
 											name="typing"
 											type="text"
 											id="typing"
