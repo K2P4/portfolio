@@ -75,21 +75,21 @@ const ServicePage = () => {
 							<div className="flex  items-center">
 								<LuDot className="text-3xl   text-yellow-400" />
 								<p className=" text-nowrap text-sm sm:text-md tracking-wide font-medium  text-gray-300 ">
-									Creation of responsive websites.
+									Creation of responsive websites
 								</p>
 							</div>
 
 							<div className="flex   items-center">
 								<LuDot className="text-3xl   text-yellow-400" />
 								<p className="text-sm text-nowrap  tracking-wide font-medium  text-gray-300 ">
-									HTML, CSS , Javascript & React .
+									HTML, CSS , Javascript & React 
 								</p>
 							</div>
 
 							<div className="flex  items-start ">
 								<LuDot className="text-3xl   text-yellow-400" />
 								<p className="text-nowrap text-sm sm:text-sm md:text-md  font-medium  text-gray-300 ">
-									Website Performance & accessibility optimization .
+									Website Performance &optimization 
 								</p>
 							</div>
 
@@ -147,7 +147,7 @@ const ServicePage = () => {
 							<div className="flex  items-center ">
 								<LuDot className="sm:text-3xl  text-3xl text-yellow-400" />
 								<p className="text-sm sm:text-sm md:text-md text-norwrap tracking-wide font-medium  text-gray-300 ">
-									Technical issue resolution & bug fixing.
+									Technical bug fixing.
 								</p>
 							</div>
 						</div>
@@ -199,7 +199,7 @@ const ServicePage = () => {
 							<div className="flex  items-center">
 								<LuDot className="text-3xl   text-yellow-400" />
 								<p className="text-sm sm:text-sm md:text-md text-norwrap tracking-wide font-medium  text-gray-300 ">
-									Creation of efficient UI workflows .
+									Creation of efficient UI workflows
 								</p>
 							</div>
 						</div>
