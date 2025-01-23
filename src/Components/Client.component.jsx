@@ -72,7 +72,7 @@ const ClientComponent = () => {
 					<p className="h-20 text-justify text-xs sm:text-base  text-gray-400 leading-6  sm:my-4 sm:px-2  mx-auto tracking-wide cardFont ">
 						Their attention to detail, creativity, and responsiveness made the
 						entire process seamless and enjoyable. I highly recommend their
-						services to anyone looking for a professional and stunning website.
+						services .
 					</p>
 				</motion.div>
 				<motion.div
@@ -104,12 +104,9 @@ const ClientComponent = () => {
 					</div>
 
 					<p className="h-20  sm:text-justify text-xs sm:text-base  text-gray-400 leading-6  sm:my-4 sm:px-2  mx-auto tracking-wide cardFont ">
-						Working with KP was an absolute delight! He is not only brought our
+						Working with KP was absolute delight! He is not only brought our
 						vision to life but also added their own creative flair, resulting in
-						a website that exceeded our expectations. Their professionalism,
-						attention to detail, and timely delivery make them our go-to choice
-						for all future projects. Highly recommended!
-					</p>
+						a website that exceeded our expectations.				</p>
 				</motion.div>
 
 				<motion.div
@@ -141,8 +138,7 @@ const ClientComponent = () => {
 					</div>
 
 					<p className="h-20 text-justify text-xs sm:text-base my-2  text-gray-400 leading-6  sm:my-4 sm:px-2  mx-auto tracking-wide cardFont ">
-						Thanks to his hard work and dedication, our online presence has
-						never looked better. Hs is very good at coding & web design . Highly
+						Thanks to his hardwork and dedication. Hs is very good at coding & web design . Highly
 						recommend his services!
 					</p>
 				</motion.div>
