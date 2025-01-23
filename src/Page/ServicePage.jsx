@@ -74,28 +74,28 @@ const ServicePage = () => {
 						<div className="  flex flex-col  text-justify     gap-2  items-start   mt-4 ">
 							<div className="flex  items-center">
 								<LuDot className="text-3xl   text-yellow-400" />
-								<p className=" text-sm sm:text-md tracking-wide font-medium  text-gray-300 ">
+								<p className=" text-nowrap text-sm sm:text-md tracking-wide font-medium  text-gray-300 ">
 									Creation of responsive websites.
 								</p>
 							</div>
 
 							<div className="flex   items-center">
 								<LuDot className="text-3xl   text-yellow-400" />
-								<p className="text-sm sm:text-md tracking-wide font-medium  text-gray-300 ">
+								<p className="text-sm text-nowrap sm:text-md tracking-wide font-medium  text-gray-300 ">
 									HTML, CSS , Javascript & React .
 								</p>
 							</div>
 
 							<div className="flex  items-start ">
 								<LuDot className="text-4xl   text-yellow-400" />
-								<p className=" text-sm sm:text-md  font-medium  text-gray-300 ">
+								<p className="text-nowrap text-sm sm:text-md  font-medium  text-gray-300 ">
 									Website Performance & accessibility optimization .
 								</p>
 							</div>
 
 							<div className="flex  items-center">
 								<LuDot className="text-3xl   text-yellow-400" />
-								<p className="text-sm sm:text-md tracking-wide font-medium  text-gray-300 ">
+								<p className="text-sm text-nowrap sm:text-md tracking-wide font-medium  text-gray-300 ">
 									Other Service & Activities
 								</p>
 							</div>
@@ -118,35 +118,35 @@ const ServicePage = () => {
 							alt=""
 						/>
 
-						<h1 className="sm:text-xl text-lg   h-14 mx-auto tracking-wider  text-center mt-3 text-yellow-400  header font-semibold">
+						<h1 className="sm:text-xl text-lg text-nowrap  h-14 mx-auto tracking-wider  text-center mt-3 text-yellow-400  header font-semibold">
 							Maintenance & techinical support
 						</h1>
 
 						<div className="  flex flex-col  text-justify    gap-2  items-start   mt-4 ">
 							<div className="flex  items-center">
 								<LuDot className="text-3xl   text-yellow-400" />
-								<p className=" text-sm sm:text-md tracking-wide font-medium  text-gray-300 ">
+								<p className="text-nowrap text-sm sm:text-md tracking-wide font-medium  text-gray-300 ">
 									Regular website updates .
 								</p>
 							</div>
 
 							<div className="flex  items-center">
 								<LuDot className="text-3xl   text-yellow-400" />
-								<p className=" text-sm sm:text-md tracking-wide font-medium  text-gray-300 ">
+								<p className="text-nowrap text-sm sm:text-md tracking-wide font-medium  text-gray-300 ">
 									Website performance tracking .
 								</p>
 							</div>
 
 							<div className="flex  items-start ">
 								<LuDot className="text-3xl  tracking-wide   text-yellow-400" />
-								<p className=" text-sm sm:text-md  font-medium  text-gray-300 ">
+								<p className="text-nowrap text-sm sm:text-md  font-medium  text-gray-300 ">
 									24 / 7 support .
 								</p>
 							</div>
 
 							<div className="flex  items-center ">
 								<LuDot className="sm:text-4xl  text-3xl text-yellow-400" />
-								<p className=" text-sm sm:text-md  tracking-wide font-medium  text-gray-300 ">
+								<p className="text-nowrap text-sm sm:text-md  tracking-wide font-medium  text-gray-300 ">
 									Technical issue resolution & bug fixing.
 								</p>
 							</div>
