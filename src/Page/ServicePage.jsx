@@ -46,7 +46,7 @@ const ServicePage = () => {
 
 				<div
 					id="service"
-					className={`flex flex-col sm:flex-row gap-2 sm:gap-7 ${
+					className={`flex flex-col sm:flex-row gap-2 sm:gap-3 ${
 						showAnimation &&
 						"  animate__animated transition-transform  animate__slideInLeft   duration-1000 "
 					}`}>
@@ -58,7 +58,7 @@ const ServicePage = () => {
 							scale: 1.04,
 							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
 						}}
-						className="sm:w-[30%]  w-full  duration-300  shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4 h-[345px]  sm:h-[385px] rounded-lg border-gray-500 "
+						className="sm:w-[32%]  w-full  duration-300  shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4 h-[345px]  sm:h-[385px] rounded-lg border-gray-500 "
 						onMouseEnter={() => setToggleHover(true)}
 						onMouseLeave={() => setToggleHover(false)}>
 						<img
@@ -109,7 +109,7 @@ const ServicePage = () => {
 							scale: 1.04,
 							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
 						}}
-						className="sm:w-[30%] w-full   duration-300  shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4  h-[345px]  sm:h-[385px] rounded-lg border-gray-500 "
+						className="sm:w-[32%] w-full   duration-300  shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4  h-[345px]  sm:h-[385px] rounded-lg border-gray-500 "
 						onMouseEnter={() => setHovered(true)}
 						onMouseLeave={() => setHovered(false)}>
 						<img
@@ -161,7 +161,7 @@ const ServicePage = () => {
 							scale: 1.04,
 							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
 						}}
-						className="sm:w-[30%] w-full  duration-300  shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4  h-[345px]  sm:h-[385px] rounded-lg border-gray-500 "
+						className="sm:w-[32%] w-full  duration-300  shadow  bg-[#210538]  hover:bg-[#23053b]  px-1 cardFont  py-4  h-[345px]  sm:h-[385px] rounded-lg border-gray-500 "
 						onMouseEnter={() => setIsHovered(true)}
 						onMouseLeave={() => setIsHovered(false)}>
 						<img
