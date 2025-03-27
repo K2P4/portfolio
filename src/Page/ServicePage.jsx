@@ -65,7 +65,7 @@ const ServicePage = () => {
             className="w-full hover:cursor-pointer duration-300 shadow bg-[#210538] hover:bg-[#23053b] px-1 cardFont py-4 h-[345px] sm:h-[385px] rounded-lg border-gray-500"
           >
             <img
-              className="lg:w-[100px] w-[80px] object-cover mx-auto"
+              className="  lg:w-[80px] xl:w-[100px] w-[80px] object-cover mx-auto"
               src="https://cdn-icons-png.flaticon.com/128/1197/1197511.png"
               alt=""
             />
@@ -75,25 +75,25 @@ const ServicePage = () => {
             <div className="flex flex-col text-justify gap-2 items-start mt-4">
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md tracking-wide font-medium text-gray-300">
+                <p className="text-sm lg:text-sm xl:text-md text-nowrap tracking-wide font-medium text-gray-300">
                   Creation of responsive websites
                 </p>
               </div>
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm tracking-wide font-medium text-gray-300">
-                  HTML, CSS, JavaScript , Vue & React
+                <p className="text-sm lg:text-sm xl:text-md text-nowrap tracking-wide font-medium text-gray-300">
+                  HTML,CSS,JavaScript,Vue&React
                 </p>
               </div>
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md font-medium text-gray-300">
-                  Website Performance & Optimization
+                <p className="text-sm lg:text-sm xl:text-md text-nowrap font-medium text-gray-300">
+                  Website Performance 
                 </p>
               </div>
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md tracking-wide font-medium text-gray-300">
+                <p className="text-sm lg:text-sm xl:text-md text-nowrap tracking-wide font-medium text-gray-300">
                   Other Service & Activities
                 </p>
               </div>
@@ -112,7 +112,7 @@ const ServicePage = () => {
             className="w-full hover:cursor-pointer duration-300 shadow bg-[#210538] hover:bg-[#23053b] px-1 cardFont py-4 h-[345px] sm:h-[385px] rounded-lg border-gray-500"
           >
             <img
-              className="w-[80px] sm:w-[100px] object-cover mx-auto"
+              className="w-[80px] lg:w-[80px] xl:w-[100px] object-cover mx-auto"
               src="https://cdn-icons-png.flaticon.com/128/8606/8606660.png"
               alt=""
             />
@@ -122,25 +122,25 @@ const ServicePage = () => {
             <div className="flex flex-col text-justify gap-2 items-start mt-4">
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md tracking-wide font-medium text-gray-300">
+                <p className="text-sm lg:text-sm xl:text-md text-nowrap  tracking-wide font-medium text-gray-300">
                   Regular website updates
                 </p>
               </div>
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md tracking-wide font-medium text-gray-300">
+                <p className="text-sm lg:text-sm xl:text-md text-nowrap  tracking-wide font-medium text-gray-300">
                   Website performance tracking
                 </p>
               </div>
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md font-medium text-gray-300">
+                <p className="text-sm lg:text-sm xl:text-md text-nowrap  font-medium text-gray-300">
                   24/7 support
                 </p>
               </div>
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md tracking-wide font-medium text-gray-300">
+                <p className="text-sm lg:text-sm xl:text-md text-nowrap  tracking-wide font-medium text-gray-300">
                   Technical bug fixing
                 </p>
               </div>
@@ -159,7 +159,7 @@ const ServicePage = () => {
             className="w-full duration-300 hover:cursor-pointer shadow bg-[#210538] hover:bg-[#23053b] px-1 cardFont py-4 h-[345px] sm:h-[385px] rounded-lg border-gray-500"
           >
             <img
-              className="sm:w-[100px] w-[80px] object-cover mx-auto"
+              className="w-[80px] lg:w-[80px] xl:w-[100px] object-cover mx-auto"
               src="https://cdn-icons-png.flaticon.com/128/9672/9672242.png"
               alt=""
             />
@@ -169,25 +169,25 @@ const ServicePage = () => {
             <div className="flex flex-col text-justify gap-2 items-start mt-4">
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md tracking-wide font-medium text-gray-300">
+                <p className="text-sm lg:text-sm xl:text-md lg:tracking-normal tracking-wide font-medium text-gray-300">
                   Database Design & Management
                 </p>
               </div>
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md tracking-wide font-medium text-gray-300">
+                <p className=" text-sm lg:text-sm xl:text-md  tracking-wide font-medium text-gray-300">
                   RESTful & API Development
                 </p>
               </div>
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md tracking-wide font-medium text-gray-300">
-                  Performance Optimization & Caching
+                <p className="text-sm  text-nowrap lg:text-sm xl:text-md tracking-wide font-medium text-gray-300">
+                  Performance Optimization 
                 </p>
               </div>
               <div className="flex items-center">
                 <LuDot className="text-3xl text-yellow-400" />
-                <p className="text-sm sm:text-md tracking-wide font-medium text-gray-300">
+                <p className="text-sm  text-nowrap lg:text-sm xl:text-md  tracking-wide font-medium text-gray-300">
                   Secure Backend Development
                 </p>
               </div>

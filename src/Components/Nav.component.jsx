@@ -103,9 +103,9 @@ const NavComponent = () => {
         >
           <h1
             onClick={() => nav("/")}
-            className="flex  select-none items-center gap-0 sm:gap-1 sm:text-md lg:text-xl text-yellow-400  header font-bold tracking-widest  "
+            className="flex  select-none items-center gap-0 sm:gap- sm:text-sm md:text-lg lg:text-xl text-yellow-400  header font-bold tracking-widest  "
           >
-            PHYO THURA{" "}
+             THURA{" "}
             <span>
               <DiCodeigniter className=" w-4 " />
             </span>

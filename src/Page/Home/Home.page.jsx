@@ -74,9 +74,9 @@ const HomePage = () => {
   return (
     <div
       id="home"
-      className=" flex flex-col h-screen   md:h-auto justify-center md:flex-row  md:justify-between align-middle items-center md:ContainerResponsive "
+      className=" flex flex-col h-screen sm:h-full   md:h-full justify-center md:flex-row  md:justify-between align-middle items-center md:ContainerResponsive "
     >
-      <div className="  mb-auto    mt-24  lg:mb-0    lg:mt-0 animate__animated animate__slideInLeft duration-1000 w-full lg:w-[50%] ">
+      <div className="  mb-auto    mt-24  lg:mb-0 lg:mt-16   xl:mt-0 animate__animated animate__slideInLeft duration-1000 w-full lg:w-[50%] ">
         <h1 className="text-yellow-400  text-3xl md:text-4xl header font-bold tracking-widest">
           Hello ! I'm{" "}
           <span className="text-gray-300 font-bold">PHYO THURA</span>

@@ -851,17 +851,17 @@ const AboutPage = () => {
           </svg>
 
           <div className=" sm:w-[70%] lg:w-[50%] text-left sm:px-3 lg:px-5">
-            <h1 className="    header sm:text-xl lg:text-2xl text-yellow-400 font-bold">
+            <h1 className="    header sm:text-lg md:text-xl lg:text-2xl text-yellow-400 font-bold">
               About Me
             </h1>
 
-            <p className="  sm:mt-2  lg:mt-5 sm:leading-7   lg:leading-8 sm:text-sm lg:text-md font-medium text-gray-300 tracking-tight lg:tracking-wide   text-justify lg:text-justify ">
+            <p className="  sm:mt-2  lg:mt-5 sm:leading-7    lg:leading-8 sm:text-sm lg:text-md font-medium text-gray-300 tracking-tight lg:tracking-normal   text-justify lg:text-justify ">
               {" "}
               Hello I am{" "}
               <span className="tracking-widest text-yellow-400 font-bold">
-                Thura
+                Thura.
               </span>
-              . Currently, I have been working as a Junior Software Developer in
+               Currently, I have been working as a Junior Software Developer in
               the logistics company. I have experience in developing web
               applications, backend systems, and optimizing business processes
               with modern technologies. Since I was young, my passion has been
@@ -870,7 +870,7 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-        <div className=" sm:w-full  lg:w-[80%]  bg-[#200536] shadow-[#311a44]    shadow-lg   overflow-hidden -z-20  sm:start-5 lg:start-60           border-s-0  rounded-s-none  h-[55%] lg:h-[54%] transition-transform    sm:top-40   lg:top-36   absolute  rounded-lg   "></div>
+        <div className=" sm:w-full  lg:w-[80%]  bg-[#200536] shadow-[#311a44]    shadow-lg   overflow-hidden -z-20  sm:start-5 lg:start-60           border-s-0  rounded-s-none  h-[58%] lg:h-[54%] transition-transform    sm:top-40   lg:top-36   absolute  rounded-lg   "></div>
 
 
       </div>
@@ -891,7 +891,7 @@ const AboutPage = () => {
         </div>
 
         <div className="">
-          <h1 className="  text-center my-2   header text-xl text-yellow-400 font-bold">
+          <h1 className="  text-center my-2    header text-xl text-yellow-400 font-bold">
             About Me
           </h1>
 

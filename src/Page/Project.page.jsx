@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
@@ -14,8 +14,10 @@ const ProjectPage = () => {
   const nav = useNavigate();
   const [hover, setHovered] = useState(false);
   const [showAnimation, setShowAnimation] = useState(false);
-
+  const swiperRef = useRef(null);
   const [toggleHover, setToggleHover] = useState(false);
+
+  
 
   const hanldeProject = (path) => {
     nav(path);
@@ -60,11 +62,20 @@ const ProjectPage = () => {
           showAnimation &&
           "  animate__animated  animate__slideInRight  duration-1000 "
         }  h-[430px]  sm:h-[430px] flex-row mySwiper items-center  `}
-        spaceBetween={30}
         slidesPerView={1} 
+        spaceBetween={5}
         breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
           768: {
-            slidesPerView: 3, 
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
           },
         }}
         pagination={{ clickable: true }}
@@ -78,7 +89,7 @@ const ProjectPage = () => {
         }}
         modules={[Keyboard, Autoplay, Pagination]}
       >
-        <SwiperSlide className="  w-full   sm:h-[455px]     sm:w-[35%] ">
+        <SwiperSlide  style={{ width: '500px' }}  className="  w-full   sm:h-[455px]      ">
           <motion.div
             whileHover={{
               opacity: 0.7,
@@ -86,7 +97,7 @@ const ProjectPage = () => {
 
               boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
             }}
-            className=" rounded-lg shadow-md shadow-gray-950 bg-[#23053a]  "
+            className=" rounded-lg shadow-md shadow-gray-950     h-auto lg:h-[400px] xl:h-[390px]  bg-[#23053a]  "
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -114,7 +125,7 @@ const ProjectPage = () => {
           </motion.div>
         </SwiperSlide>
 
-        <SwiperSlide className="  w-full  sm:h-[455px]     sm:w-[35%] ">
+        <SwiperSlide style={{ width: '500px' }}  className="  w-full  sm:h-[455px]      ">
           <motion.div
             whileHover={{
               opacity: 0.7,
@@ -122,7 +133,7 @@ const ProjectPage = () => {
 
               boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
             }}
-            className=" rounded-lg shadow-md shadow-gray-950 bg-[#23053a]  "
+            className=" rounded-lg shadow-md shadow-gray-950    h-auto lg:h-[400px] xl:h-[390px] bg-[#23053a]  "
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -150,7 +161,7 @@ const ProjectPage = () => {
           </motion.div>
         </SwiperSlide>
 
-        <SwiperSlide className="  w-full  sm:h-[455px]     sm:w-[35%] ">
+        <SwiperSlide style={{ width: '500px' }} className="  w-full  sm:h-[455px]      ">
           <motion.div
             whileHover={{
               opacity: 0.7,
@@ -158,7 +169,7 @@ const ProjectPage = () => {
 
               boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
             }}
-            className=" rounded-lg shadow-md shadow-gray-950 bg-[#23053a]  "
+            className=" rounded-lg shadow-md shadow-gray-950    h-auto lg:h-[400px] xl:h-[390px] bg-[#23053a]  "
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -186,14 +197,14 @@ const ProjectPage = () => {
           </motion.div>
         </SwiperSlide>
 
-        <SwiperSlide className=" w-full  sm:h-[455px]     sm:w-[35%]">
+        <SwiperSlide style={{ width: '500px' }} className=" w-full  sm:h-[455px]     ">
           <motion.div
             whileHover={{
               opacity: 0.7,
               scale: 1.04,
               boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
             }}
-            className="  m-auto rounded-lg shadow-gray-950   shadow-md bg-[#23053a]  "
+            className="  m-auto rounded-lg shadow-gray-950 h-auto lg:h-[400px] xl:h-[390px]  shadow-md bg-[#23053a]  "
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
@@ -223,7 +234,7 @@ const ProjectPage = () => {
           </motion.div>
         </SwiperSlide>
 
-        <SwiperSlide className="  w-full  sm:h-[455px]     sm:w-[35%] ">
+        <SwiperSlide style={{ width: '500px' }} className="  w-full  sm:h-[455px]      ">
           <motion.div
             whileHover={{
               opacity: 0.7,
@@ -231,7 +242,7 @@ const ProjectPage = () => {
 
               boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
             }}
-            className=" rounded-lg shadow-md shadow-gray-950 bg-[#23053a]  "
+            className=" rounded-lg shadow-md shadow-gray-950    h-auto lg:h-[400px] xl:h-[390px] bg-[#23053a]  "
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -259,7 +270,7 @@ const ProjectPage = () => {
           </motion.div>
         </SwiperSlide>
 
-        <SwiperSlide className="  w-full  sm:h-[455px]     sm:w-[35%] ">
+        <SwiperSlide style={{ width: '500px' }} className="  w-full  sm:h-[455px]      ">
           <motion.div
             whileHover={{
               opacity: 0.7,
@@ -267,7 +278,7 @@ const ProjectPage = () => {
 
               boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
             }}
-            className=" rounded-lg shadow-md shadow-gray-950 bg-[#23053a]  "
+            className=" rounded-lg shadow-md shadow-gray-950    h-auto lg:h-[400px] xl:h-[390px] bg-[#23053a]  "
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -295,7 +306,7 @@ const ProjectPage = () => {
           </motion.div>
         </SwiperSlide>
 
-        <SwiperSlide className="  w-full  sm:h-[455px]     sm:w-[35%]">
+        <SwiperSlide className="  w-full  sm:h-[455px]     ">
           <motion.div
             whileInView={{ opacity: 1 }}
             initial={false}
@@ -306,7 +317,7 @@ const ProjectPage = () => {
             }}
             onMouseEnter={() => setToggleHover(true)}
             onMouseLeave={() => setToggleHover(false)}
-            className=" shadow-gray-950 rounded-lg shadow-md bg-[#23053a]  "
+            className=" shadow-gray-950 rounded-lg shadow-md bg-[#23053a] h-auto lg:h-[400px] xl:h-[390px]  "
           >
             <img
               className="   object-cover  w-full  h-[180px]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
@@ -335,14 +346,14 @@ const ProjectPage = () => {
           </motion.div>
         </SwiperSlide>
 
-        <SwiperSlide className=" w-full  sm:h-[455px]     sm:w-[35%]">
+        <SwiperSlide className=" w-full  sm:h-[455px]     ">
           <motion.div
             whileHover={{
               opacity: 0.7,
               scale: 1.04,
               boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
             }}
-            className="  m-auto rounded-lg  shadow-gray-950   shadow-md bg-[#23053a]  "
+            className="  m-auto rounded-lg  shadow-gray-950  h-auto lg:h-[400px] xl:h-[390px]  shadow-md bg-[#23053a]  "
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
@@ -370,14 +381,14 @@ const ProjectPage = () => {
           </motion.div>
         </SwiperSlide>
 
-        <SwiperSlide className=" w-full  sm:h-[455px]     sm:w-[35%]">
+        <SwiperSlide className=" w-full  sm:h-[455px]     ">
           <motion.div
             whileHover={{
               opacity: 0.7,
               scale: 1.04,
               boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
             }}
-            className="  m-auto rounded-lg  shadow-gray-950   shadow-md bg-[#23053a]  "
+            className="  m-auto rounded-lg  shadow-gray-950 h-auto lg:h-[400px] xl:h-[390px]  shadow-md bg-[#23053a]  "
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
@@ -408,7 +419,7 @@ const ProjectPage = () => {
           </motion.div>
         </SwiperSlide>
 
-        {/* <SwiperSlide className="   w-full  sm:h-[455px]     sm:w-[35%] ">
+        {/* <SwiperSlide className="   w-full  sm:h-[455px]      ">
 					<motion.div
 						whileHover={{
 							opacity: 0.7,
@@ -416,7 +427,7 @@ const ProjectPage = () => {
 
 							boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.7)",
 						}}
-						className=" rounded-lg shadow-md shadow-gray-950 bg-[#23053a]  "
+						className=" rounded-lg shadow-md shadow-gray-950    h-auto lg:h-[400px] xl:h-[390px]bg-[#23053a]  "
 						onMouseEnter={() => setIsHovered(true)}
 						onMouseLeave={() => setIsHovered(false)}>
 						<img

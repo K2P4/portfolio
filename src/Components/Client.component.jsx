@@ -50,7 +50,7 @@ const ClientComponent = () => {
 						scale: 0.9,
 						boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
 					}}
-					className="lg:h-[400px] h-[350px] py-3 px-3 shadow-gray-950 rounded-lg w-full lg:w-[30%] shadow-md bg-[#23053a]  ">
+					className=" lg:h-[430px] xl:h-[400px]  h-[340px] md:h-[340px]  py-3 px-3 shadow-gray-950 rounded-lg w-full lg:w-[30%] shadow-md bg-[#23053a]  ">
 					<img
 					className="   object-cover ring-2 ring-purple-950    text-center mx-auto sm:mt-5    h-20 w-20  sm:h-32 sm:w-32 rounded-full    shadow-md shadow-[#2d183f]     opacity-95  "
 						src="https://i.ibb.co/7pnY8Cb/min-thu-khant.jpg"
@@ -83,7 +83,7 @@ const ClientComponent = () => {
 						scale: 0.9,
 						boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
 					}}
-					className=" lg:h-[470px]  h-[350px] py-3 px-3 shadow-gray-950 rounded-lg w-full lg:w-[30%] shadow-md bg-[#23053a]   ">
+					className=" lg:h-[520px]   xl:h-[470px]  h-[340px] py-3 px-3 shadow-gray-950 rounded-lg w-full lg:w-[30%] shadow-md bg-[#23053a]   ">
 					<img
 						className="   object-cover ring-2 ring-purple-950 sm:mt-5   text-center mx-auto    h-20 w-20  sm:h-32 sm:w-32 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
 						src="https://i.ibb.co/WWFHfFn/Aye.jpg"
@@ -117,7 +117,7 @@ const ClientComponent = () => {
 						scale: 0.9,
 						boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
 					}}
-					className="lg:h-[400px]  h-[350px] py-3 px-3 mt-5 shadow-gray-950 rounded-lg w-full lg:w-[30%] shadow-md bg-[#23053a]  ">
+					className="xl:h-[400px]  h-[340px] lg:h-[420px]  py-3 px-3 mt-5 shadow-gray-950 rounded-lg w-full lg:w-[30%] shadow-md bg-[#23053a]  ">
 					<img
 						className="   object-cover ring-2 ring-purple-950    text-center mx-auto    h-20 w-20 sm:h-32 sm:w-32 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
 						src="https://i.ibb.co/S79zrVy/Khin-Moh.jpg"
