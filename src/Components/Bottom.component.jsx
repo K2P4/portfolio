@@ -17,7 +17,7 @@ const BottomComponent = () => {
 	return (
 		<div className="w-full relative h-[50%] py-4  flex flex-col gap-5 justify-center projectBox shadow-xl   shadow-[#28112c]   opacity-95 ">
 			<h1 className="flex items-center  mx-auto gap-1 text-xl text-yellow-400  header font-bold tracking-widest  ">
-				KP{" "}
+				PHYO THURA{" "}
 				<span>
 					<DiCodeigniter className=" w-4 " />
 				</span>
@@ -27,27 +27,27 @@ const BottomComponent = () => {
 				<ul className="flex justify-center items-center space-x-4 sm:space-x-9 cardFont">
 					<li
 						onClick={() => scrollToSection("about")}
-						className="text-gray-300 text-xs sm:text-base  select-none transition-transform  tracking-wide  hover:border-b hover:border-yellow-400 duration-700 hover:text-yellow-400  font-medium ">
+						className="text-gray-300 text-xs sm:text-base  select-none transition-transform  tracking-wide hover:cursor-pointer duration-700 hover:text-yellow-400  font-medium ">
 						About
 					</li>
 					<li
 						onClick={() => scrollToSection("client")}
-						className="text-gray-300 text-xs sm:text-base  transition-transform tracking-wide  hover:border-b hover:border-yellow-400 duration-700 hover:text-yellow-400  font-medium ">
+						className="text-gray-300 text-xs sm:text-base  transition-transform tracking-wide hover:cursor-pointer duration-700 hover:text-yellow-400  font-medium ">
 						Reviews
 					</li>
 					<li
 						onClick={() => scrollToSection("project")}
-						className="text-gray-300 text-xs sm:text-base  transition-transform tracking-wide  hover:border-b hover:border-yellow-400 duration-700 hover:text-yellow-400  font-medium ">
+						className="text-gray-300 text-xs sm:text-base  transition-transform tracking-wide hover:cursor-pointer duration-700 hover:text-yellow-400  font-medium ">
 						Projects
 					</li>
 					<li
 						onClick={() => scrollToSection("home")}
-						className="text-gray-300 text-xs sm:text-base  transition-transform tracking-wide  hover:border-b hover:border-yellow-400 duration-700 hover:text-yellow-400  font-medium ">
+						className="text-gray-300 text-xs sm:text-base  transition-transform tracking-wide hover:cursor-pointer duration-700 hover:text-yellow-400  font-medium ">
 						Resume
 					</li>
 					<li
 						onClick={() => scrollToSection("service")}
-						className="text-gray-300 text-xs  transition-transform tracking-wide  hover:border-b hover:border-yellow-400 duration-700 hover:text-yellow-400  font-medium ">
+						className="text-gray-300 text-xs   sm:text-base  transition-transform tracking-wide hover:cursor-pointer duration-700 hover:text-yellow-400  font-medium ">
 						Service
 					</li>
 				</ul>

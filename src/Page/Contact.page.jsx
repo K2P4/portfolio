@@ -65,9 +65,9 @@ const ContactPage = () => {
 	});
 
 	return (
-		<div className="ContainerResponsive flex  gap-4  mt-40 sm:gap-14 flex-col justify-center">
+		<div className="ContainerResponsive flex  gap-4  mt-72 lg:mt-40  sm:mt-64 md:mt-32 sm:gap-14 flex-col justify-center">
 			<div className="header  flex items-center flex-col mx-auto ">
-				<h1 className=" text-md text-yellow-400 tracking-wide my-1">Contact</h1>
+				<h1 className=" text-md  lg:text-2xl text-yellow-400 tracking-wide my-1">Contact</h1>
 				<h1 className=" sm:text-2xl text-xl text-gray-300  ">
 					I Want to Hear from you
 				</h1>
@@ -75,7 +75,7 @@ const ContactPage = () => {
 
 			<div
 				id="contact"
-				className="flex flex-col gap-6 sm:gap-0 sm:flex-row    items-start">
+				className="flex flex-col gap-6 sm:gap-0 sm:flex-row  w-full  ">
 				<div
 					className={`sm:w-[50%] w-full ${
 						showAnimation &&
@@ -153,7 +153,7 @@ const ContactPage = () => {
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.name}
-											className="mt-1 px-10 py-3 sm:px-3 sm:p-5 rounded-md  w-full  focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm text-gray-400 "
+											className="mt-1 px-5 py-3 sm:px-3 sm:p-5 rounded-md  w-full  focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm text-gray-400 "
 											name="name"
 											type="name"
 											id="name"
@@ -172,7 +172,7 @@ const ContactPage = () => {
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.email}
-											className="mt-1 px-10 py-3 sm:px-3 sm:p-5 rounded-md  w-full  text-gray-400 focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm "
+											className="mt-1 px-5 py-3 sm:px-3 sm:p-5 rounded-md  w-full  text-gray-400 focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm "
 											name="email"
 											type="email"
 											id="email"
@@ -191,7 +191,7 @@ const ContactPage = () => {
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.typing}
-											className="mt-1 text-gray-300   px-3  pb-12 rounded-md  text-gray-400  w-full  focus:outline-none h-[120px] focus:border-2  focus:border-[#280642]   bg-[#23053a]  ring-transparent focus:ring-transparent text-sm "
+											className="mt-1   px-5  pb-12 rounded-md  text-gray-400  w-full  focus:outline-none h-[120px] focus:border-2  focus:border-[#280642]   bg-[#23053a]  ring-transparent focus:ring-transparent text-sm "
 											name="typing"
 											type="text"
 											id="typing"
@@ -208,9 +208,9 @@ const ContactPage = () => {
 									<Button
 										disabled={isSubmitting}
 										type="submit"
-										className="text-black ms-auto cardFont  active:scale-95 sm:mt-5  mt-3 bg-yellow-500 sm:w-[30%]  hover:bg-yellow-500 rounded-lg   text-center  font-semibold">
+										className="text-white ms-auto cardFont  active:scale-95 sm:mt-5  mt-3 bg-yellow-500  sm:w-[40%]  hover:bg-yellow-500 rounded-lg   text-center  font-semibold">
 										{isLoading ? (
-											<Loader2 className=" mr-2 text-white h-5 w-5 animate-spin" />
+											<Loader2 className=" mr-2 text-gray-300 mx-auto text-center h-5 w-5 animate-spin" />
 										) : (
 											<> Send Message</>
 										)}

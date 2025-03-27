@@ -59,17 +59,7 @@ const SkillPage = () => {
 							JAVASCRIPT
 						</h1>
 					</CarouselItem>
-					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
-						<img
-							className="mx-auto text-center h-32  object-cover   w-32 "
-							src="https://cdn-icons-png.flaticon.com/128/1126/1126012.png"
-							alt=""
-						/>
 
-						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
-							REACT
-						</h1>
-					</CarouselItem>
 					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
 						<img
 							className="mx-auto text-center h-32  object-cover   w-32 "
@@ -92,28 +82,31 @@ const SkillPage = () => {
 							TAILWINDCSS
 						</h1>
 					</CarouselItem>
+
 					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
 						<img
 							className="mx-auto text-center h-32  object-cover   w-32 "
-							src="https://cdn-icons-png.flaticon.com/128/2111/2111432.png"
+							src="https://cdn-icons-png.flaticon.com/128/1126/1126012.png"
 							alt=""
 						/>
 
 						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
-							GIT HUB
+							REACT
 						</h1>
 					</CarouselItem>
+
 					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
 						<img
 							className="mx-auto text-center h-32  object-cover   w-32 "
-							src="https://cdn-icons-png.flaticon.com/128/3094/3094456.png"
+							src="https://cdn-icons-png.flaticon.com/128/15484/15484278.png"
 							alt=""
 						/>
 
 						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
-							API
+							VUE JS
 						</h1>
 					</CarouselItem>
+	
 					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
 						<img
 							className="mx-auto text-center h-32  object-cover   w-32 "
@@ -125,6 +118,36 @@ const SkillPage = () => {
 							FIGMA
 						</h1>
 					</CarouselItem>
+
+
+					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
+						<img
+							className="mx-auto text-center h-32  object-cover   w-32 "
+							src="https://cdn-icons-png.flaticon.com/128/2111/2111432.png"
+							alt=""
+						/>
+
+						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
+							GIT HUB
+						</h1>
+					</CarouselItem>
+
+					
+					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
+						<img
+							className="mx-auto text-center h-32  object-cover   w-32 "
+							src="https://cdn-icons-png.flaticon.com/128/919/919836.png"
+							alt=""
+						/>
+
+						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
+							MYSQL
+						</h1>
+					</CarouselItem>
+
+					
+				
+		
 					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
 						<img
 							className="mx-auto text-center h-32  object-cover   w-32 "
@@ -146,6 +169,20 @@ const SkillPage = () => {
 
 						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
 							Laravel
+						</h1>
+					</CarouselItem>
+
+							
+		
+					<CarouselItem className="  shadow-[#2c173b] hover:rotate-2 hover:opacity-75 hover:transition-transform duration-1000 w-[50%]  hover:bg-[#1d0531] flex flex-col items-center gap-3  shadow-lg rounded-lg  px-3 py-4  h-[200px]  ">
+						<img
+							className="mx-auto text-center h-32  object-cover   w-32 "
+							src="https://cdn-icons-png.flaticon.com/128/15484/15484303.png"
+							alt=""
+						/>
+
+						<h1 className="text-xl mx-auto font-semibold   font-mono tracking-wide text-yellow-400 text-center">
+							NODE JS
 						</h1>
 					</CarouselItem>
 				</CarouselContent>
