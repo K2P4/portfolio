@@ -237,7 +237,7 @@ const ProjectPage = () => {
           >
             <img
               className="   object-cover  w-full  h-[180px]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
-              src="public/recipe.png"
+              src="/recipe.png"
               alt=""
             />
 
@@ -273,7 +273,7 @@ const ProjectPage = () => {
           >
             <img
               className="   object-cover  w-full  h-[180px]   rounded-2xl rounded-b-sm shadow-md shadow-[#2d183f]     opacity-95  "
-              src="public/quiz.png"
+              src="/quiz.png"
               alt=""
             />
 

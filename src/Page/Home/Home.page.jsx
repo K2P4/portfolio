@@ -60,7 +60,7 @@ const HomePage = () => {
 
   const downloadCV = () => {
     setLoading(true);
-    const url = "public/cv_dev.png";
+    const url = "/cv_dev.png";
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", "Phyo Thura_CV");
