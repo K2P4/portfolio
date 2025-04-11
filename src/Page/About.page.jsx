@@ -861,7 +861,7 @@ const AboutPage = () => {
               <span className="tracking-widest text-yellow-400 font-bold">
                 Thura.
               </span>
-               Currently, I have been working as a Junior Software Developer in
+               Currently, I have been working as a Junior Developer in
               the logistics company. I have experience in developing web
               applications, backend systems, and optimizing business processes
               with modern technologies. Since I was young, my passion has been
@@ -879,7 +879,7 @@ const AboutPage = () => {
         id="about2"
         className={`w-full m-auto   h-screen      ${
           showAnimationCopy &&
-          "  animate__animated  animate__slideInRight  duration-1000  "
+          "  duration-1000  "
         }  sm:hidden  m-auto  flex flex-col  justify-center  align-middle items-center`}
       >
         <div className="w-full border-b pb-2 border-[#23053a] ">
@@ -901,7 +901,7 @@ const AboutPage = () => {
               Thura .
             </span>
             <br/>
-             Currently, I have been working as a Junior Software Developer in
+             Currently, I have been working as a Junior Developer in
             the logistics company. I have experience in developing web
             applications, backend systems, and optimizing business processes
             with modern technologies. Since I was young, my passion has been
