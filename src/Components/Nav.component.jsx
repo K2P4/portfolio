@@ -1,15 +1,8 @@
 /** @format */
 
 import React, { useEffect, useState, useRef } from "react";
-import { NavLink } from "react-router-dom";
-import { ContactPage, HomePage, ProjectPage, ServicePage } from "../Page";
-import AboutPage from "../Page/About.page";
 import { useNavigate } from "react-router-dom";
 import { DiCodeigniter } from "react-icons/di";
-import SkillPage from "../Page/Skill.page";
-
-import ClientComponent from "./Client.component";
-import BottomComponent from "./Bottom.component";
 
 const NavComponent = () => {
   const [toggle, settoggle] = useState(false);
@@ -94,12 +87,11 @@ const NavComponent = () => {
 
   return (
     <div className="">
-      <div className=" sm:w-[80%]  w-[90%]  h-full  mx-auto ">
         <div
           className={` ${
             isFixed &&
-            "fixed top-0 left-0  w-full    pe-9   ps-9   lg:pe-32 lg:px-32  mx-auto bg-[#200435]  duration-500      z-30 "
-          } flex   py-5 justify-between items-center`}
+            "fixed top-0 left-0  w-full  px-9  sm:px-20   lg:pe-32 lg:px-32  mx-auto bg-[#200435]  duration-500      z-30 "
+          } flex   py-7 justify-between items-center`}
         >
           <h1
             onClick={() => nav("/")}
@@ -350,21 +342,6 @@ const NavComponent = () => {
           </div>
         </div>
 
-        <HomePage />
-
-        <AboutPage />
-
-        <ServicePage />
-        <SkillPage />
-
-        <ProjectPage />
-
-        <ClientComponent />
-
-        <ContactPage />
-      </div>
-
-      <BottomComponent />
     </div>
   );
 };

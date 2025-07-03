@@ -25,5 +25,5 @@ module.exports = {
 			position: ["fixed"],
 		},
 	},
-	plugins: [require("tailwindcss-animate", "flowbite/plugin")],
+	plugins: [],
 };

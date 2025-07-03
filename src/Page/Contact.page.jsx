@@ -1,54 +1,29 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
-
+import React from "react";
 import { Label } from "../Components/ui/label";
 import { Button } from "../Components/ui/button";
 import { Loader2 } from "lucide-react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, ErrorMessage } from "formik";
 import * as yup from "yup";
-import { BottomComponent } from "../Components";
 import { useCreateMutation } from "../store/endpoints/contact";
 
 const ContactPage = () => {
-	const [showAnimation, setShowAnimation] = useState(false);
 	const [CreateFun, { data,isLoading }] = useCreateMutation();
-
-
-	useEffect(() => {
-		const handleScroll = () => {
-			const serviceComponent = document.getElementById("contact");
-			if (serviceComponent) {
-				const serviceComponentOffset = serviceComponent.offsetTop;
-				const scrollPosition = window.scrollY + window.innerHeight;
-
-				if (scrollPosition >= serviceComponentOffset) {
-					setShowAnimation(true);
-				} else {
-					setShowAnimation(false);
-				}
-			}
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
 
 	const initailValue = {
 		email: "",
 		name: "",
-		typing: "",
+		message: "",
 	};
 
 	const handleSubmit = async (value) => {
 		console.log(value);
-		CreateFun(value);
+		await CreateFun(value);
 
 		value.email = "";
 		value.name = "";
-		value.typing = "";
+		value.message = "";
 		
 		
 		
@@ -61,11 +36,11 @@ const ContactPage = () => {
 			.email("invalid email format"),
 		name: yup.string().required("name is required"),
 
-		typing: yup.string(),
+		message: yup.string(),
 	});
 
 	return (
-		<div className="ContainerResponsive flex  gap-4  mt-72 lg:mt-40  sm:mt-64 md:mt-32 sm:gap-14 flex-col justify-center">
+		<div className="ContainerResponsive flex  gap-4  py-16 sm:gap-14 flex-col justify-center">
 			<div className="header  flex items-center flex-col mx-auto ">
 				<h1 className=" text-md  lg:text-2xl text-yellow-400 tracking-wide my-1">Contact</h1>
 				<h1 className=" sm:text-2xl text-xl text-gray-300  ">
@@ -74,13 +49,11 @@ const ContactPage = () => {
 			</div>
 
 			<div
+						data-aos="fade-right"
 				id="contact"
 				className="flex flex-col gap-6 sm:gap-0 sm:flex-row  w-full  ">
 				<div
-					className={`sm:w-[50%] w-full ${
-						showAnimation &&
-						"animate__animated animate__slideInLeft duration-1000"
-					} flex flex-col gap-6 sm:gap-7 mt-5 `}>
+					className={`sm:w-[50%] w-full flex flex-col gap-6 sm:gap-7 mt-5 `}>
 					<div className="flex sm:items-start items-center   gap-8 sm:gap-5">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -135,10 +108,8 @@ const ContactPage = () => {
 				</div>
 
 				<div
-					className={` cardFont ${
-						showAnimation &&
-						"animate__animated animate__slideInRight duration-1000"
-					}w-full mt-4  sm:mt-0 sm:w-[50%]`}>
+				data-aos="fade-left"
+					className={` cardFont w-full mt-4  sm:mt-0 sm:w-[50%]`}>
 					<Formik
 						validateOnChange={false}
 						validateOnBlur={false}
@@ -190,21 +161,22 @@ const ContactPage = () => {
 										<input
 											onChange={handleChange}
 											onBlur={handleBlur}
-											value={values.typing}
+											value={values.message}
 											className="mt-1   px-5  pb-12 rounded-md  text-gray-400  w-full  focus:outline-none h-[120px] focus:border-2  focus:border-[#280642]   bg-[#23053a]  ring-transparent focus:ring-transparent text-sm "
-											name="typing"
+											name="message"
 											type="text"
-											id="typing"
-											placeholder="Typing your message here... "
+											id="message"
+											placeholder="message your message here... "
 										/>
 
 										<ErrorMessage
 											component={"p"}
-											name="typing"
+											name="message"
 											className="text-orange-500 text-sm font-medium"
 										/>
 									</div>
 
+							
 									<Button
 										disabled={isSubmitting}
 										type="submit"

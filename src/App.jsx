@@ -1,18 +1,12 @@
-/** @format */
-
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import { NavComponent } from "./Components";
-import { HomePage } from "./Page";
+import AppRoutes from "./routes";
 
 const App = () => {
-	return (
-		<div className="ContainerResponsive  ">
-			<Routes>
-				<Route path="/" element={<NavComponent />} />
-			</Routes>
-		</div>
-	);
+  return (
+    <div className="ContainerResponsive">
+      <AppRoutes />
+    </div>
+  );
 };
 
 export default App;

@@ -5,7 +5,7 @@ export const ContactApi = ApiService.injectEndpoints({
 	endpoints: (builder) => ({
 		create: builder.mutation({
 			query: (arg) => ({
-				url: "/contact",
+				url: "/contact/send-message",
 				method: "POST",
 				body: arg,
 			}),
