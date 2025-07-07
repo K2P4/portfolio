@@ -41,7 +41,7 @@ export const projects = [
       "Notifications & reports",
     ],
     githubUrl: "",
-    demoUrl: "https://nms.nordictec.com/login",
+    demoUrl: "",
     img: "projects/hrm.png",
   },
 
@@ -53,14 +53,12 @@ export const projects = [
     features: [
       "Patient registration & history",
       "Doctor & appointment scheduling",
-      "Billing & invoicing",
       "Pharmacy management",
       "Medical records & prescriptions",
       "Lab test reports",
       "Role-based access",
     ],
-    githubUrl:
-      "https://github.com/one-project-one-month/Hospital-Management-System-Laravel",
+    githubUrl:"",
     demoUrl: "https://hospital-management-fe-next-yu3u.vercel.app/login",
     img: "projects/hospital.jpg",
   },
