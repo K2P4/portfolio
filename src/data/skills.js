@@ -30,7 +30,7 @@ export const skills = {
     },
     {
       title: "Tailwind css",
-      img: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-512x307-1v56l8ed.png",
+      img: "https://images.icon-icons.com/3398/PNG/512/css_tailwind_logo_icon_214735.png",
       percentage: 80,
     },
     {

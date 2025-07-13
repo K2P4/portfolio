@@ -7,7 +7,7 @@ const SkillPage = () => {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
-    <section  data-aos="fade-right" className="min-h-screen py-16  px-4">
+    <section data-aos="fade-right" className="min-h-screen py-16  px-4">
       <h1 className="text-yellow-400 text-4xl font-bold border-b-2 border-yellow-400 inline-block mb-12">
         My Skill-Set
       </h1>
@@ -30,11 +30,11 @@ const SkillPage = () => {
       </div>
 
       {/* Skills */}
-      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-10 items-center ">
+      <div className="flex flex-wrap gap-8">
         {skills[activeCategory].map((skill, idx) => (
           <div
             key={idx}
-            className=" border border-purple-950 rounded-3xl p-6 w-[90%] sm:w-[260px] shadow-lg hover:shadow-yellow-400/10 transition duration-300 ease-in-out"
+            className=" border border-purple-950 rounded-3xl p-6 w-[45%] sm:w-[45%] md:w-[260px] shadow-lg hover:shadow-yellow-400/10 transition duration-300 ease-in-out"
           >
             <div className="flex flex-col items-center gap-4">
               <img
@@ -47,7 +47,7 @@ const SkillPage = () => {
               </h3>
 
               {/* Progress  */}
-              <div className="w-full mt-4">
+              <div className="w-full mt-3">
                 <div className="text-sm text-gray-400 mb-1 text-center">
                   {skill.percentage}%
                 </div>

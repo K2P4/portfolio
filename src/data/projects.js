@@ -59,7 +59,7 @@ export const projects = [
       "Role-based access",
     ],
     githubUrl:"",
-    demoUrl: "https://hospital-management-fe-next-yu3u.vercel.app/login",
+    // demoUrl: "https://hospital-management-fe-next-yu3u.vercel.app/login",
     img: "projects/hospital.jpg",
   },
 
@@ -118,21 +118,21 @@ export const projects = [
     img: "projects/task.png",
   },
 
-  {
-    title: "Recipe CRUD Project",
-    description:
-      "Simple recipe management app with CRUD and pagination built using Vue and Laravel.",
-    techStack: ["Vue", "Laravel", "Tailwind CSS", "MySQL"],
-    features: [
-      "Add, update, delete recipes",
-      "Image upload support",
-      "Paginated recipe listing",
-      "Responsive design",
-    ],
-    githubUrl: "https://github.com/K2P4/recipe-vue-project",
-    demoUrl: "https://phyo-recipe.netlify.app/",
-    img: "projects/recipe.png",
-  },
+  // {
+  //   title: "Recipe CRUD Project",
+  //   description:
+  //     "Simple recipe management app with CRUD and pagination built using Vue and Laravel.",
+  //   techStack: ["Vue", "Laravel", "Tailwind CSS", "MySQL"],
+  //   features: [
+  //     "Add, update, delete recipes",
+  //     "Image upload support",
+  //     "Paginated recipe listing",
+  //     "Responsive design",
+  //   ],
+  //   githubUrl: "https://github.com/K2P4/recipe-vue-project",
+  //   demoUrl: "https://phyo-recipe.netlify.app/",
+  //   img: "projects/recipe.png",
+  // },
 
   {
     title: "Fancy Quiz App",

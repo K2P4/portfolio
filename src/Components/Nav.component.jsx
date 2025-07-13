@@ -95,7 +95,7 @@ const NavComponent = () => {
         >
           <h1
             onClick={() => nav("/")}
-            className="flex  select-none items-center gap-0 sm:gap- sm:text-sm md:text-lg lg:text-xl text-yellow-400  header font-bold tracking-widest  "
+            className="flex  select-none items-center gap-0 sm:gap- sm:text-md md:text-lg text-yellow-400  header font-bold tracking-widest  "
           >
              THURA{" "}
             <span>
@@ -296,8 +296,8 @@ const NavComponent = () => {
             </div>
           )}
 
-          {/* navigation bar for sm */}
-          <div className=" hidden sm:flex">
+          {/* navigation bar  */}
+          <div className=" hidden md:flex">
             <ul className="flex sm:space-x-4 md:space-x-4  lg:space-x-7">
               {NavList.map((nav) => (
                 <li
@@ -315,7 +315,7 @@ const NavComponent = () => {
           </div>
 
           {/* navigation menu */}
-          <div className="flex sm:hidden z-10   text-center">
+          <div className="flex md:hidden z-10   text-center">
             <button
               className=" text-xl  flex  text-yellow-500  tracking-wide items-center font-bold "
               type="button"
