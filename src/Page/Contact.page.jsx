@@ -143,7 +143,7 @@ const ContactPage = () => {
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.email}
-											className="mt-1 px-5 py-3 sm:px-3 sm:p-5 rounded-md  w-full  text-gray-400 focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm "
+											className="mt-1 border-0 px-5 py-3 sm:px-3 sm:p-5 rounded-md  w-full  focus:outline-none  bg-[#23053a] focus:border-2  focus:border-[#280642]  ring-transparent focus:ring-transparent text-sm text-gray-400"
 											name="email"
 											type="email"
 											id="email"
@@ -162,7 +162,7 @@ const ContactPage = () => {
 											onChange={handleChange}
 											onBlur={handleBlur}
 											value={values.message}
-											className="mt-1   px-5  pb-12 rounded-md  text-gray-400  w-full  focus:outline-none h-[120px] focus:border-2  focus:border-[#280642]   bg-[#23053a]  ring-transparent focus:ring-transparent text-sm "
+											className="mt-1 border-0  px-5  pb-12 rounded-md  text-gray-400  w-full  focus:outline-none h-[120px] focus:border-2  focus:border-[#280642]   bg-[#23053a]  ring-transparent focus:ring-transparent text-sm "
 											name="message"
 											type="text"
 											id="message"
@@ -180,7 +180,7 @@ const ContactPage = () => {
 									<Button
 										disabled={isSubmitting}
 										type="submit"
-										className="text-white ms-auto cardFont  active:scale-95 sm:mt-5  mt-3 bg-yellow-500  sm:w-[40%]  hover:bg-yellow-500 rounded-lg   text-center  font-semibold">
+										className="text-black ms-auto cardFont  active:scale-95 sm:mt-5 hover:bg-yellow-400   mt-3 bg-[#ffcc23]  sm:w-[40%]  rounded-lg   text-center  font-semibold">
 										{isLoading ? (
 											<Loader2 className=" mr-2 text-gray-300 mx-auto text-center h-5 w-5 animate-spin" />
 										) : (

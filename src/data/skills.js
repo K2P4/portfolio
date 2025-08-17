@@ -21,7 +21,12 @@ export const skills = {
     {
       title: "Javascript",
       img: "https://cdn-icons-png.flaticon.com/128/5968/5968292.png",
-      percentage: 80,
+      percentage: 70,
+    },
+        {
+      title: "TypeScript",
+      img: "https://cdn-icons-png.flaticon.com/128/5968/5968381.png",
+      percentage: 55,
     },
     {
       title: "Bootstrap",
@@ -59,7 +64,7 @@ export const skills = {
     {
       title: "NODE JS",
       img: "https://cdn-icons-png.flaticon.com/128/15484/15484303.png",
-      percentage: 60,
+      percentage: 50,
     },
     {
       title: "Mysql",
@@ -82,4 +87,5 @@ export const skills = {
     },
 
   ],
+
 };

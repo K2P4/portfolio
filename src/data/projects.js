@@ -1,5 +1,27 @@
 export const projects = [
   {
+    title: "Thura Blog",
+    description:
+      "Tech blog platform with authentication, comments, admin panel, and full blog management.",
+    techStack: [
+      "PHP",
+      "Laravel",
+      "Bootstrap",
+      "MySQL",
+      "Vercel",
+      "Tailwind CSS",
+    ],
+    features: [
+      "User registration & login",
+      "Comment & Subscribe features",
+      "Admin blog management (CRUD)",
+      "Role-based permissions",
+    ],
+    githubUrl: "https://github.com/K2P4/laravel-tech-blog",
+    demoUrl: "https://phyothura-blog.vercel.app/",
+    img: "projects/blog.png",
+  },
+  {
     title: "E-Commerce Platform",
     description:
       "Full-featured online store with cart, payments, and admin dashboard.",
@@ -26,10 +48,41 @@ export const projects = [
   },
 
   {
+    title: "MEI Website",
+    description:
+      "A non-profit organization website provide free education and resources.",
+    techStack: [
+      "React",
+      "Laravel",
+      "Tailwind CSS",
+      "zod",
+      "Tanstack Query",
+      "Vite",
+      "MySQL",
+    ],
+    features: [
+      "Admin management",
+      "volunteer registration & listing",
+      "Event management",
+      "Course management",
+      "Contact form",
+    ],
+    demoUrl: "https://mei-mm.org/",
+    img: "projects/mei.png",
+  },
+
+  {
     title: "HRM System",
     description:
       "A comprehensive Human Resource Management System with all essential HR operations.",
-    techStack: ["Vue 2", "Laravel", "Laravel Mix", "MySQL"],
+    techStack: [
+      "Vue 2",
+      "Laravel",
+      "Laravel Mix",
+      "MySQL",
+      "Bootstrap",
+      "webpack",
+    ],
     features: [
       "Employee management",
       "Attendance & leave tracking",
@@ -45,23 +98,23 @@ export const projects = [
     img: "projects/hrm.png",
   },
 
-  {
-    title: "Hospital Management System",
-    description:
-      "System for managing patients, appointments, billing, and medical services.",
-    techStack: ["Next.js", "Laravel", "MySQL"],
-    features: [
-      "Patient registration & history",
-      "Doctor & appointment scheduling",
-      "Pharmacy management",
-      "Medical records & prescriptions",
-      "Lab test reports",
-      "Role-based access",
-    ],
-    githubUrl:"",
-    // demoUrl: "https://hospital-management-fe-next-yu3u.vercel.app/login",
-    img: "projects/hospital.jpg",
-  },
+  // {
+  //   title: "Hospital Management System",
+  //   description:
+  //     "System for managing patients, appointments, billing, and medical services.",
+  //   techStack: ["Next.js", "Laravel", "MySQL"],
+  //   features: [
+  //     "Patient registration & history",
+  //     "Doctor & appointment scheduling",
+  //     "Pharmacy management",
+  //     "Medical records & prescriptions",
+  //     "Lab test reports",
+  //     "Role-based access",
+  //   ],
+  //   githubUrl: "",
+  //   // demoUrl: "https://hospital-management-fe-next-yu3u.vercel.app/login",
+  //   img: "projects/hospital.jpg",
+  // },
 
   {
     title: "Zoya Blog",
@@ -77,22 +130,6 @@ export const projects = [
     githubUrl: "https://github.com/K2P4/zoya-blog",
     demoUrl: "https://zoya-blog.vercel.app/",
     img: "projects/zoya.png",
-  },
-
-  {
-    title: "The Dev Diary",
-    description:
-      "Tech blog platform with authentication, comments, admin panel, and full blog management.",
-    techStack: ["PHP", "Laravel", "Bootstrap", "MySQL"],
-    features: [
-      "User registration & login",
-      "Comment system",
-      "Admin blog management (CRUD)",
-      "Role-based permissions",
-    ],
-    githubUrl: "https://github.com/K2P4/laravel-tech-blog",
-    demoUrl: "https://blog-nu-five-62.vercel.app/",
-    img: "projects/devDiary.png",
   },
 
   {
@@ -146,23 +183,7 @@ export const projects = [
       "Score summary at the end",
     ],
     githubUrl: "https://github.com/K2P4/fancy_quiz_app_with_vueJs",
-    demoUrl: "https://phyo-recipe.netlify.app/",
+    demoUrl: "https://phyothura-quiz-app.netlify.app/",
     img: "projects/quiz.png",
-  },
-
-  {
-    title: "Contact Management App",
-    description:
-      "Full-stack contact management system with CRUD operations.",
-    techStack: ["React", "Laravel", "Tailwind CSS", "MySQL"],
-    features: [
-      "Add, edit, delete contacts",
-      "User authentication",
-      "Responsive UI",
-      "Search & filter contacts",
-    ],
-    githubUrl: "https://github.com/K2P4/studentProject_with_contact_app",
-    demoUrl: "https://student-project-with-contact-app.vercel.app/",
-    img: "projects/contact.png",
   },
 ];

@@ -6,7 +6,7 @@ export default function Projects() {
     <section 			data-aos="fade-left" id="project" className="py-16 px-4 max-w-7xl mx-auto">
       <h2 className="text-4xl font-bold text-center text-yellow-500 mb-12">My Projects</h2>
 
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, idx) => (
           <div
             key={idx}
@@ -17,7 +17,7 @@ export default function Projects() {
                 src={project?.img}
                 alt={project.title}
                 fill
-                className="object-cover h-48"
+                className="object-center h-52 w-full"
               />
             </div>
 
