@@ -1,16 +1,15 @@
 // routes/index.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Layout from "../layout/Layout";
-import HomePage from "../Page/Home.page";
+import {Layout} from "@layout";
+import {Home} from "@pages";
 
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        
+        <Route index element={<Home />} />
       </Route>
     </Routes>
   );
