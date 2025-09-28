@@ -53,11 +53,10 @@ export const Home = () => {
 
   const downloadCV = () => {
     setLoading(true);
-    const url = '/thura_cv_update.png';
+    const url = '/cv_dev.png';
     const link = document.createElement('a');
     link.href = url;
-    link.setAttribute('download', 'Phyo Thura_CV');
-    link.setAttribute('target', '_blank');
+    link.setAttribute('download', 'Phyo Thura_CV.png');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -90,7 +89,7 @@ export const Home = () => {
             </button>
           </div>
 
-            <Social />
+          <Social />
         </div>
 
         {/*  Profile */}
@@ -118,4 +117,3 @@ export const Home = () => {
     </section>
   );
 };
-
