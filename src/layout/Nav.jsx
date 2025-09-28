@@ -115,7 +115,7 @@ export const Nav = () => {
 
         {/* navigation bar for lg layout  */}
         <div className="hidden md:flex">
-          <ul className="flex sm:space-x-4 md:space-x-4  lg:space-x-7">
+          <ul className="flex sm:space-x-4 md:space-x-5  lg:space-x-7">
             {NavList.map((nav) => (
               <li
                 key={nav.id}

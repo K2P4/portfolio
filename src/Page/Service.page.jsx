@@ -16,7 +16,7 @@ export const Service= () => {
         </div>
 
         {/* Services  */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {services.map((serviceItem, index) => (
             <motion.div key={index} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 8 }} transition={{ duration: 0.4, ease: 'easeOut' }} whileHover={{ scale: 1.02 }} className="h-full">
               <Card className="group h-full border-gray-200 hover:border-primary/40 transition-colors duration-300 shadow-sm">
