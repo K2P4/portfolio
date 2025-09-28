@@ -1,77 +1,91 @@
-/** @format */
 
-import React  from "react";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@components';
 
-const AboutPage = () => {
-
+export const About = () => {
   return (
-    <div id="about" className="py-16">
-      <div className="mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          {/* About  */}
+    <section id="about" className="py-20 bg-white">
+        <div className="grid mx-auto grid-cols-1 lg:grid-cols-2 justify-between gap-14 items-center">
           <div data-aos="fade-right" className="flex flex-col gap-6">
-            <h2 className="text-3xl font-bold text-yellow-400">About Me</h2>
-            <p className="text-gray-300 leading-relaxed tracking-tight text-justify">
-              Hello, I am{" "}
-              <span className="text-yellow-400 font-semibold tracking-wide">
-                Thura
-              </span>
-              . I’m currently working as a Junior Developer at a logistics
-              company. I specialize in developing web applications and backend
-              systems, and I enjoy streamlining business operations through
-              modern technology. I've always had a passion for software
-              development and continuously strive to improve my skills to create
-              scalable, high-quality solutions.
+            <span className="inline-flex w-fit items-center rounded-full border border-primary/40  px-3 py-1 text-sm font-semibold text-gray-700">About</span>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-black">Building useful, reliable software</h2>
+            <p className="text-gray-700 leading-relaxed tracking-tight">
+              Hello, I am <span className="font-semibold text-primary">Thura</span>. I’m currently working as a Junior Developer at a logistics company. I focus on building web applications and backend
+              services that streamline operations and deliver measurable value. I care about code quality, thoughtful UX, and maintainable systems.
             </p>
 
-            {/* Info Cards */}
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="bg-white/5 backdrop-blur-md shadow-lg shadow-[#2b1c39]/30 rounded-lg p-4">
-                <p className="text-gray-400 text-sm">Name</p>
-                <p className="text-yellow-400 font-semibold text-md">
-                  Phyo Thura
-                </p>
+            {/* Quick stats */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div className="rounded-lg border border-gray-200 hover:border-primary/40 duration-300 transition-all cursor-auto p-4">
+                <div className="text-2xl font-bold text-black">
+                  1+<span className="text-primary">y</span>
+                </div>
+                <div className="text-xs text-gray-600">Experience</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-md shadow-lg shadow-[#2b1c39]/30 rounded-lg p-4">
-                <p className="text-gray-400 text-sm">Phone</p>
-                <p className="text-yellow-400 font-semibold text-md">
-                  09968213232
-                </p>
+              <div className="rounded-lg border border-gray-200 hover:border-primary/40 duration-300 transition-all cursor-auto p-4">
+                <div className="text-2xl font-bold text-black">
+                  10+<span className="text-primary">%</span>
+                </div>
+                <div className="text-xs text-gray-600">Process gains</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-md shadow-lg shadow-[#2b1c39]/30 rounded-lg p-4 col-span-2">
-                <p className="text-gray-400 text-sm">Email</p>
-                <p className="text-yellow-400 font-semibold text-md">
-                  pthya381@gmail.com
-                </p>
+              <div className="rounded-lg border border-gray-200 hover:border-primary/40 duration-300 transition-all cursor-auto p-4">
+                <div className="text-2xl font-bold text-black">Web</div>
+                <div className="text-xs text-gray-600">Apps & APIs</div>
               </div>
             </div>
+
           </div>
 
-          {/* Interests */}
-          <div data-aos="fade-left" className="space-y-6 mx-auto">
-            <h3 className="text-xl font-semibold text-yellow-400">
-              My Interests
-            </h3>
-            <div className="flex flex-wrap gap-4">
-              {[
-                { icon: "🎧", label: "Music" },
-                { icon: "✈️", label: "Travel" },
-                { icon: "🎬", label: "Movie" },
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-2 bg-white/5 shadow-md shadow-[#2b1c39]/30 px-4 py-2 duration-700 cursor-pointer hover:shadow-sm hover:scale-105 rounded-full text-gray-300 text-sm"
-                >
-                  <span className="text-yellow-400 text-lg">{item.icon}</span>
-                  <span>{item.label}</span>
+          {/* Right: Details card */}
+          <div data-aos="fade-left">
+            <Card className="shadow-sm">
+              <CardHeader>
+                <CardTitle className="text-black">A bit more about me</CardTitle>
+                <CardDescription>I enjoy collaborating with cross‑functional teams and shipping polished, production‑ready features.</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {/* Interests */}
+                <div className="space-y-3">
+                  <h3 className="text-sm font-semibold text-black">Interests</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { icon: '🎧', label: 'Music' },
+                      { icon: '✈️', label: 'Travel' },
+                      { icon: '🎬', label: 'Movie' },
+                    ].map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-2 cursor-pointer rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm text-gray-700 hover:border-primary/40  transition"
+                      >
+                        <span className="text-lg">{item.icon}</span>
+                        <span>{item.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
+
+                {/* Focus Areas */}
+                <div className="space-y-3">
+                  <h3 className="text-sm font-semibold text-black">Focus areas</h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary"></span> Web application development
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary"></span> RESTful APIs & backend
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary"></span> Clean, maintainable code
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary"></span> Business process automation
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
-      </div>
-    </div>
+    </section>
   );
 };
 
-export default AboutPage;

@@ -1,11 +1,5 @@
 export const skills = {
-  "UI Design": [
-    {
-      title: "Figma",
-      img: "https://cdn-icons-png.flaticon.com/128/5968/5968705.png",
-      percentage: 40,
-    },
-  ],
+
 
   Frontend: [
     {
@@ -70,6 +64,14 @@ export const skills = {
       title: "Mysql",
       img: "https://cdn-icons-png.flaticon.com/128/919/919836.png",
       percentage: 70,
+    },
+  ],
+
+    "UI Design": [
+    {
+      title: "Figma",
+      img: "https://cdn-icons-png.flaticon.com/128/5968/5968705.png",
+      percentage: 40,
     },
   ],
 

@@ -1,72 +1,25 @@
 /** @format */
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-	background: rgb(0, 36, 34);
-	background: linear-gradient(
-		90deg,
-		rgba(0, 36, 34, 1) 0%,
-		rgba(0, 17, 87, 1) 0%,
-		rgba(0, 0, 80, 1) 0%,
-		rgba(0, 6, 38, 1) 0%,
-		rgba(0, 6, 41, 1) 0%,
-		rgba(41, 0, 75, 1) 0%,
-		rgba(28, 0, 77, 1) 0%,
-		rgba(23, 0, 71, 1) 0%,
-		rgba(25, 5, 49, 1) 0%
-	);
-}
-
-
-
-.cardBox {
-	background: rgb(0, 36, 34);
-	background: linear-gradient(
-		90deg,
-		rgba(0, 36, 34, 1) 0%,
-		rgb(241, 242, 243) 0%,
-		rgba(0, 0, 80, 1) 0%,
-		rgba(0, 6, 38, 1) 0%,
-		rgba(0, 6, 41, 1) 0%,
-		rgba(41, 0, 75, 1) 0%,
-		rgb(48, 0, 131) 0%,
-		rgba(23, 0, 71, 1) 0%,
-		rgba(25, 5, 49, 1) 0%
-	);
-}
-
-.shadow-custom {
-	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-		0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-}
-
-* {
-  font-family: "Poppins";
-}
-
-
-.projectBox {
-	background: rgba(0, 36, 34, 0.356);
-	background: linear-gradient(
-		90deg,
-		rgba(0, 36, 34, 1) 0%,
-		rgba(0, 17, 87, 1) 0%,
-		rgba(0, 0, 80, 1) 0%,
-		rgba(0, 6, 38, 1) 0%,
-		rgb(0, 11, 77) 0%,
-		rgb(45, 0, 82) 0%,
-		rgb(56, 0, 153) 0%,
-		rgba(23, 0, 71, 1) 0%,
-		rgba(25, 5, 49, 1) 0%
-	);
+@layer base {
+  body {
+    /* Soft, user-friendly background across the whole app */
+    @apply bg-gradient-to-b from-slate-50 via-white to-blue-50 bg-fixed text-black min-h-screen antialiased;
+  }
 }
 
 @layer components {
-	.ContainerResponsive {
-		@apply w-full  h-auto m-auto;
-	}
+  .btn-primary {
+    @apply bg-primary text-center text-white px-6 py-2 rounded-lg font-medium hover:bg-primary/90 active:scale-95 transition;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-center text-primary cursor-pointer px-6 py-2 rounded-lg font-medium hover:bg-primary hover:text-white transition-all;
+  }
+
+  .btn-outline-wth-animate {
+    @apply border border-primary text-center text-primary px-6 py-2 rounded-full font-medium cursor-pointer transition-all duration-500 ease-in-out hover:bg-primary hover:text-white hover:-translate-y-0.5 active:scale-95;
+  }
 }

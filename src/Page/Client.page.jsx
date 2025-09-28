@@ -1,133 +1,47 @@
-/** @format */
+import { motion } from 'framer-motion';
+import { clients } from '../data/clients';
 
-import React from "react";
-import { motion } from "framer-motion";
-import { FaStar } from "react-icons/fa6";
-
-const ClientPage = () => {
-  const stars = [1, 2, 3, 4, 5];
-
+const TestimonialCard = ({ client }) => {
   return (
-    <div
-      data-aos="fade-right"
-      id="review"
-      className=" ContainerResponsive flex flex-col py-16    gap-10 justify-center sm:gap-16  "
+    <motion.div
+      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.35, ease: 'easeOut' }}
+      whileHover={{ y: -5, scale: 1.01 }}
+      className="p-[1px] shadow-sm   rounded-2xl bg-gradient-to-br from-primary/30  to-primary/40 "
     >
-      <h1 className=" text-yellow-400 mt-10  text-2xl header font-bold tracking-wide ">
-        Client & Reviews
-      </h1>
-
-      <div
-        id="client"
-        className={`flex flex-col lg:flex-row items-center justify-center  gap-5  sm:gap-4`}
-      >
-        <motion.div
-          whileInView={{ opacity: 1 }}
-          initial={false}
-          whileHover={{
-            opacity: 0.7,
-            scale: 0.9,
-            boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
-          }}
-          className="  lg:h-[430px]  duration-300 xl:h-[400px]  h-[340px] md:h-[340px]  py-3 px-3 shadow-gray-950 rounded-lg w-full lg:w-[30%] shadow-md bg-[#23053a]  "
-        >
-          <img
-            className="   object-cover ring-2 ring-purple-950    text-center mx-auto sm:mt-5    h-20 w-20  sm:h-32 sm:w-32 rounded-full    shadow-md shadow-[#2d183f]     opacity-95  "
-            src="Min.jpg"
-            alt=""
-          />
-          <h1 className=" text-gray-300 text-md  my-2 header tracking-wider  font-semibold mx-auto text-center sm:text-xl mt-3">
-            Min Thu Khant
-          </h1>
-
-          <div className="flex sm:gap-3  gap-2 items-center  justify-center">
-            {stars.map((item) => (
-              <FaStar
-                className="text-yellow-500  shadow-lg   h-4 w-4 sm:h-7 sm:w-7"
-                key={item}
-              />
-            ))}
+      <div className="h-full bg-white rounded-2xl p-6 shadow-sm border ">
+        <div className="flex items-start gap-4">
+          <div className="flex flex-col  items-center gap-2">
+            <img src={client?.img} alt={client?.position} className="h-24 w-24 rounded-full ring-2 ring-gray-200 object-cover" />
+            <a href={client?.media} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary text-sm mt-3">
+              View profile
+            </a>
           </div>
-
-          <p className="h-20 text-center mt-3 text-xs sm:text-base  text-gray-400 leading-6 sm:mt-5 sm:tracking-normal sm:my-4 sm:px-2  mx-auto  cardFont ">
-            Their attention to detail, creativity, and responsiveness made the
-            entire process seamless and enjoyable. I highly recommend their
-            services .
-          </p>
-        </motion.div>
-        <motion.div
-          whileInView={{ opacity: 1 }}
-          initial={false}
-          whileHover={{
-            opacity: 0.7,
-            scale: 0.9,
-            boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
-          }}
-          className=" lg:h-[520px] duration-300    xl:h-[470px]  h-[340px] py-3 px-3 shadow-gray-950 rounded-lg w-full lg:w-[30%] shadow-md bg-[#23053a]   "
-        >
-          <img
-            className="   object-cover ring-2 ring-purple-950 sm:mt-5   text-center mx-auto    h-20 w-20  sm:h-32 sm:w-32 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
-            src="Aye.jpg"
-            alt=""
-          />
-
-          <h1 className=" text-gray-300 text-md  my-2 header tracking-wider  font-semibold mx-auto text-center sm:text-xl mt-3">
-            Aye Yadanar Kyaw
-          </h1>
-
-          <div className="flex sm:gap-3  gap-2 items-center  justify-center">
-            {stars.map((item) => (
-              <FaStar
-                className="text-yellow-500  shadow-lg   h-4 w-4 sm:h-7 sm:w-7"
-                key={item}
-              />
-            ))}
+          <div className="flex-1">
+            <h2 className="text-black font-semibold">{client?.position}</h2>
+            <p className="mt-3 text-gray-600 leading-6 text-sm">{client?.text}</p>
           </div>
-
-          <p className="h-20  mt-3 text-center text-xs sm:text-base  text-gray-400 leading-6  sm:my-4 sm:px-5  mx-auto sm:tracking-normal cardFont ">
-            Working with Phyo Thura was absolute delight! He is not only brought
-            our vision to life but also added their own creative flair,
-            resulting in a website that exceeded our expectations.{" "}
-          </p>
-        </motion.div>
-
-        <motion.div
-          whileInView={{ opacity: 1 }}
-          initial={false}
-          whileHover={{
-            opacity: 0.7,
-            scale: 0.9,
-            boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
-          }}
-          className=" duration-300 xl:h-[400px]  h-[340px] lg:h-[420px]  py-3 px-3 mt-5 shadow-gray-950 rounded-lg w-full lg:w-[30%] shadow-md bg-[#23053a]  "
-        >
-          <img
-            className="   object-cover ring-2 ring-purple-950    text-center mx-auto    h-20 w-20 sm:h-32 sm:w-32 rounded-full     shadow-md shadow-[#2d183f]     opacity-95  "
-            src="myatpoe.jpg"
-            alt=""
-          />
-
-          <h1 className=" text-gray-300 text-md  my-2 header tracking-wider  font-semibold mx-auto text-center sm:text-xl mt-3">
-            Myat Poe Eain
-          </h1>
-
-          <div className="flex gap-2 sm:gap-3 items-center  justify-center">
-            {stars.map((item) => (
-              <FaStar
-                className="text-yellow-500  shadow-lg   h-4 w-4 sm:h-7 sm:w-7"
-                key={item}
-              />
-            ))}
-          </div>
-
-          <p className="h-20 mt-3 text-xs sm:text-base my-2  text-gray-400 leading-6  sm:my-4 sm:px-5 text-center  sm:tracking-normal  mx-auto tracking-wide cardFont ">
-            Thanks to his hardwork and dedication. Hs is very good at coding &
-            web design . Highly recommend his services !
-          </p>
-        </motion.div>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
-export default ClientPage;
+export const Client = () => {
+  return (
+    <section data-aos="fade-right" id="review" className="py-20">
+      <div className="flex flex-col items-center text-center gap-3 mb-10">
+        <span className="inline-flex items-center rounded-full border border-primary/40 px-3 py-1 text-xs font-semibold text-gray-700">Clients</span>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black">What Clients Say</h2>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {clients.map((c, i) => (
+          <TestimonialCard key={i} client={c} />
+        ))}
+      </div>
+    </section>
+  );
+};
+

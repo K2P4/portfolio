@@ -1,18 +1,15 @@
-// layout/Layout.jsx
-import React from "react";
 import { Outlet } from "react-router-dom";
-import { FooterComponent, NavComponent } from "../Components";
+import { Footer, Nav } from "@layout";
 
-const Layout = () => {
+export const Layout = () => {
   return (
-    <div className="layout">
-      <div className="sm:w-[80%]  w-[90%]  h-full  mx-auto">
-        <NavComponent />
+    <div className="layout overflow-x-hidden">
+      <div className="sm:w-[80%] w-[90%] h-full mx-auto ">
+        <Nav />
         <Outlet />
       </div>
-      <FooterComponent />
+      <Footer  />
     </div>
   );
 };
 
-export default Layout;

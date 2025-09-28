@@ -1,9 +1,8 @@
-import React from "react";
 import AppRoutes from "./routes";
 
 const App = () => {
   return (
-    <div className="ContainerResponsive">
+    <div className="ContainerResponsive overflow-x-hidden">
       <AppRoutes />
     </div>
   );

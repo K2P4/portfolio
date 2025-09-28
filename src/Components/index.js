@@ -1,5 +1,7 @@
 /** @format */
 
-export { default as NavComponent } from "./Nav.component.jsx";
 export { default as WebLottie } from "./lottieComponent/web.lottie.jsx";
-export { default as FooterComponent } from "./Footer.component.jsx";
+export * from './Social.component.jsx'
+export { default as Carousel } from "./ui/carousel.jsx";
+export * from './ui/card.jsx'
+
