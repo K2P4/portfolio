@@ -106,7 +106,7 @@ export const Contact = () => {
                     />
                   </div>
 
-                  <button disabled={isSubmitting} type="submit" className="mr-auto md:ms-auto  rounded-xl  sm:mt-5  mt-3    btn-primary  px-6 py-3 focus:outline-none focus:ring-1 focus:ring-primary/40">
+                  <button disabled={isSubmitting} type="submit" className="xs:mr-auto md:ml-auto w-fit rounded-xl  sm:mt-5  mt-3    btn-primary  px-6 py-3 focus:outline-none focus:ring-1 focus:ring-primary/40">
                     {isLoading ? <Loader2 className="mr-2 text-white mx-auto text-center h-5 w-5 animate-spin" /> : <> Submit</>}
                   </button>
                 </Form>
