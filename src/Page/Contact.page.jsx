@@ -33,7 +33,6 @@ export const Contact = () => {
   return (
     <div className="ContainerResponsive flex gap-6 py-16 sm:gap-14 flex-col justify-center">
       <div className="flex flex-col items-center text-center gap-3 mb-10">
-        <span className="inline-flex items-center rounded-full border border-primary/40 px-3 py-1 text-xs font-semibold text-gray-700">Contact</span>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black">I want to hear from you </h2>
       </div>
 

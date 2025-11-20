@@ -5,7 +5,7 @@ import {Carousel} from '@components';
 
 export const Projects = () => {
   const rawCategories = useMemo(() => Array.from(new Set(projects.map((p) => p.category || 'Personal'))), []);
-  const displayLabel = (cat) => (cat === 'Freelance' ? 'Outsource' : cat);
+  const displayLabel = (cat) => cat === cat.toUpperCase() ? cat : cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
   const categories = ['All', ...rawCategories];
   const [active, setActive] = useState('All');
   const filtered = useMemo(() => (active === 'All' ? projects : projects.filter((p) => p.category === active)), [active]);
@@ -14,8 +14,7 @@ export const Projects = () => {
     <section data-aos="fade-left" id="projects" className="py-20">
       <div className="mx-auto  px-4">
         <div className="flex flex-col items-center text-center gap-3 mb-10">
-          <span className="inline-flex items-center rounded-full border border-primary/40 px-3 py-1 text-xs font-semibold text-gray-700">Projects</span>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black">Selected Work</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black">My Projects</h2>
         </div>
 
         {/* Category Tabs */}
@@ -44,7 +43,7 @@ export const Projects = () => {
               </div>
               <div className="p-5 flex flex-col flex-grow">
                 <h3 className="text-lg md:text-xl text-black font-semibold mb-1">{project.title}</h3>
-                <p className="text-sm text-gray-700">{project.description}</p>
+                <p className="text-sm text-gray-700 my-1">{project.description}</p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (

@@ -32,7 +32,6 @@ export const Client = () => {
   return (
     <section data-aos="fade-right" id="review" className="py-20">
       <div className="flex flex-col items-center text-center gap-3 mb-10">
-        <span className="inline-flex items-center rounded-full border border-primary/40 px-3 py-1 text-xs font-semibold text-gray-700">Clients</span>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black">What Clients Say</h2>
       </div>
 

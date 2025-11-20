@@ -11,7 +11,6 @@ export const Service= () => {
     <section id="service" data-aos="fade-left" className="py-20 ">
       <div className="mx-auto  px-4">
         <div className="flex flex-col items-center text-center gap-3 mb-12">
-          <span className="inline-flex w-fit items-center rounded-full border border-primary/40  px-3 py-1 text-sm font-semibold text-gray-700">Services</span>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-black">What I can do for you</h2>
         </div>
 

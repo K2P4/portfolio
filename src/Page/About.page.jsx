@@ -6,7 +6,6 @@ export const About = () => {
     <section id="about" className="py-20 bg-white">
         <div className="grid mx-auto grid-cols-1 lg:grid-cols-2 justify-between gap-14 items-center">
           <div data-aos="fade-right" className="flex flex-col gap-6">
-            <span className="inline-flex w-fit items-center rounded-full border border-primary/40  px-3 py-1 text-sm font-semibold text-gray-700">About</span>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-black">Building useful, reliable software</h2>
             <p className="text-gray-700 leading-relaxed tracking-tight">
               Hello, I am <span className="font-semibold text-primary">Thura</span>. I’m currently working as a Junior Developer at a logistics company. I focus on building web applications and backend
