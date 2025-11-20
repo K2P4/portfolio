@@ -38,7 +38,7 @@ export const projects = [
     category: "Freelance",
     techStack: ["React", "Laravel", "Tailwind CSS", "Tanstack Query", "Vite", "MySQL","Typescript","cPanel","shadcn/ui"],
     features: ["Course listing & enrollment", "Video lectures & Classrooms", "Progress tracking", "User authentication","Admin UI", "Student UI", ],
-    demoUrl: "https://www.thecrystalacademy.org/login",
+    demoUrl: "",
     img: "projects/learning_platform.png",
   },
 
@@ -48,7 +48,7 @@ export const projects = [
     category: "Freelance",
     techStack: ["Wordpress", "Elementor", "PHP", "MySQL", "cPanel", "HTML", "CSS"],
     features: ["Blog  management", "Plugins integration", "Responsive design", "SEO optimization", "Contact form"],
-    demoUrl: "https://phfmyanmar.org/",
+    demoUrl: "",
     img: "projects/phf.png",
   },
 
