@@ -20,8 +20,6 @@ export const projects = [
     img: "projects/ecommerce.png",
   },
 
-  
-
   {
     title: "MEI Website",
     description: "A non-profit organization website provide free education and resources.",
@@ -32,12 +30,12 @@ export const projects = [
     img: "projects/mei.png",
   },
 
-    {
+  {
     title: "Learning Platform",
     description: "A structured online learning platform offering course enrollment, video lessons, and progress tracking through a streamlined student and admin experience.",
     category: "Freelance",
-    techStack: ["React", "Laravel", "Tailwind CSS", "Tanstack Query", "Vite", "MySQL","Typescript","cPanel","shadcn/ui"],
-    features: ["Course listing & enrollment", "Video lectures & Classrooms", "Progress tracking", "User authentication","Admin UI", "Student UI", ],
+    techStack: ["React", "Laravel", "Tailwind CSS", "Tanstack Query", "Vite", "MySQL", "Typescript", "cPanel", "shadcn/ui"],
+    features: ["Course listing & enrollment", "Video lectures & Classrooms", "Progress tracking", "User authentication", "Admin UI", "Student UI"],
     demoUrl: "https://www.thecrystalacademy.org/login",
     img: "projects/learning_platform.png",
   },
@@ -56,7 +54,7 @@ export const projects = [
     title: "HRM System",
     description: "A comprehensive Human Resource Management System with all essential HR operations.",
     category: "Work",
-    techStack: ["Vue 2", "Laravel", "Laravel Mix", "MySQL", "Bootstrap", "webpack","Vuex","Vuetify"],
+    techStack: ["Vue 2", "Laravel", "Laravel Mix", "MySQL", "Bootstrap", "webpack", "Vuex", "Vuetify"],
     features: [
       "Employee management",
       "Attendance & leave tracking",
@@ -72,32 +70,23 @@ export const projects = [
     img: "projects/hrm.png",
   },
 
-    {
+  {
     title: "BD Report & Task Management",
     description: "Business Development Report and Task Management System for tracking BD activities and tasks.",
     category: "Work",
-    techStack: ["Vue 2", "Laravel", "Laravel Mix", "MySQL", "Bootstrap", "webpack","Vuex","Vuetify"],
-    features: [
-      "BD Activity Reporting",
-      "Task Assignment & Tracking",
-      "User Roles & Permissions",
-      "Client Management",
-      "Dashboard & Analytics",
-      "Data Export to Excel & PDF",
-      "Meeting Scheduling",
-    ],
+    techStack: ["Vue 2", "Laravel", "Laravel Mix", "MySQL", "Bootstrap", "webpack", "Vuex", "Vuetify"],
+    features: ["BD Activity Reporting", "Task Assignment & Tracking", "User Roles & Permissions", "Client Management", "Dashboard & Analytics", "Data Export to Excel & PDF", "Meeting Scheduling"],
     githubUrl: "",
     demoUrl: "",
     img: "projects/hrm.png",
   },
-
 
   {
     title: "Nordic Website",
     description: "A modern Nordic-style logistics website featuring key service details, an inquiry form, and a clear vacancy listing.",
     category: "Work",
     techStack: ["Vue 3", "Tailwind CSS"],
-    features: ["Inquiry form", "Vacancy listing", "Logistic services" , "Responsive design" ],
+    features: ["Inquiry form", "Vacancy listing", "Logistic services", "Responsive design"],
     githubUrl: "",
     demoUrl: "https://nordictec.com/",
     img: "projects/nordic.png",
@@ -112,6 +101,23 @@ export const projects = [
     githubUrl: "",
     demoUrl: "https://hospital-management-fe-next-yu3u.vercel.app/login",
     img: "projects/hospital.jpg",
+  },
+
+  {
+    title: "Pwel-Sar RealEstate",
+    description: "Real estate platform to browse,list and manage properties with a fast-modern interface.",
+    techStack: ["React", "TypeScript", "PostgreSQL", "Zustand", "Tanstack Query", "Zod", "shadcn/ui", "Vite", "i18next", "Node.js"],
+    category: "Community",
+    features: [
+      "Property listing and management",
+      "search + filters (location, type)",
+      "role & permssion (agents, buyers)",
+      "Support Multi languages",
+      "Responsive UI",
+    ],
+    githubUrl: "",
+    demoUrl: "",
+    img: "projects/pwelsar.png",
   },
 
   {
