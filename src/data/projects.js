@@ -9,6 +9,28 @@ export const projects = [
     demoUrl: "https://phyothura-blog.vercel.app/",
     img: "projects/blog.png",
   },
+
+    {
+    title: "Hotel Booking MVP",
+    description: "A comprehensive hotel booking platform allowing users to browse hotels, check availability, and book rooms with an integrated admin panel.",
+    category: "Personal",
+    techStack: ["Next.js", "TypeScript", "Supabase", "shadcn/ui", "Tailwind CSS"],
+    features: ["Browsing hotels", "Checking availability", "Booking hotel rooms", "Admin panel", "Responsive design", "Role-based access"],
+    githubUrl: "https://github.com/K2P4/hotel_booking_mvp",
+    demoUrl: "https://thura-hotel-booking.vercel.app/",
+    img: "projects/hotel_booking.png",
+  },
+  {
+    title: "Restaurant POS",
+    description: "A Point of Sale system for restaurants featuring product and category management, invoice printing, and detailed reporting.",
+    category: "Personal",
+    techStack: ["React", "Supabase", "shadcn/ui", "Tailwind CSS", "Tanstack Query"],
+    features: ["Products management", "Category management", "Invoice & Printing", "User Management", "Reports", "Responsive Design"],
+    githubUrl: "https://github.com/K2P4/thura-resturant-pos",
+    demoUrl: "https://thura-resturant-pos.vercel.app/",
+    img: "projects/resturant_pos.png",
+  },
+  
   {
     title: "E-Commerce Platform",
     description: "Full-featured online store with cart, payments, and admin dashboard.",
@@ -152,4 +174,5 @@ export const projects = [
     demoUrl: "https://phyothura-quiz-app.netlify.app/",
     img: "projects/quiz.png",
   },
+
 ];

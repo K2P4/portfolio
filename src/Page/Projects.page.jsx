@@ -39,7 +39,7 @@ export const Projects = () => {
           renderItem={(project) => (
             <div className="group h-full bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 flex flex-col">
               <div className="h-60 relative overflow-hidden">
-                <img src={project?.img} alt={project.title} className="object-cover h-60 w-full transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={project?.img} alt={project.title} className="object-contain h-60 w-full transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-5 flex flex-col flex-grow">
                 <h3 className="text-lg md:text-xl text-black font-semibold mb-1">{project.title}</h3>
