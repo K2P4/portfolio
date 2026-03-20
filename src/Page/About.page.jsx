@@ -37,11 +37,8 @@ export const About = () => {
           {/* Right: Details card */}
           <div data-aos="fade-left">
             <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle className="text-black">A bit more about me</CardTitle>
-                <CardDescription>I enjoy collaborating with cross‑functional teams and shipping polished, production‑ready features.</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
+              
+              <CardContent className="space-y-6 mt-4 ">
                 {/* Interests */}
                 <div className="space-y-3">
                   <h3 className="text-sm font-semibold text-black">Interests</h3>
