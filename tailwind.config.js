@@ -19,8 +19,9 @@ module.exports = {
 				serif: ["Roboto"],
 			},
 			colors: {
-				primary: "#2563eb", // 
-				rating: "#f59e0b", // amber
+				primary: "#2563eb",
+				rating: "#f59e0b",
+				night: "#0f172a",
 			},
 
 			position: ["fixed"],

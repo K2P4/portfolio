@@ -36,8 +36,13 @@ export const skills = {
       percentage: 70,
     },
     {
-      title: "Vue 2",
+      title: "Vue ",
       img: "https://cdn-icons-png.flaticon.com/128/15484/15484278.png",
+      percentage: 70,
+    },
+    {
+      title: "Next.js",
+      img: "https://images.icon-icons.com/2389/PNG/512/next_js_logo_icon_145038.png",
       percentage: 70,
     },
   ],
@@ -62,6 +67,11 @@ export const skills = {
       title: "Mysql",
       img: "https://cdn-icons-png.flaticon.com/128/919/919836.png",
       percentage: 80,
+    },
+    {
+      title: "PostgreSQL",
+      img: "https://cdn-icons-png.flaticon.com/128/919/919836.png",
+      percentage: 60,
     },
   ],
 

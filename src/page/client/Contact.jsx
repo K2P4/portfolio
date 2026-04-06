@@ -1,13 +1,14 @@
-import { Loader2 } from 'lucide-react';
+import { FaSpinner } from 'react-icons/fa';
 import { Formik, Form } from 'formik';
-import * as yup from 'yup';
-import { useCreateMutation } from '../store/endpoints/contact';
+import { useCreateMutation } from '../../store/endpoints/contact';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa6';
 import { SiGmail } from 'react-icons/si';
+import Alert from '../../components/Alert';
+import { contactSchema } from '../../validations/contactSchema';
 
-export const Contact = () => {
-  const [CreateFun, { data, isLoading }] = useCreateMutation();
+export default function Contact() {
+  const [CreateFun, { data, isLoading, isError, error }] = useCreateMutation();
 
   const initialValues = {
     email: '',
@@ -15,29 +16,28 @@ export const Contact = () => {
     message: '',
   };
 
-  const handleSubmit = async (value) => {
-    console.log(value);
-    await CreateFun(value);
-
-    value.email = '';
-    value.name = '';
-    value.message = '';
+  const handleSubmit = async (values, { resetForm }) => {
+    const result = await CreateFun(values);
+    if (!result.error) {
+      resetForm();
+    }
   };
 
-  const validationSchema = yup.object({
-    email: yup.string().required('email is required').email('invalid email format'),
-    name: yup.string().required('name is required'),
-
-    message: yup.string(),
-  });
   return (
     <div className="ContainerResponsive flex gap-6 py-16 sm:gap-14 flex-col justify-center">
       <div className="flex flex-col items-center text-center gap-3 mb-10">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black">I want to hear from you </h2>
       </div>
 
+      {(isError || data) && (
+        <div className="p-0 m-0">
+          {data && <Alert variant="success" message="Thanks for reaching out — I’ll get back to you shortly." />}
+          {isError && <Alert variant="error" message={error?.data?.description || 'Something went wrong. Please try again later.'} />}
+        </div>
+      )}
+
       <div id="contact" className="flex flex-col gap-6 sm:gap-0 lg:gap-12 sm:flex-row w-full">
-        <div  data-aos="fade-right" className={` w-full flex flex-col gap-6 sm:gap-7 `}>
+        <div data-aos="fade-right" className={` w-full flex flex-col gap-6 sm:gap-7 `}>
           <div className="flex  items-center gap-8 sm:gap-5">
             <FaMapMarkerAlt className="btn-outline   h-10 w-10 rounded-full  p-2 " />
             <p className="text-gray-700 font-medium text-pretty sm:text-base text-sm cardFont w-full sm:w-[72%] tracking-wide">North Okkalapa Township, Yangon.</p>
@@ -57,10 +57,9 @@ export const Contact = () => {
         </div>
 
         <div data-aos="fade-left" className={` w-full   `}>
-          <Formik validateOnChange={false} validateOnBlur={false} validationSchema={validationSchema} initialValues={initialValues} onSubmit={handleSubmit}>
+          <Formik validateOnChange={false} validateOnBlur={false} validationSchema={contactSchema} initialValues={initialValues} onSubmit={handleSubmit}>
             {({ isSubmitting, handleChange, handleBlur, values, errors, touched }) => (
               <>
-                {data && <div className="mb-3 rounded-md border border-primary/30 bg-primary/10 px-4 py-2 text-black text-sm">Thanks for reaching out — I’ll get back to you shortly.</div>}
                 <Form className="flex flex-col gap-4 rounded-2xl  ">
                   <div>
                     <input
@@ -105,8 +104,12 @@ export const Contact = () => {
                     />
                   </div>
 
-                  <button disabled={isSubmitting} type="submit" className="xs:mr-auto md:ml-auto w-fit rounded-xl  sm:mt-5  mt-3    btn-primary  px-6 py-3 focus:outline-none focus:ring-1 focus:ring-primary/40">
-                    {isLoading ? <Loader2 className="mr-2 text-white mx-auto text-center h-5 w-5 animate-spin" /> : <> Submit</>}
+                  <button
+                    disabled={isSubmitting}
+                    type="submit"
+                    className="xs:mr-auto md:ml-auto w-fit rounded-xl  sm:mt-5  mt-3    btn-primary  px-6 py-3 focus:outline-none focus:ring-1 focus:ring-primary/40"
+                  >
+                    {isLoading ? <FaSpinner className="mr-2 text-white mx-auto text-center h-5 w-5 animate-spin" /> : <> Submit</>}
                   </button>
                 </Form>
               </>
@@ -116,5 +119,4 @@ export const Contact = () => {
       </div>
     </div>
   );
-};
-
+}

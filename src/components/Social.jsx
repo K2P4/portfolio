@@ -2,7 +2,7 @@ import { FaFacebookF, FaTelegram,FaLinkedinIn } from 'react-icons/fa6';
 import { AiFillInstagram } from 'react-icons/ai';
 import { FaGithub } from 'react-icons/fa';
 
-export const Social = ({isFooter = false}) => {
+export default function Social({isFooter = false}) {
   return (
     <div className={`flex items-center justify-center ${isFooter ? 'lg:justify-center ' : "lg:justify-normal "} gap-5 mt-6 `}>
       <a href="https://www.facebook.com/profile.php?id=100077023871140" target="_blank">

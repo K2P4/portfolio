@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
-import { projects } from '../data/projects';
-import {Carousel} from '@components';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { projects } from '../../data/projects';
+import Carousel from '../../components/carousel';
 
-export const Projects = () => {
+export default function Projects() {
   const rawCategories = useMemo(() => Array.from(new Set(projects.map((p) => p.category || 'Personal'))), []);
-  const displayLabel = (cat) => cat === cat.toUpperCase() ? cat : cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
+  const displayLabel = (cat) => (cat === cat.toUpperCase() ? cat : cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase());
   const categories = ['All', ...rawCategories];
   const [active, setActive] = useState('All');
   const filtered = useMemo(() => (active === 'All' ? projects : projects.filter((p) => p.category === active)), [active]);
@@ -64,12 +64,12 @@ export const Projects = () => {
                 <div className="mt-auto pt-5 flex justify-between items-center text-sm">
                   {project.demoUrl && (
                     <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary">
-                      Live <ExternalLink className="w-4 h-4" />
+                      Live <FaExternalLinkAlt className="w-3.5 h-3.5" />
                     </a>
                   )}
                   {project.githubUrl && (
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary">
-                      GitHub <Github className="w-4 h-4" />
+                      GitHub <FaGithub className="w-4 h-4" />
                     </a>
                   )}
                 </div>

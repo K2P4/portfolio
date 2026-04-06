@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { clients } from '../data/clients';
+import { clients } from '../../data/clients';
 
 const TestimonialCard = ({ client }) => {
   return (
@@ -13,7 +13,7 @@ const TestimonialCard = ({ client }) => {
       <div className="h-full bg-white rounded-2xl p-6 shadow-sm border ">
         <div className="flex items-start gap-4">
           <div className="flex flex-col  items-center gap-2">
-            <img src={client?.img} alt={client?.position} className="h-24 w-24 rounded-full ring-2 ring-gray-200 object-cover" />
+            <img src={client?.img} alt={client?.position} className="h-24 w-24 rounded-full ring-1 ring-gray-200 object-cover" />
             <a href={client?.media} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary text-sm mt-3">
               View profile
             </a>
@@ -28,7 +28,7 @@ const TestimonialCard = ({ client }) => {
   );
 };
 
-export const Client = () => {
+export default function Client() {
   return (
     <section data-aos="fade-right" id="review" className="py-20">
       <div className="flex flex-col items-center text-center gap-3 mb-10">

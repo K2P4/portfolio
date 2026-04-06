@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { skills } from "../data/skills";
-import { Card, CardHeader, CardTitle, CardContent } from "@components";
+import { skills } from "../../data/skills";
 import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader } from "../../components/card";
 
 const categories = Object.keys(skills);
 
-export const Skill = () => {
+export default function Skill() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (

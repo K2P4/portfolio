@@ -1,55 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Contact, About, Service, Skill, Projects, Client } from '@pages';
-import { Social } from '@components';
+import Social from '../../components/Social';
+import Service from './Service';
+import Skill from './Skill';
+import Projects from './Projects';
+import Client from './Client';
+import Contact from './Contact';
+import useTypingEffect from '../../hooks/useTypingEffect';
 
-export const Home = () => {
-  const [loopNum, setLoopNum] = useState(0);
+export default function Home() {
   const [loading, setLoading] = useState(false);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
-  const toRotate = ['Full Stack Developer'];
-  const period = 2000;
+  const text = useTypingEffect(['Software Developer']);
 
   useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
     AOS.init({ duration: 1000 });
-
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
-
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setIndex((prevIndex) => prevIndex - 1);
-      setDelta(period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setIndex(1);
-      setDelta(500);
-    } else {
-      setIndex((prevIndex) => prevIndex + 1);
-    }
-  };
+  }, []);
 
   const downloadCV = () => {
     setLoading(true);
@@ -64,7 +30,7 @@ export const Home = () => {
   };
 
   return (
-    <section id="home">
+    <section id="about">
       {/* Home */}
       <div className="w-full mx-auto min-h-screen justify-between grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16  place-items-center">
         <div data-aos="fade-right" className="w-full  lg:mt-0  animate-fade-in">
@@ -108,7 +74,7 @@ export const Home = () => {
         </div>
       </div>
 
-      <About />
+      {/* <About /> */}
       <Service />
       <Skill />
       <Projects />
@@ -116,4 +82,4 @@ export const Home = () => {
       <Contact />
     </section>
   );
-};
+}
