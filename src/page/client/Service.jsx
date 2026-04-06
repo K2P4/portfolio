@@ -2,7 +2,7 @@ import React from 'react';
 import { LuDot } from 'react-icons/lu';
 import { motion } from 'framer-motion';
 import { services } from '../../data/services';
-import { Card, CardContent, CardHeader, CardTitle } from '../../components/card';
+import { Card, CardContent, CardHeader, CardTitle } from '../../components/Card';
 
 export default function Service() {
   const iconUrls = ['https://cdn-icons-png.flaticon.com/128/1197/1197511.png', 'https://cdn-icons-png.flaticon.com/128/8606/8606660.png', 'https://cdn-icons-png.flaticon.com/128/9672/9672242.png'];

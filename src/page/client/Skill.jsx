@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { skills } from "../../data/skills";
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader } from "../../components/card";
+import { Card, CardContent, CardHeader } from "../../components/Card";
 
 const categories = Object.keys(skills);
 
