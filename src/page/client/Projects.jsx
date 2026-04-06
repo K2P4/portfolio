@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { projects } from '../../data/projects';
-import Carousel from '../../components/carousel';
+import Carousel from '../../components/Carousel';
 
 export default function Projects() {
   const rawCategories = useMemo(() => Array.from(new Set(projects.map((p) => p.category || 'Personal'))), []);
