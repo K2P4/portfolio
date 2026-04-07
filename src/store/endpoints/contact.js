@@ -8,7 +8,7 @@ export const ContactApi = ApiService.injectEndpoints({
         method: 'POST',
         body: {
           chat_id: import.meta.env.VITE_TELEGRAM_CHAT_ID,
-          text: `📢 *New Contact Form Submission*\n\n` + `👤 *Name:* ${arg.name}\n` + `📧 *Email:* ${arg.email}\n` + `💬 *Message:*\n${arg.message}`,
+          text: `New Contact\n\n` + `Name: ${arg.name}\n` + `Email: ${arg.email}\n` + `Message: ${arg.message}`,
           parse_mode: 'Markdown',
         },
       }),

@@ -35,6 +35,10 @@ module.exports = {
 					'0%': { opacity: '0', transform: 'translateY(12px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' },
 				},
+				slideInBottom: {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
 				float: {
 					'0%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-6px)' },
@@ -44,6 +48,7 @@ module.exports = {
 			animation: {
 				'fade-in': 'fadeIn 500ms ease-out both',
 				'slide-up': 'slideUp 600ms 100ms ease-out both',
+				'slide-in-bottom': 'slideInBottom 500ms ease-out both',
 				float: 'float 6s ease-in-out infinite',
 			},
 		},

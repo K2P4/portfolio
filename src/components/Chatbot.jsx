@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAskChatbotMutation } from '../store/endpoints/chatbot';
-import { BsChatDotsFill, BsX } from 'react-icons/bs';
+import { BsChatDotsFill, BsX, BsSendFill, BsArrowRightShort } from 'react-icons/bs';
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,17 +8,20 @@ export default function Chatbot() {
   const [input, setInput] = useState('');
   const [ask, { isLoading }] = useAskChatbotMutation();
 
-  const handleSend = async () => {
-    if (!input.trim()) return;
+  const suggestedQuestions = ['What services do you offer?', 'Show me your projects.', 'How can I contact you?'];
 
-    const userMsg = { role: 'user', content: input };
+  const handleSend = async (messageText = input) => {
+    const textToSend = messageText.trim();
+    if (!textToSend) return;
+
+    const userMsg = { role: 'user', content: textToSend };
     setMessages((prev) => [...prev, userMsg]);
     setInput('');
 
-    const res = await ask({ question: userMsg.content });
-    if (res.data) {
-      setMessages((prev) => [...prev, { role: 'bot', content: res.data }]);
-    } else if (res.error) {
+    try {
+      const res = await ask({ question: textToSend }).unwrap();
+      setMessages((prev) => [...prev, { role: 'bot', content: res }]);
+    } catch (err) {
       setMessages((prev) => [...prev, { role: 'bot', content: "Sorry, I can't connect right now." }]);
     }
   };
@@ -26,35 +29,71 @@ export default function Chatbot() {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       {isOpen ? (
-        <div className="w-[420px] h-[450px]  rounded-xl shadow-2xl flex flex-col overflow-hidden border">
-          <div className="bg-primary/95 p-4 flex justify-between items-center text-white">
-            <h3 className="font-semibold">Thura AI Assistant</h3>
-            <button onClick={() => setIsOpen(false)}>
+        <div className="w-[340px] h-[480px] md:w-[380px] md:h-[520px] bg-white rounded-2xl shadow-md flex flex-col overflow-hidden   animate-fade-in translate-y-0 translate-x-0">
+          <div className="bg-blue-600 p-4 flex justify-between items-center text-white">
+            <div className="flex items-center gap-2">
+              <BsChatDotsFill size={20} />
+              <h3 className="font-medium">Portfolio Assistant</h3>
+            </div>
+            <button onClick={() => setIsOpen(false)} className="hover:bg-white/10 p-1 rounded-full transition">
               <BsX size={24} />
             </button>
           </div>
 
-          <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-gray-100 flex flex-col">
-            {messages.length === 0 && <p className="text-gray-400 text-sm text-center m-auto">Ask me anything!</p>}
+          <div className="flex-1 p-4 overflow-y-auto space-y-5 bg-gray-50 flex flex-col scroll-smooth">
+            {messages.length === 0 && (
+              <div className="flex flex-col items-center justify-center h-full text-center space-y-4 animate-slide-in-bottom">
+                <div className="p-3 bg-blue-100 rounded-full text-blue-600">
+                  <BsChatDotsFill size={32} />
+                </div>
+                <p className="text-gray-700 font-medium">Hi! How can I help?</p>
+                <div className="flex flex-col gap-2 w-full">
+                  {suggestedQuestions.map((q, i) => (
+                    <button
+                      key={i}
+                      onClick={() => handleSend(q)}
+                      className="text-left py-2.5 px-4 text-sm bg-white border border-gray-200 rounded-xl hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all flex items-center justify-between group"
+                    >
+                      {q}
+                      <BsArrowRightShort size={20} className="text-gray-400 group-hover:text-blue-600" />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
             {messages.map((msg, i) => (
-              <div key={i} className={`p-2 max-w-[80%] rounded-lg ${msg.role === 'user' ? 'bg-blue-600 text-white ml-auto' : 'bg-gray-200 text-gray-800'}`}>
+              <div
+                key={i}
+                className={`p-3 max-w-[85%] rounded-2xl text-[13.5px] leading-relaxed animate-slide-in-bottom ${
+                  msg.role === 'user' ? 'bg-blue-600 text-white ml-auto rounded-tr-none' : 'bg-white text-gray-800 border border-gray-100 rounded-tl-none shadow-sm'
+                }`}
+              >
                 {msg.content}
               </div>
             ))}
-            {isLoading && <div className="text-gray-500 text-sm animate-pulse">Replying...</div>}
+            {isLoading && (
+              <div className="flex items-center gap-1.5 text-gray-400 text-xs ml-1">
+                <div className="flex gap-0.5">
+                  <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce"></div>
+                  <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce [animation-delay:0.2s]"></div>
+                  <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce [animation-delay:0.4s]"></div>
+                </div>
+                <span>Typing...</span>
+              </div>
+            )}
           </div>
 
-          <div className="p-3 bg-gray-100 flex">
+          <div className="p-3 bg-white border-t border-gray-100 flex gap-2">
             <input
               type="text"
-              className="flex-1 bg-gray-100 text-gray-800 border border-gray-300 rounded-l-xl  focus:outline-none"
-              placeholder="Type a message..."
+              className="flex-1 bg-gray-50 text-gray-800 border-none rounded-xl px-4 py-2 focus:ring-1 focus:ring-blue-500 transition text-sm"
+              placeholder="Message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             />
-            <button className="bg-primary px-4 text-white rounded-r-xl hover:bg-blue-700 transition" onClick={handleSend}>
-              Send
+            <button disabled={isLoading || !input.trim()} className="bg-blue-600 p-2.5 text-white rounded-xl hover:bg-blue-700 transition disabled:opacity-40 shadow-sm" onClick={() => handleSend()}>
+              <BsSendFill size={18} />
             </button>
           </div>
         </div>
