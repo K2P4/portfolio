@@ -11,22 +11,15 @@
       name="description"
       content="Phyo Thura — junior software developer building fast, accessible, and delightful web apps. Explore projects, skills, and contact details."
     />
+    <meta
+      name="keywords"
+      content="Phyo Thura, PhyoThura, Phyothura, junior software developer, software developer, web developer, frontend developer, React developer, portfolio"
+    />
     <meta name="author" content="Phyo Thura" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="/" />
-    <script>
-      (() => {
-        try {
-          const url = `${location.origin}${location.pathname}`;
-          const canonical = document.querySelector('link[rel="canonical"]');
-          if (canonical) canonical.setAttribute('href', url);
-          const ogUrl = document.querySelector('meta[property="og:url"]');
-          if (ogUrl) ogUrl.setAttribute('content', url);
-        } catch {
-          // no-op
-        }
-      })();
-    </script>
+    <link rel="canonical" href="https://thura.newway-solution.com/" />
+    <link rel="alternate" hreflang="en" href="https://thura.newway-solution.com/" />
+    <meta name="theme-color" content="#2563eb" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -35,8 +28,9 @@
       property="og:description"
       content="Junior software developer building fast, accessible, and delightful web apps. Explore projects, skills, and contact details."
     />
-    <meta property="og:url" content="/" />
-    <meta property="og:image" content="/Phyo.jpg" />
+    <meta property="og:url" content="https://thura.newway-solution.com/" />
+    <meta property="og:site_name" content="Phyo Thura" />
+    <meta property="og:image" content="https://thura.newway-solution.com/Phyo.jpg" />
     <meta property="og:image:alt" content="Profile photo of Phyo Thura" />
 
     <!-- Twitter -->
@@ -46,10 +40,51 @@
       name="twitter:description"
       content="Junior software developer building fast, accessible, and delightful web apps. Explore projects, skills, and contact details."
     />
-    <meta name="twitter:image" content="/Phyo.jpg" />
+    <meta name="twitter:image" content="https://thura.newway-solution.com/Phyo.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Phyo Thura",
+            "url": "https://thura.newway-solution.com/"
+          },
+          {
+            "@type": "Person",
+            "name": "Phyo Thura",
+            "alternateName": ["Phyothura", "PhyoThura"],
+            "url": "https://thura.newway-solution.com/",
+            "image": "https://thura.newway-solution.com/Phyo.jpg",
+            "jobTitle": "Software Developer",
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=100077023871140",
+              "https://www.instagram.com/vik83124",
+              "https://t.me/KP_Vv",
+              "https://www.linkedin.com/in/phyothura",
+              "https://github.com/K2P4"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main>
+        <h1>Phyo Thura</h1>
+        <p>Junior Software Developer</p>
+        <p>I build fast, accessible and delightful web apps. Explore projects, skills, and contact details.</p>
+        <p>Contact: <a href="mailto:pthuya381@gmail.com">pthuya381@gmail.com</a></p>
+        <p>
+          Profiles: <a href="https://www.linkedin.com/in/phyothura">LinkedIn</a> · <a href="https://github.com/K2P4">GitHub</a> ·
+          <a href="https://t.me/KP_Vv">Telegram</a> · <a href="https://www.facebook.com/profile.php?id=100077023871140">Facebook</a> ·
+          <a href="https://www.instagram.com/vik83124">Instagram</a>
+        </p>
+      </main>
+    </div>
+    <noscript>This site works best with JavaScript enabled.</noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -12,7 +12,7 @@ export default function Skill() {
     <section data-aos="fade-right" className="py-20 ">
       <div className="mx-auto  px-4">
         <div className="flex flex-col items-center text-center gap-3 mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-black">My Skill-Set</h1>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black">My Skill-Set</h2>
         </div>
 
         {/* Category Tabs */}
@@ -62,5 +62,5 @@ export default function Skill() {
       </div>
     </section>
   );
-};
+}
 

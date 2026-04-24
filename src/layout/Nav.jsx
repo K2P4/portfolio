@@ -23,9 +23,14 @@ export default function Nav() {
           isFixed && 'fixed top-0 left-0  w-full  px-9 lg:pb-8  lg:pe-32 lg:px-32  mx-auto shadow-sm border-b border-slate-300/60 bg-white backdrop-blur-[1px]  duration-500      z-50 '
         } flex py-6 sm:py-10 lg:pt-8 lg:pb-0 justify-between items-center `}
       >
-        <h1 onClick={() => nav('/')} className="flex select-none items-center gap-0 sm:gap-2 sm:text-md md:text-xl text-gray-900  header font-bold tracking-wide">
-          THURA{' '}
-        </h1>
+        <button
+          type="button"
+          onClick={() => nav('/')}
+          className="flex select-none items-center gap-0 sm:gap-2 sm:text-md md:text-xl text-gray-900 header font-bold tracking-wide"
+          aria-label="Go to home"
+        >
+          THURA
+        </button>
 
         {/* sheet */}
         <div className={`md:hidden ${toggle ? 'fixed inset-0 z-40' : ''}`}>
@@ -42,7 +47,7 @@ export default function Nav() {
             aria-label="Mobile navigation drawer"
           >
             <div className="px-5 py-5 border-b border-slate-200 flex items-center justify-between">
-              <h1 className=" select-none items-center  text-gray-900  header font-bold tracking-wide">THURA</h1>
+              <div className="select-none items-center text-gray-900 header font-bold tracking-wide">THURA</div>
               <button type="button" onClick={closeMenu} className=" bg-transparent hover:text-primary rounded-md p-2" aria-label="Close menu">
                 <AiOutlineClose className="text-xl" />
               </button>

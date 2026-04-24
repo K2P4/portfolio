@@ -1,11 +1,32 @@
 import { Helmet } from 'react-helmet-async';
 
+function normalizeBaseUrl(raw) {
+  if (!raw) return null;
+  const trimmed = String(raw).trim();
+  if (!trimmed) return null;
+
+  try {
+    const withProtocol = /^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//.test(trimmed) ? trimmed : `https://${trimmed}`;
+    const url = new URL(withProtocol);
+    url.hash = '';
+    url.search = '';
+    return url.toString().replace(/\/$/, '');
+  } catch {
+    return null;
+  }
+}
+
+function getBaseUrl() {
+  const envBase = normalizeBaseUrl(import.meta.env.VITE_SITE_URL);
+  if (envBase) return envBase;
+  if (typeof window !== 'undefined') return window.location.origin.replace(/\/$/, '');
+  return 'https://thura.newway-solution.com';
+}
+
 function absoluteUrl(pathname = '/') {
-  if (typeof window === 'undefined') return pathname;
-  const origin = window.location.origin;
-  const base = origin.endsWith('/') ? origin.slice(0, -1) : origin;
+  const base = getBaseUrl();
   const path = pathname.startsWith('/') ? pathname : `/${pathname}`;
-  return `${base}${path}`;
+  return new URL(path, `${base}/`).toString();
 }
 
 export default function StructuredData() {
@@ -16,6 +37,7 @@ export default function StructuredData() {
     url: absoluteUrl('/'),
     image: absoluteUrl('/Phyo.jpg'),
     jobTitle: 'Software Developer',
+    alternateName: ['Phyothura', 'PhyoThura'],
     sameAs: [
       'https://www.facebook.com/profile.php?id=100077023871140',
       'https://www.instagram.com/vik83124',
@@ -38,4 +60,3 @@ export default function StructuredData() {
     </Helmet>
   );
 }
-
