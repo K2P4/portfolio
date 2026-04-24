@@ -5,8 +5,48 @@
     <link rel="icon" type="image/svg+xml" href="/assests/dev.svg?v=1" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Phyo Thura</title>
+
+    <title>Phyo Thura | Junior Software Developer</title>
+    <meta
+      name="description"
+      content="Phyo Thura — junior software developer building fast, accessible, and delightful web apps. Explore projects, skills, and contact details."
+    />
+    <meta name="author" content="Phyo Thura" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="/" />
+    <script>
+      (() => {
+        try {
+          const url = `${location.origin}${location.pathname}`;
+          const canonical = document.querySelector('link[rel="canonical"]');
+          if (canonical) canonical.setAttribute('href', url);
+          const ogUrl = document.querySelector('meta[property="og:url"]');
+          if (ogUrl) ogUrl.setAttribute('content', url);
+        } catch {
+          // no-op
+        }
+      })();
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Phyo Thura | Software Developer" />
+    <meta
+      property="og:description"
+      content="Junior software developer building fast, accessible, and delightful web apps. Explore projects, skills, and contact details."
+    />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="/Phyo.jpg" />
+    <meta property="og:image:alt" content="Profile photo of Phyo Thura" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Phyo Thura | Software Developer" />
+    <meta
+      name="twitter:description"
+      content="Junior software developer building fast, accessible, and delightful web apps. Explore projects, skills, and contact details."
+    />
+    <meta name="twitter:image" content="/Phyo.jpg" />
   </head>
   <body>
     <div id="root"></div>

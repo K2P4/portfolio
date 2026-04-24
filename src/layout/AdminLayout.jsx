@@ -3,6 +3,7 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { FaSignOutAlt, FaRobot, FaBars } from 'react-icons/fa';
 import { supabase } from '../lib/supabase';
 import { navItems } from '../data/adminNav';
+import Seo from '../components/Seo';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../store/slices/authSlice';
@@ -21,6 +22,7 @@ export default function AdminLayout() {
 
   return (
     <div className="flex min-h-screen bg-night text-slate-300">
+      <Seo title="Admin | Phyo Thura" pathname="/admin" noIndex />
       {/* Sidebar */}
       <aside className={`bg-slate-800 border-r border-slate-800 transition-all duration-300 flex flex-col h-screen ${isSidebarOpen ? 'w-64' : 'w-20'}`}>
         <div className="p-6 flex items-center gap-3">

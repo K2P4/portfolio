@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
 import { Formik, Form } from 'formik';
 import { useLoginMutation } from '../../store/endpoints/auth';
 import { useNavigate } from 'react-router-dom';
 import Alert from '../../components/Alert';
 import { authSchema } from '../../validations/authSchema';
+import Seo from '../../components/Seo';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setAuth } from '../../store/slices/authSlice';
 
 const AdminLogin = () => {
@@ -28,6 +28,7 @@ const AdminLogin = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen  bg-night text-white p-4">
+      <Seo title="Admin Login | Phyo Thura" pathname="/admin/login" noIndex />
       <div className="p-8 bg-slate-800 rounded-2xl shadow-xl w-full max-w-md border border-slate-700/50">
         <h2 className="text-3xl font-semibold mb-8 text-center bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Admin Portal</h2>
 
