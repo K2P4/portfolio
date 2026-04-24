@@ -32,7 +32,7 @@ export default function Seo({
           'https://www.facebook.com/profile.php?id=100077023871140',
           'https://www.instagram.com/vik83124',
           'https://t.me/KP_Vv',
-          'http://linkedin.com/in/phyothura21',
+          'https://www.linkedin.com/in/phyothura',
           'https://github.com/K2P4',
         ],
       };

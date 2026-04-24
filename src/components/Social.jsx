@@ -19,7 +19,7 @@ export default function Social({isFooter = false}) {
       <a href="https://t.me/KP_Vv" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
         <FaTelegram className="btn-outline-wth-animate   h-10 w-10 lg:h-12 lg:w-12 p-2 " />
       </a>
-      <a href="http://linkedin.com/in/phyothura21" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/phyothura" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <FaLinkedinIn className="btn-outline-wth-animate   h-10 w-10 lg:h-12 lg:w-12 p-2 " />
       </a>
       <a href="https://github.com/K2P4" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
