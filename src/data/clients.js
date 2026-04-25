@@ -1,9 +1,9 @@
 export const clients = [
   {
     img: 'clients/atoz.jpg',
-    position: 'Founder of A/Z',
+    position: 'Founder of Lotoshinn',
     name: 'Ye Zon Aung',
-    text: 'Working with thura was smooth and enjoyable.',
+    text: 'Working with thura was smooth & enjoyable.',
     media: 'https://www.linkedin.com/in/ye-zon-aung/',
   },
   {
@@ -17,7 +17,7 @@ export const clients = [
     img: 'clients/xnova.jpg',
     position: 'Founder of XNOVA',
     name: 'Nyan Lin Htet',
-    text: 'Easy to work with thura and delivered great results.',
+    text: 'Easy to work with thura, delivered great results.',
     media: 'https://www.linkedin.com/in/n-l-htet/',
   },
 ];

@@ -30,7 +30,7 @@ export default function Chatbot() {
     <div className="fixed bottom-6 right-6 z-50">
       {isOpen ? (
         <div className="w-[340px] h-[480px] md:w-[380px] md:h-[520px] bg-white rounded-2xl shadow-md flex flex-col overflow-hidden   animate-fade-in translate-y-0 translate-x-0">
-          <div className="bg-blue-600 p-4 flex justify-between items-center text-white">
+          <div className="bg-blue-600 p-2 md:p-4 flex justify-between items-center text-white">
             <div className="flex items-center gap-2">
               <BsChatDotsFill size={20} />
               <h3 className="font-medium">Portfolio Assistant</h3>
@@ -98,7 +98,7 @@ export default function Chatbot() {
           </div>
         </div>
       ) : (
-        <button onClick={() => setIsOpen(true)} className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105">
+        <button onClick={() => setIsOpen(true)} className="bg-blue-600 text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105">
           <BsChatDotsFill size={28} />
         </button>
       )}
