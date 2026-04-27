@@ -1,5 +1,5 @@
 export const skills = {
-  Frontend: [
+  "Frontend & Design": [
     {
       title: "HTML5",
       img: "https://cdn-icons-png.flaticon.com/128/174/174854.png",
@@ -45,9 +45,15 @@ export const skills = {
       img: "https://images.icon-icons.com/2389/PNG/512/next_js_logo_icon_145038.png",
       percentage: 70,
     },
+    {
+      title: "Figma",
+      img: "https://cdn-icons-png.flaticon.com/128/5968/5968705.png",
+      percentage: 40,
+    }
+
   ],
 
-  Backend: [
+  "Backend & Database": [
     {
       title: "PHP",
       img: "https://cdn-icons-png.flaticon.com/128/5968/5968332.png",
@@ -56,12 +62,17 @@ export const skills = {
     {
       title: "Laravel",
       img: "https://icon.icepanel.io/Technology/svg/Laravel.svg",
-      percentage: 75,
+      percentage: 80,
     },
     {
       title: "NODE JS",
       img: "https://cdn-icons-png.flaticon.com/128/15484/15484303.png",
       percentage: 60,
+    },
+    {
+      title: "Python",
+      img: "https://cdn-icons-png.flaticon.com/128/3098/3098090.png",
+      percentage: 40,
     },
     {
       title: "Mysql",
@@ -70,21 +81,8 @@ export const skills = {
     },
     {
       title: "PostgreSQL",
-      img: "https://cdn-icons-png.flaticon.com/128/919/919836.png",
-      percentage: 60,
-    },
-  ],
-
-  "UI Design": [
-    {
-      title: "Figma",
-      img: "https://cdn-icons-png.flaticon.com/128/5968/5968705.png",
-      percentage: 40,
-    },
-    {
-      title: "Canva",
-      img: "skills/canva-icon.png",
-      percentage: 40,
+      img: "https://cdn-icons-png.flaticon.com/128/5968/5968342.png",
+      percentage: 50,
     },
   ],
 
@@ -92,15 +90,25 @@ export const skills = {
     {
       title: "React Native",
       img: "https://cdn-icons-png.flaticon.com/128/1126/1126012.png",
-      percentage: 60,
+      percentage: 50,
     },
   ],
 
-  Tools: [
+  "Devops & Tools": [
     {
       title: "Github",
       img: "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
       percentage: 70,
+    },
+    {
+      title: "Docker",
+      img: "https://cdn-icons-png.flaticon.com/128/919/919853.png",
+      percentage: 40,
+    },
+    {
+      title: "GitHub Actions",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
+      percentage: 40,
     },
 
     {
@@ -121,7 +129,7 @@ export const skills = {
       percentage: 60,
     },
 
-       {
+    {
       title: "Webpack",
       img: "skills/webpack-icon.png",
       percentage: 60,
