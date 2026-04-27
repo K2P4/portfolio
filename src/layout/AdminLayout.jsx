@@ -50,7 +50,11 @@ export default function AdminLayout() {
         </nav>
 
         <div className="p-4 border-t border-slate-700/50">
-          <button onClick={handleLogout} className="w-full flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-slate-400 hover:bg-red-500/10 hover:text-red-400 group">
+          <button
+            onClick={handleLogout}
+            className="w-full flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-slate-400 hover:bg-red-500/10 hover:text-red-400 group"
+            aria-label="Log out"
+          >
             <div className="text-xl font-semibold">
               <FaSignOutAlt />
             </div>
@@ -61,7 +65,11 @@ export default function AdminLayout() {
 
       <main className="flex-1 flex flex-col h-screen overflow-hidden">
         <header className="h-20 bg-slate-800/50 backdrop-blur-md border-b border-slate-800 flex items-center px-8 justify-between">
-          <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 hover:bg-slate-800 rounded-lg transition-colors">
+          <button
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            className="p-2 hover:bg-slate-800 rounded-lg transition-colors"
+            aria-label={isSidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}
+          >
             <FaBars size={20} />
           </button>
 

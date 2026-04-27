@@ -35,7 +35,7 @@ export default function Chatbot() {
               <BsChatDotsFill size={20} />
               <h3 className="font-medium">Portfolio Assistant</h3>
             </div>
-            <button onClick={() => setIsOpen(false)} className="hover:bg-white/10 p-1 rounded-full transition">
+            <button onClick={() => setIsOpen(false)} className="hover:bg-white/10 p-1 rounded-full transition" aria-label="Close chatbot">
               <BsX size={24} />
             </button>
           </div>
@@ -92,13 +92,18 @@ export default function Chatbot() {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             />
-            <button disabled={isLoading || !input.trim()} className="bg-blue-600 p-2.5 text-white rounded-xl hover:bg-blue-700 transition disabled:opacity-40 shadow-sm" onClick={() => handleSend()}>
+            <button
+              disabled={isLoading || !input.trim()}
+              className="bg-blue-600 p-2.5 text-white rounded-xl hover:bg-blue-700 transition disabled:opacity-40 shadow-sm"
+              onClick={() => handleSend()}
+              aria-label="Send message"
+            >
               <BsSendFill size={18} />
             </button>
           </div>
         </div>
       ) : (
-        <button onClick={() => setIsOpen(true)} className="bg-blue-600 text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105">
+        <button onClick={() => setIsOpen(true)} className="bg-blue-600 text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105" aria-label="Open chatbot">
           <BsChatDotsFill size={28} />
         </button>
       )}
