@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Social from '../../components/Social';
 import Service from './Service';
@@ -14,7 +13,22 @@ export default function Home() {
   const text = useTypingEffect([' Software Developer']);
 
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    let isMounted = true;
+
+    import('aos').then(({ default: AOS }) => {
+      if (!isMounted) return;
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 24,
+        easing: 'ease-out-cubic',
+      });
+      AOS.refresh();
+    });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const downloadCV = () => {

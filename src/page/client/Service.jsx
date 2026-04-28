@@ -16,7 +16,15 @@ export default function Service() {
         {/* Services  */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {services.map((serviceItem, index) => (
-            <motion.div key={index} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 8 }} transition={{ duration: 0.4, ease: 'easeOut' }} whileHover={{ scale: 1.02 }} className="h-full">
+            <motion.div
+              key={index}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 8 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.4, ease: 'easeOut' }}
+              whileHover={{ scale: 1.02 }}
+              className="h-full"
+            >
               <Card className="group h-full border-gray-200 hover:border-primary/40 transition-colors duration-300 shadow-sm">
                 <CardHeader className="items-center text-center">
                   <div className="w-20 h-20 rounded-full bg-primary/5 flex items-center justify-center ring-1 ring-primary/20">
