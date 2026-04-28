@@ -7,7 +7,7 @@ export default function Footer() {
   const { showToTop, scrollToSection, scrollToTop } = useScrollManager();
 
   return (
-    <footer className="w-full relative border-t border-slate-300/40 bg-gradient-to-b from-white to-slate-50/70 backdrop-blur-[1px]">
+    <footer className="w-full relative border-t border-slate-300/40 dark:border-slate-800 bg-gradient-to-b from-white to-slate-50/70 dark:from-slate-950 dark:to-slate-900/80 backdrop-blur-[1px] transition-colors duration-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <nav aria-label="Footer Navigation" className="w-full">
           <ul className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 cardFont">
@@ -15,7 +15,7 @@ export default function Footer() {
               <li key={item.id}>
                 <button
                   onClick={() => scrollToSection(item.name)}
-                  className="capitalize text-sm sm:text-base text-slate-700 hover:text-primary transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded px-1"
+                  className="capitalize text-sm sm:text-base text-slate-700 dark:text-slate-300 hover:text-primary transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded px-1"
                 >
                   {item.name}
                 </button>
@@ -35,7 +35,7 @@ export default function Footer() {
           type="button"
           aria-label="Scroll to top"
           onClick={scrollToTop}
-          className={`fixed  bottom-40 sm:bottom-32 animate-bounce right-[50%] z-40 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/30 ring-1 ring-white/50 transition-all duration-300   ${
+          className={`fixed bottom-40 sm:bottom-32 left-1/2 -translate-x-1/2 animate-bounce z-40 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/30 ring-1 ring-white/50 transition-all duration-300 ${
             showToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
           style={{ pointerEvents: showToTop ? 'auto' : 'none' }}

@@ -1,10 +1,20 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export default function Carousel({ items = [], renderItem, getKey, className = '', slideWidthClasses = 'w-[88%] sm:w-[70%] md:w-[55%] lg:w-[40%] xl:w-[32%]', showArrows = true, showDots = true }) {
+export default function Carousel({
+  items = [],
+  renderItem,
+  getKey,
+  className = '',
+  slideWidthClasses = 'w-[88%] sm:w-[70%] md:w-[55%] lg:w-[40%] xl:w-[32%]',
+  showArrows = true,
+  showDots = true,
+  autoSlide = false,
+  autoSlideInterval = 3000,
+}) {
   const scrollRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
 
-  const keys = useMemo(() => items.map((it, idx) => (getKey ? getKey(it, idx) : idx)), [items, getKey]);
+  const keys = items.map((it, idx) => (getKey ? getKey(it, idx) : idx));
 
   const scrollByAmount = (dir) => {
     const el = scrollRef.current;
@@ -55,6 +65,17 @@ export default function Carousel({ items = [], renderItem, getKey, className = '
       setActiveSlide(0);
     }
   }, [keys.join('|')]);
+
+  useEffect(() => {
+    if (!autoSlide || items.length <= 1) return;
+
+    const intervalId = window.setInterval(() => {
+      const nextIndex = activeSlide === items.length - 1 ? 0 : activeSlide + 1;
+      scrollToIndex(nextIndex);
+    }, autoSlideInterval);
+
+    return () => window.clearInterval(intervalId);
+  }, [activeSlide, autoSlide, autoSlideInterval, items.length]);
 
   return (
     <div className={`relative ${className}`}>

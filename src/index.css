@@ -5,8 +5,16 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
   body {
-    @apply bg-gradient-to-b from-slate-50 via-white to-blue-50 bg-fixed text-black min-h-screen antialiased;
+    @apply min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50 bg-fixed text-black antialiased transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:text-slate-100;
   }
 }
 
@@ -16,10 +24,18 @@
   }
 
   .btn-outline {
-    @apply border border-primary text-center text-primary cursor-pointer px-6 py-2 rounded-lg font-medium hover:bg-primary hover:text-white transition-all;
+    @apply border border-primary text-center text-primary cursor-pointer px-6 py-2 rounded-lg font-medium hover:bg-primary hover:text-white transition-all dark:border-blue-400 dark:text-blue-300 dark:hover:bg-blue-500 dark:hover:text-white;
   }
 
   .btn-outline-wth-animate {
-    @apply border border-primary text-center text-primary px-6 py-2 rounded-full font-medium cursor-pointer transition-all duration-500 ease-in-out hover:bg-primary hover:text-white hover:-translate-y-0.5 active:scale-95;
+    @apply border border-primary text-center text-primary px-6 py-2 rounded-full font-medium cursor-pointer transition-all duration-500 ease-in-out hover:bg-primary hover:text-white hover:-translate-y-0.5 active:scale-95 dark:border-blue-400 dark:text-blue-300 dark:hover:bg-blue-500 dark:hover:text-white;
+  }
+
+  .surface-panel {
+    @apply bg-white/90 border border-gray-200 shadow-sm backdrop-blur-sm dark:bg-slate-900/85 dark:border-slate-700 dark:text-slate-100;
+  }
+
+  .input-surface {
+    @apply bg-white border border-primary/50 text-black placeholder:text-black/50 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-100 dark:placeholder:text-slate-400;
   }
 }

@@ -15,7 +15,7 @@ export const clients = [
   },
   {
     img: 'clients/xnova.jpg',
-    position: 'Founder of XNOVA',
+    position: 'Co-Founder of XNOVA',
     name: 'Nyan Lin Htet',
     text: 'Easy to work with thura, delivered great results.',
     media: 'https://www.linkedin.com/in/n-l-htet/',

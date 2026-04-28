@@ -1,15 +1,15 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { NavList } from '../data/nav';
 import { AiOutlineClose } from 'react-icons/ai';
 import useScrollManager from '../hooks/useScrollManager';
 import useMobileMenu from '../hooks/useMobileMenu';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
+import useTheme from '../hooks/useTheme';
 
 export default function Nav() {
-  const nav = useNavigate();
   const { isFixed, selectNav, scrollToSection } = useScrollManager({ fixedThreshold: 500 });
   const { toggle, MenuRef, toggleMenu, closeMenu } = useMobileMenu();
+  const { isDark, toggleTheme } = useTheme();
 
   const handleScrollToSection = (name, id) => {
     scrollToSection(name, id);
@@ -19,19 +19,10 @@ export default function Nav() {
   return (
     <div className="">
       <div
-        className={` ${
-          isFixed && 'fixed top-0 left-0  w-full  px-9 lg:pb-8  lg:pe-32 lg:px-32  mx-auto shadow-sm border-b border-slate-300/60 bg-white backdrop-blur-[1px]  duration-500      z-50 '
-        } flex py-6 sm:py-10 lg:pt-8 lg:pb-0 justify-between items-center `}
+        className={`relative flex py-6 sm:py-10 lg:pt-8 lg:pb-0 justify-between md:justify-center items-center ${
+          isFixed ? 'md:fixed  md:left-1/2 md:-translate-x-1/2 md:z-50 md:w-auto md:py-0' : ''
+        }`}
       >
-        <button
-          type="button"
-          onClick={() => nav('/')}
-          className="flex select-none items-center gap-0 sm:gap-2 sm:text-md md:text-xl text-gray-900 header font-bold tracking-wide"
-          aria-label="Go to home"
-        >
-          THURA
-        </button>
-
         {/* sheet */}
         <div className={`md:hidden ${toggle ? 'fixed inset-0 z-40' : ''}`}>
           <button
@@ -41,15 +32,26 @@ export default function Nav() {
           />
           <div
             ref={MenuRef}
-            className={`fixed top-0 left-0 h-screen w-80 max-w-[85%] bg-white shadow-xl z-50 transform transition-transform duration-300 ease-out ${toggle ? 'translate-x-0' : '-translate-x-full'}`}
+            className={`fixed top-0 left-0 h-screen w-80 max-w-[85%] bg-white dark:bg-slate-950 shadow-xl z-50 transform transition-transform duration-300 ease-out ${toggle ? 'translate-x-0' : '-translate-x-full'}`}
             role="dialog"
             aria-modal="true"
             aria-label="Mobile navigation drawer"
           >
-            <div className="px-5 py-5 border-b border-slate-200 flex items-center justify-between">
-              <div className="select-none items-center text-gray-900 header font-bold tracking-wide">THURA</div>
-              <button type="button" onClick={closeMenu} className=" bg-transparent hover:text-primary rounded-md p-2" aria-label="Close menu">
+            <div className="px-5 py-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+              <div className="select-none items-center text-gray-900 dark:text-slate-100 header font-bold tracking-wide">Menu</div>
+              <button type="button" onClick={closeMenu} className="bg-transparent text-slate-700 dark:text-slate-300 hover:text-primary rounded-md p-2" aria-label="Close menu">
                 <AiOutlineClose className="text-xl" />
+              </button>
+            </div>
+            <div className="px-4 pt-4">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="surface-panel flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-200"
+                aria-label="Toggle color theme"
+              >
+                {isDark ? <BsSunFill className="text-amber-400" /> : <BsMoonStarsFill className="text-slate-700" />}
+                {isDark ? 'Switch to light mode' : 'Switch to dark mode'}
               </button>
             </div>
             <nav className="px-4 py-4 overflow-y-auto ">
@@ -58,8 +60,8 @@ export default function Nav() {
                   <li key={item.id}>
                     <button
                       onClick={() => handleScrollToSection(item.name, item.id)}
-                      className={`w-full text-left capitalize text-base px-3 py-3 rounded-md hover:bg-slate-50 hover:text-primary transition ${
-                        selectNav == item.id ? 'text-primary' : 'text-gray-700'
+                      className={`w-full text-left capitalize text-base px-4 py-4 rounded-md hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-primary transition ${
+                        selectNav == item.id ? 'text-primary' : 'text-gray-700 dark:text-slate-300'
                       }`}
                     >
                       {item.name}
@@ -72,26 +74,52 @@ export default function Nav() {
         </div>
 
         {/* navigation bar for lg layout  */}
-        <div className="hidden md:flex">
-          <ul className="flex sm:space-x-4 md:space-x-5  lg:space-x-7">
+        <div className="hidden md:flex items-center gap-3">
+          <ul
+            className={`rounded-full px-4 py-2 flex items-center gap-2 border shadow-xl transition-colors duration-300 ${
+              isDark
+                ? 'border-slate-700 bg-slate-900 text-slate-200 shadow-slate-950/20'
+                : 'border-slate-200/80 bg-white/95 text-slate-700 shadow-slate-300/20 backdrop-blur-sm'
+            }`}
+          >
             {NavList.map((nav) => (
               <li
                 key={nav.id}
                 value={nav.id}
                 onClick={() => handleScrollToSection(nav.name, nav.id)}
-                className={`  ${
-                  selectNav == nav.id ? 'text-primary ' : ''
-                }  capitalize text-gray-700 select-pointer  text-md lg:text-base tracking-wide select-none hover:text-primary   font-medium  hover:cursor-pointer transition-transform  duration-500  `}
+                className={`${
+                  selectNav == nav.id
+                    ? 'text-primary'
+                    : isDark
+                      ? 'text-slate-300 hover:text-white'
+                      : 'text-slate-700 hover:text-slate-950'
+                } px-5 py-2 capitalize text-sm lg:text-base tracking-wide select-none font-semibold hover:cursor-pointer transition-all duration-300`}
               >
                 {nav.name}
               </li>
             ))}
           </ul>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="surface-panel inline-flex items-center justify-center rounded-full p-3 text-slate-700 dark:text-slate-100"
+            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {isDark ? <BsSunFill className="text-amber-400" /> : <BsMoonStarsFill />}
+          </button>
         </div>
 
         {/*  mobile*/}
-        <div className="flex items-center gap-3 md:hidden z-10 text-center">
-          <button className="text-xl flex text-gray-900 tracking-wide items-center font-bold" type="button" aria-label="Open menu" onClick={toggleMenu}>
+        <div className="flex w-full items-center justify-between md:hidden z-10 text-center">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="surface-panel inline-flex items-center justify-center rounded-full p-2.5 text-slate-700 dark:text-slate-100"
+            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {isDark ? <BsSunFill className="text-amber-400" /> : <BsMoonStarsFill />}
+          </button>
+          <button className="text-xl flex text-gray-900 dark:text-slate-100 tracking-wide items-center font-bold" type="button" aria-label="Open menu" onClick={toggleMenu}>
             <GiHamburgerMenu />
           </button>
         </div>
