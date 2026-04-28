@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useAskChatbotMutation } from '../store/endpoints/chatbot';
 import { BsChatDotsFill, BsX, BsSendFill, BsArrowRightShort } from 'react-icons/bs';
 
@@ -29,7 +29,7 @@ export default function Chatbot() {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       {isOpen ? (
-        <div className="w-[340px] h-[480px] md:w-[380px] md:h-[520px] bg-white rounded-2xl shadow-md flex flex-col overflow-hidden   animate-fade-in translate-y-0 translate-x-0">
+        <div className="w-[340px] h-[480px] md:w-[380px] md:h-[520px] bg-white dark:bg-slate-950 rounded-2xl shadow-md flex flex-col overflow-hidden animate-fade-in translate-y-0 translate-x-0 border border-slate-200 dark:border-slate-800">
           <div className="bg-blue-600 p-2 md:p-4 flex justify-between items-center text-white">
             <div className="flex items-center gap-2">
               <BsChatDotsFill size={20} />
@@ -40,19 +40,19 @@ export default function Chatbot() {
             </button>
           </div>
 
-          <div className="flex-1 p-4 overflow-y-auto space-y-5 bg-gray-50 flex flex-col scroll-smooth">
+          <div className="flex-1 p-4 overflow-y-auto space-y-5 bg-gray-50 dark:bg-slate-900 flex flex-col scroll-smooth">
             {messages.length === 0 && (
               <div className="flex flex-col items-center justify-center h-full text-center space-y-4 animate-slide-in-bottom">
                 <div className="p-3 bg-blue-100 rounded-full text-blue-600">
                   <BsChatDotsFill size={32} />
                 </div>
-                <p className="text-gray-700 font-medium">Hi! How can I help?</p>
+                <p className="text-gray-700 dark:text-slate-200 font-medium">Hi! How can I help?</p>
                 <div className="flex flex-col gap-2 w-full">
                   {suggestedQuestions.map((q, i) => (
                     <button
                       key={i}
                       onClick={() => handleSend(q)}
-                      className="text-left py-2.5 px-4 text-sm bg-white border border-gray-200 rounded-xl hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all flex items-center justify-between group"
+                      className="text-left py-2.5 px-4 text-sm bg-white dark:bg-slate-950 dark:text-slate-100 border border-gray-200 dark:border-slate-800 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-800 hover:border-blue-300 hover:text-blue-600 transition-all flex items-center justify-between group"
                     >
                       {q}
                       <BsArrowRightShort size={20} className="text-gray-400 group-hover:text-blue-600" />
@@ -65,14 +65,14 @@ export default function Chatbot() {
               <div
                 key={i}
                 className={`p-3 max-w-[85%] rounded-2xl text-[13.5px] leading-relaxed animate-slide-in-bottom ${
-                  msg.role === 'user' ? 'bg-blue-600 text-white ml-auto rounded-tr-none' : 'bg-white text-gray-800 border border-gray-100 rounded-tl-none shadow-sm'
+                  msg.role === 'user' ? 'bg-blue-600 text-white ml-auto rounded-tr-none' : 'bg-white dark:bg-slate-950 text-gray-800 dark:text-slate-100 border border-gray-100 dark:border-slate-800 rounded-tl-none shadow-sm'
                 }`}
               >
                 {msg.content}
               </div>
             ))}
             {isLoading && (
-              <div className="flex items-center gap-1.5 text-gray-400 text-xs ml-1">
+              <div className="flex items-center gap-1.5 text-gray-400 dark:text-slate-400 text-xs ml-1">
                 <div className="flex gap-0.5">
                   <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce"></div>
                   <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce [animation-delay:0.2s]"></div>
@@ -83,10 +83,10 @@ export default function Chatbot() {
             )}
           </div>
 
-          <div className="p-3 bg-white border-t border-gray-100 flex gap-2">
+          <div className="p-3 bg-white dark:bg-slate-950 border-t border-gray-100 dark:border-slate-800 flex gap-2">
             <input
               type="text"
-              className="flex-1 bg-gray-50 text-gray-800 border-none rounded-xl px-4 py-2 focus:ring-1 focus:ring-blue-500 transition text-sm"
+              className="flex-1 bg-gray-50 dark:bg-slate-900 text-gray-800 dark:text-slate-100 border-none rounded-xl px-4 py-2 focus:ring-1 focus:ring-blue-500 transition text-sm"
               placeholder="Message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}

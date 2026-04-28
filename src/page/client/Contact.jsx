@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <div className="ContainerResponsive flex gap-6 py-16 sm:gap-14 flex-col justify-center">
       <div className="flex flex-col items-center text-center gap-3 mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black">I want to hear from you </h2>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black dark:text-slate-100">I want to hear from you </h2>
       </div>
 
       {(isError || data) && (
@@ -40,19 +40,19 @@ export default function Contact() {
         <div data-aos="fade-right" className={` w-full flex flex-col gap-6 sm:gap-7 `}>
           <div className="flex  items-center gap-8 sm:gap-5">
             <FaMapMarkerAlt className="btn-outline   h-10 w-10 rounded-full  p-2 " />
-            <p className="text-gray-700 font-medium text-pretty sm:text-base text-sm cardFont w-full sm:w-[72%] tracking-wide">North Okkalapa Township, Yangon.</p>
+            <p className="text-gray-700 dark:text-slate-300 font-medium text-pretty sm:text-base text-sm cardFont w-full sm:w-[72%] tracking-wide">North Okkalapa Township, Yangon.</p>
           </div>
 
           <div className="flex items-center gap-7 sm:gap-5">
             <FaPhone className="btn-outline   h-10 w-10 rounded-full  p-2 " />
 
-            <p className="text-gray-700 font-medium cardFont w-full text-md sm:text-base sm:w-[72%] tracking-wider sm:tracking-wide">+95 9968213232</p>
+            <p className="text-gray-700 dark:text-slate-300 font-medium cardFont w-full text-md sm:text-base sm:w-[72%] tracking-wider sm:tracking-wide">+95 9968213232</p>
           </div>
 
           <div className="flex items-center gap-7 sm:gap-5">
             <SiGmail className="btn-outline   h-10 w-10 rounded-full  p-2 " />
 
-            <p className="text-gray-700 font-medium sm:text-base text-md tracking-wider sm:tracking-wide cardFont w-full sm:w-[72%]">pthuya381@gmail.com</p>
+            <p className="text-gray-700 dark:text-slate-300 font-medium sm:text-base text-md tracking-wider sm:tracking-wide cardFont w-full sm:w-[72%]">pthuya381@gmail.com</p>
           </div>
         </div>
 
@@ -66,7 +66,7 @@ export default function Contact() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.name}
-                      className=" px-5 py-3 sm:px-3 sm:p-4 rounded-xl w-full focus:outline-none bg-white border border-primary/50 focus:border-primary text-sm text-black placeholder:text-black/50 focus:ring-1 focus:ring-primary/40"
+                      className="input-surface px-5 py-3 sm:px-3 sm:p-4 rounded-xl w-full focus:outline-none focus:border-primary text-sm focus:ring-1 focus:ring-primary/40"
                       name="name"
                       type="text"
                       id="name"
@@ -81,7 +81,7 @@ export default function Contact() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.email}
-                      className="mt-1 border border-primary/50 px-5 py-3 sm:px-3 sm:p-4 rounded-xl w-full focus:outline-none bg-white focus:border-primary text-sm text-black placeholder:text-black/50 focus:ring-1 focus:ring-primary/40"
+                      className="input-surface mt-1 px-5 py-3 sm:px-3 sm:p-4 rounded-xl w-full focus:outline-none focus:border-primary text-sm focus:ring-1 focus:ring-primary/40"
                       name="email"
                       type="email"
                       id="email"
@@ -96,7 +96,7 @@ export default function Contact() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.message}
-                      className="mt-1 border border-primary/50 px-5 py-3 rounded-xl text-black placeholder:text-black/50 w-full focus:outline-none min-h-[100px] bg-white focus:border-primary focus:ring-1 focus:ring-primary/40 text-sm"
+                      className="input-surface mt-1 px-5 py-3 rounded-xl w-full focus:outline-none min-h-[100px] focus:border-primary focus:ring-1 focus:ring-primary/40 text-sm"
                       name="message"
                       id="message"
                       placeholder="Type your message here..."
