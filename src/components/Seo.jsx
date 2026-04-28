@@ -30,9 +30,9 @@ function toAbsoluteUrl(pathname = '/') {
 }
 
 export default function Seo({
-  title = 'Phyo Thura | Software Developer',
-  description = 'Phyo Thura — software developer building fast, accessible, and delightful web apps. Explore projects, skills, and contact details.',
-  keywords = 'Phyo Thura, PhyoThura, Phyothura, software developer, web developer, React developer, portfolio',
+  title = 'Phyo Thura (Thura) | Software Developer',
+  description = 'Phyo Thura, also known as Thura, is a software developer building fast, accessible, and delightful web apps. Explore projects, skills, and contact details.',
+  keywords = 'Phyo Thura, Thura, PhyoThura, Phyothura, Thura developer, software developer, web developer, React developer, portfolio',
   imagePath = '/Phyo.jpg',
   pathname = '/',
   noIndex = false,
@@ -47,7 +47,7 @@ export default function Seo({
         '@context': 'https://schema.org',
         '@type': 'Person',
         name: 'Phyo Thura',
-        alternateName: ['Phyothura', 'PhyoThura'],
+        alternateName: ['Thura', 'Phyothura', 'PhyoThura'],
         url: toAbsoluteUrl('/'),
         image: toAbsoluteUrl('/Phyo.jpg'),
         jobTitle: 'Software Developer',
@@ -72,7 +72,7 @@ export default function Seo({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:site_name" content="Phyo Thura" />
+      <meta property="og:site_name" content="Phyo Thura | Thura" />
       <meta property="og:image" content={absoluteImageUrl} />
 
       <meta name="twitter:card" content="summary_large_image" />

@@ -8,6 +8,7 @@ const TestimonialCard = ({ client }) => {
     <motion.div
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 20 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.35, ease: 'easeOut' }}
       whileHover={{ y: -5, scale: 1.01 }}
       className="group relative h-full shadow-sm rounded-2xl bg-gradient-to-br from-primary/25 via-primary/10 to-transparent"

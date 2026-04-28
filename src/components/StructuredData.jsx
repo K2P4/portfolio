@@ -37,7 +37,7 @@ export default function StructuredData() {
     url: absoluteUrl('/'),
     image: absoluteUrl('/Phyo.jpg'),
     jobTitle: 'Software Developer',
-    alternateName: ['Phyothura', 'PhyoThura'],
+    alternateName: ['Thura', 'Phyothura', 'PhyoThura'],
     sameAs: [
       'https://www.facebook.com/profile.php?id=100077023871140',
       'https://www.instagram.com/vik83124',
@@ -50,7 +50,7 @@ export default function StructuredData() {
   const website = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Phyo Thura',
+    name: 'Phyo Thura | Thura',
     url: absoluteUrl('/'),
   };
 

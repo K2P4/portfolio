@@ -75,6 +75,7 @@ export default function Skill() {
               key={idx}
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 8 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
               whileHover={{ y: -6, scale: 1.01 }}
               className="h-full"
